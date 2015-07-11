@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<title>新闻详情</title>
+	<link rel="stylesheet" type="text/css" href="css/cssreset.css">
+	<link rel="stylesheet" type="text/css" href="css/detail.css">
+	<script type="text/javascript">
+	window.onorientationchange = window.onresize = function(){
+		document.documentElement.style.fontSize = window.innerWidth/640*100 +'px'
+	}
+	onorientationchange()
+	</script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/zepto.touch.js"></script>
+	<script type="text/javascript" src="js/detail.js"></script>
+</head>
+<body>
+	<div class="loading_status">读取中..</div>
+	<h1></h1>
+	<p class="base_info">
+		<span class="date"></span>
+		<span class="author"></span>
+	</p>
+	<div class="content"></div>
+	<div class="about_wrapper">
+		<h2>相关文章</h2>
+		<ul class="about_list"></ul>
+	</div>
+	<div class="like_btn">
+		<img src="image/like.png" alt="like">
+		<span class="like_num">0</span>
+	</div>
+</body>
+</html>
