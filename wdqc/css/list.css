@@ -47,15 +47,20 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 0;
 }
 .banner_go_left {
   float: left;
-  margin-left: .2rem;
+  padding: 1.955rem 1rem 1.955rem .2rem;
 }
 .banner_go_right {
   float: right;
-  margin-right: .2rem;
+  padding: 1.955rem .2rem 1.955rem 1rem;
+}
+.banner_go_left img,
+.banner_go_right img {
+  width: .21rem;
+  height: .31rem;
 }
 .banner_tip_wrapper {
   position: absolute;
