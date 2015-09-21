@@ -28,9 +28,14 @@ map {
 .mask {
   background: rgba(0, 0, 0, 0.5);
   filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
-  height: 1000px;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
-.login_wrapper {
+.pop_wrapper {
   width: 1000px;
   color: #231f20;
   margin: 0 auto;
@@ -39,61 +44,72 @@ map {
   left: 50%;
   margin-left: -500px;
 }
-.login_wrapper a {
+.pop_wrapper a {
   text-decoration: none;
-}
-.login_wrapper a:hover,
-.login_wrapper a:active,
-.login_wrapper a:visited {
   color: #231f20;
 }
-.login_wrapper .title_wrapper {
+.pop_wrapper a:hover,
+.pop_wrapper a:active,
+.pop_wrapper a:visited {
+  color: #231f20;
+}
+.pop_wrapper .left_f {
+  float: left;
+}
+.pop_wrapper .right_f {
+  float: right;
+}
+.pop_wrapper .content_wrapper {
+  overflow: hidden;
+  background: #ececec;
+}
+.pop_wrapper .title_wrapper {
   line-height: 100px;
   overflow: hidden;
   background: #231f20;
   font-size: 32px;
   color: #fff;
+  text-align: center;
 }
-.login_wrapper .h3_tle {
+.pop_wrapper .h3_tle {
   width: 495px;
   text-align: center;
 }
-.login_wrapper .left_f {
-  float: left;
-}
-.login_wrapper .right_f {
-  float: right;
-}
-.login_wrapper .content_wrapper {
-  overflow: hidden;
+.pop_wrapper .input_txt {
   background: #ececec;
+  font-size: 18px;
+  border: 1px solid #a0a0a0;
+  line-height: 48px;
+  height: 48px;
+  text-indent: 18px;
+  outline: 0;
 }
-.login_wrapper .content_wrap {
-  background: #fff;
-  width: 495px;
-  height: 400px;
-}
-.login_wrapper .login_wrap {
-  width: 380px;
-  margin: 0 auto;
-}
-.login_wrapper .tle {
+.pop_wrapper .tle {
   font-size: 28px;
   font-weight: bolder;
   line-height: 48px;
   padding-top: 10px;
 }
-.login_wrapper .auto_wrap {
+.pop_wrapper .login_content {
+  background: #fff;
+  width: 495px;
+  height: 400px;
+}
+.pop_wrapper .login_content .login_wrap {
+  width: 380px;
+  margin: 0 auto;
+}
+.pop_wrapper .login_content .auto_wrap {
   line-height: 64px;
   font-size: 14px;
 }
-.login_wrapper .auto_wrap span {
+.pop_wrapper .login_content .auto_wrap span {
   margin-left: 3px;
 }
-.login_wrapper .sub_btn_wrap {
+.pop_wrapper .login_content .sub_btn_wrap {
   text-align: center;
 }
-.login_wrapper .sub_btn {
+.pop_wrapper .login_content .sub_btn {
   border: 1px solid #a0a0a0;
   background: #f00;
   width: 378px;
@@ -101,41 +117,84 @@ map {
   font-size: 34px;
   color: #fff;
 }
-.login_wrapper .input_txt {
-  background: #ececec;
-  font-size: 18px;
-  border: 1px solid #a0a0a0;
-  width: 378px;
-  line-height: 48px;
-  height: 48px;
-  text-indent: 18px;
-  outline: 0;
-}
-.login_wrapper .link_wrapper {
+.pop_wrapper .login_content .link_wrapper {
   font-size: 14px;
   padding-top: 20px;
 }
-.login_wrapper .qrcode_wrap {
+.pop_wrapper .login_content .qrcode_wrap {
   text-align: center;
 }
-.login_wrapper .qr_code {
+.pop_wrapper .login_content .qr_code {
   vertical-align: middle;
   width: 250px;
   height: 250px;
   margin-top: 28px;
 }
-.login_wrapper .scan_qr_txt {
+.pop_wrapper .login_content .scan_qr_txt {
   font-size: 24px;
   text-align: center;
   line-height: 64px;
   font-weight: bolder;
 }
-.login_wrapper .login_mode {
+.pop_wrapper .login_content .login_mode {
   font-size: 18px;
   padding-left: 40px;
   line-height: 56px;
   border-top: 1px solid #ececec;
 }
-.login_wrapper .login_mode a {
+.pop_wrapper .login_content .login_mode a {
   margin-right: 12px;
+}
+.pop_wrapper .login_content .input_txt {
+  width: 378px;
+}
+.pop_wrapper .register_content {
+  background: #fff;
+  padding-top: 20px;
+}
+.pop_wrapper .register_content .register_table {
+  border-collapse: collapse;
+}
+.pop_wrapper .register_content .register_table td {
+  width: 500px;
+  text-indent: 56px;
+  padding: 15px 0;
+}
+.pop_wrapper .register_content .input_txt {
+  width: 318px;
+}
+.pop_wrapper .register_content .check_code {
+  width: 158px;
+}
+.pop_wrapper .register_content .agreement_wrapper {
+  text-align: center;
+  line-height: 24px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.pop_wrapper .register_content .agreement_wrapper input {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.pop_wrapper .register_content .register_btn_wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+.pop_wrapper .register_content .register_btn {
+  background: #f00;
+  width: 550px;
+  height: 52px;
+  font-size: 34px;
+  color: #fff;
+  border: none;
+}
+.pop_wrapper .register_content .socially_login {
+  border-top: 1px solid #ececec;
+  line-height: 48px;
+  font-size: 18px;
+  text-align: center;
+}
+.pop_wrapper .register_content .socially_login a {
+  margin-right: 12px;
+  font-weight: bolder;
 }
