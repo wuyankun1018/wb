@@ -1,0 +1,72 @@
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+table,
+th,
+td,
+map {
+  margin: 0;
+  padding: 0;
+}
+button {
+  outline: none;
+}
+.search_wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  height: 66px;
+  line-height: 66px;
+  background: #ececec;
+  text-indent: 20px;
+}
+.search_wrapper .search_icon {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background: url("../img/search_icon.png") no-repeat;
+  width: 31px;
+  height: 31px;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.search_wrapper select {
+  vertical-align: middle;
+  font-size: 14px;
+  width: 180px;
+  margin-right: 36px;
+}
+.search_wrapper .con_input {
+  border: none;
+  background: none;
+  font-size: 20px;
+  width: 400px;
+}
+.search_wrapper .submit_btn {
+  background: #000;
+  font-size: 24px;
+  vertical-align: middle;
+  color: #fff;
+  border: none;
+  height: 66px;
+  padding: 0 32px;
+}
+.search_wrapper .right_f {
+  float: right;
+}
