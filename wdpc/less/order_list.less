@@ -1,9 +1,28 @@
 @import "cssreset.less";
+.pl10{padding-left: 10px;}
 .order_list_wrapper{width: 790px;margin: 0 auto;
 	.order_status_nav{padding: 15px 0;overflow: hidden;text-align: center;}
 	.order_status_nav_item{background: #ececec;border: 1px solid #a0a0a0;border-radius: 3px;-webkit-border-radius: 3px; width: 118px;height: 78px;display: inline-block;*display:inline;*zoom:1;margin: 0 15px;}
 	.s_name{font-size: 24px;display: block;text-align: center;color: red;line-height: 36px;padding-top: 8px;}
 	.s_num{font-size: 22px;display: block;text-align: center;}
 	.my_order_tle{margin-top: 10px;font-size: 32px;line-height: 86px;text-indent: 30px;border-top: 2px solid #000;}
-	.list_item{border: 1px solid #a0a0a0;margin-bottom: 10px;}
+	.list_item{border: 1px solid #a0a0a0;margin-bottom: 10px;
+		.o_date{line-height: 48px;background: #ececec;font-size: 18px;text-indent: 18px;}
+		.order_item_table{border-collapse: collapse;width: 100%;margin-right: -1px;
+			td{border-right: 1px solid #ececec;}
+		}
+		.tle_tr{line-height: 42px;font-size: 16px;}
+		.detail_tr{font-size: 14px;
+			td{padding-bottom: 6px;}
+		}
+		.goods_info{float: left;width: 180px;margin-left: 12px;
+			h5{font-size: 18px;line-height: 36px;}
+			p{line-height: 20px;margin-top: 16px;}
+		}
+		.pic_wrapper{float: left; width: 196px;text-align: center;margin-left: 10px;overflow: hidden;
+			img{vertical-align: middle;}
+		}
+		.o_btn{display: block;height: 28px;background: none;border: 1px solid #ececec;border-radius: 3px;-webkit-border-radius: 3px;width: 118px;margin-top: 6px;cursor:pointer;}
+		.o_link{display: block;text-align: center;line-height: 28px;margin-top: 6px;}
+	}
 }

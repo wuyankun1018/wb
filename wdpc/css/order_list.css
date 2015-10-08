@@ -41,6 +41,9 @@ a:active,
 a:visited {
   color: #666;
 }
+.pl10 {
+  padding-left: 10px;
+}
 .order_list_wrapper {
   width: 790px;
   margin: 0 auto;
@@ -85,4 +88,68 @@ a:visited {
 .order_list_wrapper .list_item {
   border: 1px solid #a0a0a0;
   margin-bottom: 10px;
+}
+.order_list_wrapper .list_item .o_date {
+  line-height: 48px;
+  background: #ececec;
+  font-size: 18px;
+  text-indent: 18px;
+}
+.order_list_wrapper .list_item .order_item_table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-right: -1px;
+}
+.order_list_wrapper .list_item .order_item_table td {
+  border-right: 1px solid #ececec;
+}
+.order_list_wrapper .list_item .tle_tr {
+  line-height: 42px;
+  font-size: 16px;
+}
+.order_list_wrapper .list_item .detail_tr {
+  font-size: 14px;
+}
+.order_list_wrapper .list_item .detail_tr td {
+  padding-bottom: 6px;
+}
+.order_list_wrapper .list_item .goods_info {
+  float: left;
+  width: 180px;
+  margin-left: 12px;
+}
+.order_list_wrapper .list_item .goods_info h5 {
+  font-size: 18px;
+  line-height: 36px;
+}
+.order_list_wrapper .list_item .goods_info p {
+  line-height: 20px;
+  margin-top: 16px;
+}
+.order_list_wrapper .list_item .pic_wrapper {
+  float: left;
+  width: 196px;
+  text-align: center;
+  margin-left: 10px;
+  overflow: hidden;
+}
+.order_list_wrapper .list_item .pic_wrapper img {
+  vertical-align: middle;
+}
+.order_list_wrapper .list_item .o_btn {
+  display: block;
+  height: 28px;
+  background: none;
+  border: 1px solid #ececec;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  width: 118px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.order_list_wrapper .list_item .o_link {
+  display: block;
+  text-align: center;
+  line-height: 28px;
+  margin-top: 6px;
 }
