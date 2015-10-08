@@ -25,6 +25,18 @@ map {
   margin: 0;
   padding: 0;
 }
+button {
+  outline: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:visited {
+  color: #666;
+}
 .mask {
   background: rgba(0, 0, 0, 0.5);
   filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);
