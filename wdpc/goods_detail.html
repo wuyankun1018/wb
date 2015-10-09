@@ -254,5 +254,16 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="./js/jquery-1.11.3.min.js"></script>
+	<script>
+	$(function(){
+		$('.tab_wrap').on('click', '.tab_item', function(event) {
+			event.preventDefault();
+			$(this).addClass('act').siblings('.tab_item').removeClass('act')
+			var index = $(this).index()
+			$('.content_wrap').find('.content_item').removeClass('act').eq(index).addClass('act')
+		});
+	})
+	</script>
 </body>
 </html>
