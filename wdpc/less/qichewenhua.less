@@ -1,0 +1,26 @@
+@import "cssreset.less";
+.header_container{background: #f60007;height: 70px;
+	.header_wrap{width: 1440px; margin-left: auto;margin-right: auto;height: 70px;}
+	.header_logo{vertical-align: middle;width: 245px;height: 55px;float: left;margin-top: 7px;margin-right: 20px;}
+	.nav_item{.i-block();height: 70px;text-align: center;width: 120px;
+		.nav_name{font-size: 28px;font-weight: bolder;line-height: 70px;position: relative;}
+		.nav_content{position: absolute;}
+		&:hover{
+			.nav_name{color: #fff;}
+			.nav_content{display: block;}
+		}
+	}
+	.search_wrapper{.i-block();height: 70px;
+		.search_input{width: 420px;background: #fff url("../img/search_icon2.png") no-repeat right center;border: none;height: 30px;padding: 0;margin: 0;outline: none;}
+	}
+}
+.share_logo{font-size:0;.newIcon();padding: 16px 14px;vertical-align: middle;}
+.s_weibo{font-size:0;.newIcon();padding: 15px;background-position: 0 -50px;
+	&:hover{background-position: -50px -50px;}
+}
+.s_weixin{font-size:0;.newIcon();padding: 15px;background-position: 0 -100px;
+	&:hover{background-position: -50px -100px;}
+}
+.s_qzone{font-size:0;.newIcon();padding: 15px;background-position: 0 -150px;
+	&:hover{background-position: -50px -150px;}
+}
