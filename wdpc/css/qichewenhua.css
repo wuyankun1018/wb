@@ -65,19 +65,107 @@ a:visited {
   *zoom: 1;
   height: 70px;
   text-align: center;
-  width: 120px;
+  padding: 0 30px;
+  position: relative;
 }
 .header_container .nav_item .nav_name {
   font-size: 28px;
   font-weight: bolder;
   line-height: 70px;
   position: relative;
+  display: block;
+}
+.header_container .nav_item .nav_name:after {
+  display: none;
+  content: "";
+  left: 50%;
+  margin-left: -12px;
+  bottom: 0;
+  position: absolute;
+  border: 14px solid transparent;
+  border-bottom-color: #000;
 }
 .header_container .nav_item .nav_content {
+  display: none;
   position: absolute;
+  width: 540px;
+  height: 330px;
+  background: #000;
+  top: 70px;
+  left: 0;
+  overflow: hidden;
+  color: #fff;
+  border: 5px solid #000;
+}
+.header_container .nav_item .nav_content .s_nav_ul {
+  width: 120px;
+  float: left;
+  padding-top: 10px;
+}
+.header_container .nav_item .nav_content .s_nav_ul li {
+  line-height: 42px;
+  font-size: 18px;
+}
+.header_container .nav_item .nav_content .s_nav_ul li .con_wrap {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  width: 420px;
+  height: 330px;
+  background: #fff;
+  color: #000;
+  z-index: 1;
+}
+.header_container .nav_item .nav_content .s_nav_ul li .con_item {
+  padding: 20px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 22px;
+  overflow: hidden;
+}
+.header_container .nav_item .nav_content .s_nav_ul li .con_item .share_wrap {
+  color: #b2b2b2;
+  line-height: 36px;
+}
+.header_container .nav_item .nav_content .s_nav_ul li .con_item .share_wrap a {
+  margin-left: 6px;
+}
+.header_container .nav_item .nav_content .s_nav_ul li .con_item p {
+  height: 70px;
+  padding-top: 10px;
+}
+.header_container .nav_item .nav_content .s_nav_ul li .con_item img {
+  width: 180px;
+  height: 120px;
+  float: left;
+  margin-right: 10px;
+}
+.header_container .nav_item .nav_content .s_nav_ul li .li_name {
+  position: relative;
+}
+.header_container .nav_item .nav_content .s_nav_ul li .li_name:after {
+  display: none;
+  content: "";
+  right: 0;
+  top: 7px;
+  position: absolute;
+  border: 14px solid transparent;
+  border-right-color: #fff;
+}
+.header_container .nav_item .nav_content .s_nav_ul li:hover .con_wrap {
+  z-index: 2;
+}
+.header_container .nav_item .nav_content .s_nav_ul li:hover .li_name {
+  color: #f60007;
+}
+.header_container .nav_item .nav_content .s_nav_ul li:hover .li_name:after {
+  display: block;
 }
 .header_container .nav_item:hover .nav_name {
   color: #fff;
+}
+.header_container .nav_item:hover .nav_name:after {
+  display: block;
 }
 .header_container .nav_item:hover .nav_content {
   display: block;
@@ -87,15 +175,42 @@ a:visited {
   *display: inline;
   *zoom: 1;
   height: 70px;
+  float: right;
+  position: relative;
 }
 .header_container .search_wrapper .search_input {
-  width: 420px;
-  background: #ffffff url("../img/search_icon2.png") no-repeat right center;
+  width: 380px;
+  background: #fff;
   border: none;
   height: 30px;
   padding: 0;
   margin: 0;
   outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 30px;
+  margin-top: 12px;
+}
+.header_container .search_wrapper .search_btn {
+  background: #ffffff url("../img/search_icon2.png") no-repeat;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+.header_container .search_wrapper p {
+  font-size: 12px;
+  color: #cccccc;
+  line-height: 24px;
+  text-indent: 10px;
+}
+.header_container .search_wrapper p a {
+  color: inherit;
 }
 .share_logo {
   font-size: 0;
@@ -108,6 +223,7 @@ a:visited {
   background: url("../img/new_icons.png") no-repeat;
   padding: 15px;
   background-position: 0 -50px;
+  vertical-align: middle;
 }
 .s_weibo:hover {
   background-position: -50px -50px;
@@ -117,6 +233,7 @@ a:visited {
   background: url("../img/new_icons.png") no-repeat;
   padding: 15px;
   background-position: 0 -100px;
+  vertical-align: middle;
 }
 .s_weixin:hover {
   background-position: -50px -100px;
@@ -126,6 +243,7 @@ a:visited {
   background: url("../img/new_icons.png") no-repeat;
   padding: 15px;
   background-position: 0 -150px;
+  vertical-align: middle;
 }
 .s_qzone:hover {
   background-position: -50px -150px;
