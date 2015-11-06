@@ -1,0 +1,29 @@
+@red:#f60007;
+.newIcon(){
+	background: url("../img/new_icons.png") no-repeat;
+}
+.i-block(){
+	display: inline-block;*display:inline;*zoom:1;
+}
+.border-r(@a){
+	border-radius: @a;
+	-webkit-border-radius: @a;
+}
+.auto(){
+	margin-left: auto;margin-right: auto;
+}
+.red(){
+	color: @red;
+}
+.bgred(){
+	background-color: @red;
+}
+.transition(@p){
+  transition: @p;
+  -moz-transition: @p; /* Firefox 4 */
+  -webkit-transition: @p; /* Safari 和 Chrome */
+  -o-transition: @p;
+}
+.opacity(@o){
+  filter:alpha(opacity=@o);opacity:@o / 100;
+}
