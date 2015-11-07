@@ -584,14 +584,23 @@ img {
   overflow: hidden;
   padding-left: 20px;
 }
+.main_tab_wrap .tab_wrap.saiche_bg {
+  background: url("../img/saiche_bg.png") no-repeat;
+}
+.main_tab_wrap .tab_wrap.saiche_bg .tab_item {
+  margin-right: 30px;
+}
 .main_tab_wrap .tab_wrap .tab_item {
   float: left;
   padding: 0 40px;
   line-height: 45px;
   margin-top: 5px;
   color: #fff;
+  background-color: #f60007;
+  cursor: pointer;
 }
-.main_tab_wrap .tab_wrap .tab_item.act {
+.main_tab_wrap .tab_wrap .tab_item.act,
+.main_tab_wrap .tab_wrap .tab_item:hover {
   color: #000;
   background: #fff;
 }
