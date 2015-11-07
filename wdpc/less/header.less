@@ -1,4 +1,5 @@
 @import "cssreset.less";
+@import "atom.less";
 .header_container{background: #f60007;height: 70px;min-width: 1440px;
 	.header_fixed_wrapper{position: fixed;background: #f60007;z-index: 10;left: 50%;top: 0;margin-left: -720px;}
 	.header_wrap{width: 1440px; margin-left: auto;margin-right: auto;height: 70px;}
@@ -97,8 +98,13 @@
 .s_renren{font-size:0;.newIcon();padding: 15px;background-position: 0 -250px;vertical-align: middle;
 	&:hover{background-position: -50px -250px;}
 }
-.reply_icon{font-size:0;.newIcon();padding: 7px;background-position: -50px 0px;vertical-align: middle;
+.reply_icon{font-size:0;.newIcon();padding: 8px 9px;background-position: -50px 0px;vertical-align: middle;
 }
 .gotop_icon{font-size:0;.newIcon();padding: 15px;background-position: -300px 0;vertical-align: middle;}
 .login_icon{font-size:0;.newIcon();padding: 12px 10px;background-position: -200px 0;vertical-align: middle;}
 .clear_f{clear: both;height: 0;*zoom:0;}
+.bread_crumb_wrapper{.auto;margin-top: 10px;margin-bottom: 10px;width: 1440px;
+	.bread_crumb_wrap{
+		font-size: 20px;line-height: 40px;border-left: 15px solid @red;background: #f2f3f7;padding-left: 15px;
+	}
+}

@@ -345,7 +345,7 @@ img {
 .reply_icon {
   font-size: 0;
   background: url("../img/new_icons.png") no-repeat;
-  padding: 7px;
+  padding: 8px 9px;
   background-position: -50px 0px;
   vertical-align: middle;
 }
@@ -367,6 +367,20 @@ img {
   clear: both;
   height: 0;
   *zoom: 0;
+}
+.bread_crumb_wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 1440px;
+}
+.bread_crumb_wrapper .bread_crumb_wrap {
+  font-size: 20px;
+  line-height: 40px;
+  border-left: 15px solid #f60007;
+  background: #f2f3f7;
+  padding-left: 15px;
 }
 .ad_wrapper {
   width: 1440px;
@@ -650,7 +664,10 @@ img {
   margin-right: 5px;
 }
 .main_tab_wrap .content_wrap_l .tab_con_item .share_wrap .reply_icon {
-  margin-right: 5px;
+  margin-right: 2px;
+}
+.main_tab_wrap .content_wrap_l .tab_con_item .share_wrap .date_wrap {
+  margin-right: 10px;
 }
 .main_tab_wrap .content_wrap_r {
   float: right;
