@@ -486,6 +486,12 @@ img {
   border: 33px solid transparent;
   border-right-color: #fff;
 }
+.banner_wrap.no_tools .img_list_wrap {
+  width: 800px;
+}
+.banner_wrap.no_tools .tle_list_wrap {
+  width: 640px;
+}
 .banner_wrap .love_car_tools_wrap {
   float: right;
   width: 208px;
@@ -677,7 +683,6 @@ img {
   background-color: #f60007;
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 638px;
   border: 1px solid #f60007;
 }
 .main_tab_wrap .content_wrap_r .con_r_wrap h4 {
@@ -738,6 +743,40 @@ img {
   height: 120px;
   width: 204px;
 }
+.main_tab_wrap .content_wrap_r .con_r_wrap .nav_list_wrap {
+  text-align: center;
+  font-size: 0;
+  background: #f2f3f7;
+  padding-bottom: 20px;
+}
+.main_tab_wrap .content_wrap_r .con_r_wrap .nav_list_wrap a {
+  color: #000;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 190px;
+  font-size: 36px;
+  height: 120px;
+  line-height: 120px;
+  margin-top: 20px;
+  background: #dadbe1;
+}
+.main_tab_wrap .content_wrap_r .con_r_wrap .nav_list_wrap .light {
+  background: #e5e6eb;
+}
+.main_tab_wrap .content_wrap_r .con_r_wrap .love_car_list a {
+  color: #000;
+  background: #f2f3f7;
+  height: 120px;
+  line-height: 120px;
+  font-size: 36px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #fff;
+  margin-top: -1px;
+  white-space: nowrap;
+}
 .main_tab_wrap .content_wrap_r .r_ad {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -771,6 +810,14 @@ img {
 .list_tab_wrap .tab_wrap .tab_item.act {
   color: #000;
   background: #fff;
+}
+.list_tab_wrap .tab_wrap .more_pic_link {
+  color: #fff;
+  font-size: 16px;
+  float: right;
+  height: 50px;
+  line-height: 50px;
+  margin-right: 20px;
 }
 .list_tab_wrap .con_wrap .con_item_list {
   display: none;
