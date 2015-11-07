@@ -41,3 +41,6 @@ a:active,
 a:visited {
   color: #000;
 }
+img {
+  border: none;
+}

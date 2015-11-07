@@ -1,9 +1,9 @@
 @import "cssreset.less";
 .header_container{background: #f60007;height: 70px;min-width: 1440px;
-	.header_fixed_wrapper{position: fixed;background: inherit;z-index: 10;left: 50%;top: 0;margin-left: -720px;}
+	.header_fixed_wrapper{position: fixed;background: #f60007;z-index: 10;left: 50%;top: 0;margin-left: -720px;}
 	.header_wrap{width: 1440px; margin-left: auto;margin-right: auto;height: 70px;}
 	.header_logo{vertical-align: middle;width: 245px;height: 55px;float: left;margin-top: 7px;margin-right: 20px;}
-	.nav_item{.i-block();height: 70px;text-align: center;padding: 0 30px;position: relative;
+	.nav_item{float: left;height: 70px;text-align: center;padding: 0 30px;position: relative;
 		.nav_name{font-size: 28px;font-weight: bolder;line-height: 70px;position: relative;display: block;
 			&:after{
 				display: none;
@@ -57,7 +57,7 @@
 		.search_input{width: 380px; background: #fff;border: none;height: 30px;padding: 0;margin: 0;outline: none;.border-r(5px);font-size: 18px;padding-left: 10px;padding-right: 30px;margin-top: 12px;}
 		.search_btn{background: #fff url("../img/search_icon2.png") no-repeat;position: absolute;width: 24px;height: 24px;border: none;cursor:pointer;position: absolute;right: 10px;top: 15px;}
 		p{font-size: 12px;color: #cccccc;line-height: 24px;text-indent: 10px;
-			a{color: inherit;}
+			a{color: #cccccc;}
 		}
 	}
 }
@@ -101,3 +101,4 @@
 }
 .gotop_icon{font-size:0;.newIcon();padding: 15px;background-position: -300px 0;vertical-align: middle;}
 .login_icon{font-size:0;.newIcon();padding: 12px 10px;background-position: -200px 0;vertical-align: middle;}
+.clear_f{clear: both;height: 0;*zoom:0;}
