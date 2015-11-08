@@ -41,9 +41,21 @@ a:active,
 a:visited {
   color: #000;
 }
+img {
+  border: none;
+}
 .header_container {
   background: #f60007;
   height: 70px;
+  min-width: 1440px;
+}
+.header_container .header_fixed_wrapper {
+  position: fixed;
+  background: #f60007;
+  z-index: 10;
+  left: 50%;
+  top: 0;
+  margin-left: -720px;
 }
 .header_container .header_wrap {
   width: 1440px;
@@ -60,9 +72,7 @@ a:visited {
   margin-right: 20px;
 }
 .header_container .nav_item {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
+  float: left;
   height: 70px;
   text-align: center;
   padding: 0 30px;
@@ -211,7 +221,70 @@ a:visited {
   text-indent: 10px;
 }
 .header_container .search_wrapper p a {
+  color: #cccccc;
+}
+.footer_container {
+  margin-top: 20px;
+  min-width: 1440px;
+  height: 110px;
+}
+.footer_container .footer_container {
+  background-color: #f60007;
+  color: #fff;
+  font-size: 16px;
+  line-height: 60px;
+  height: 60px;
+  text-align: center;
+  overflow: hidden;
+}
+.footer_container .footer_container .footer_wrap {
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer_container .footer_container .footer_wrap .gotop {
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.footer_container .footer_container .footer_wrap .gotop_icon {
+  margin-left: 10px;
+}
+.footer_container .aboutus_container {
+  background: #231f20;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.footer_container .aboutus_container .aboutus_wrap {
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer_container .aboutus_container .aboutus_wrap .goto_login {
+  float: right;
+  margin-right: 20px;
+}
+.footer_container .aboutus_container .aboutus_wrap .goto_login .login_icon {
+  margin-left: 10px;
+}
+.footer_container .aboutus_container a {
   color: inherit;
+}
+.footer_container .aboutus_container .a_link {
+  margin: 0 20px;
+}
+.footer_container a {
+  color: inherit;
+}
+.footer_container .fixed {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 10;
+  margin-left: -720px;
 }
 .share_logo {
   font-size: 0;
@@ -289,6 +362,11 @@ a:visited {
   padding: 12px 10px;
   background-position: -200px 0;
   vertical-align: middle;
+}
+.clear_f {
+  clear: both;
+  height: 0;
+  *zoom: 0;
 }
 .ad_wrapper {
   width: 1440px;
@@ -555,10 +633,18 @@ a:visited {
 }
 .main_tab_wrap .content_wrap_l .tab_con_item .share_wrap a {
   margin-left: 5px;
+  vertical-align: middle;
 }
 .main_tab_wrap .content_wrap_l .tab_con_item .share_wrap .right_f {
   float: right;
   vertical-align: middle;
+  line-height: 38px;
+}
+.main_tab_wrap .content_wrap_l .tab_con_item .share_wrap .left_f {
+  float: left;
+  vertical-align: middle;
+  height: 38px;
+  line-height: 38px;
 }
 .main_tab_wrap .content_wrap_l .tab_con_item .share_wrap .share_logo {
   margin-right: 5px;
@@ -625,6 +711,7 @@ a:visited {
   float: left;
   width: 180px;
   height: 120px;
+  border: none;
 }
 .main_tab_wrap .content_wrap_r .con_r_wrap .ul_wrap .item p {
   float: left;
@@ -632,7 +719,7 @@ a:visited {
   font-size: 36px;
   line-height: 120px;
   height: 120px;
-  width: 208px;
+  width: 204px;
 }
 .main_tab_wrap .content_wrap_r .r_ad {
   margin-top: 10px;
@@ -714,60 +801,4 @@ a:visited {
 }
 .list_tab_wrap .con_wrap .con_item_list.act {
   display: block;
-}
-.footer_container {
-  margin-top: 20px;
-}
-.footer_container .footer_container {
-  background-color: #f60007;
-  color: #fff;
-  font-size: 16px;
-  line-height: 60px;
-  height: 60px;
-  text-align: center;
-}
-.footer_container .footer_container .footer_wrap {
-  width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.footer_container .footer_container .footer_wrap .gotop {
-  float: right;
-  margin-right: 20px;
-}
-.footer_container .footer_container .footer_wrap .gotop_icon {
-  margin-left: 10px;
-}
-.footer_container .aboutus_container {
-  background: #231f20;
-  height: 50px;
-  line-height: 50px;
-  color: #fff;
-  text-align: center;
-}
-.footer_container .aboutus_container .aboutus_wrap {
-  width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.footer_container .aboutus_container .aboutus_wrap .goto_login {
-  float: right;
-  margin-right: 20px;
-}
-.footer_container .aboutus_container .aboutus_wrap .goto_login .login_icon {
-  margin-left: 10px;
-}
-.footer_container .aboutus_container a {
-  color: inherit;
-}
-.footer_container .aboutus_container .a_link {
-  margin: 0 20px;
-}
-.footer_container a {
-  color: inherit;
-}
-.footer_container .fixed {
-  position: fixed;
-  bottom: 0;
-  left: 0;
 }
