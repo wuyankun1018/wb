@@ -774,3 +774,11 @@ img {
   vertical-align: top;
   margin: 0 10px;
 }
+.paper_tab_wrap .content_wrap_r .erweima_wrap .erweima_item img {
+  width: 162px;
+  height: 162px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
