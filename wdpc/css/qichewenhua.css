@@ -486,11 +486,16 @@ img {
   border: 33px solid transparent;
   border-right-color: #fff;
 }
+.banner_wrap.no_tools {
+  height: 533px;
+}
 .banner_wrap.no_tools .img_list_wrap {
   width: 800px;
+  height: 533px;
 }
 .banner_wrap.no_tools .tle_list_wrap {
   width: 640px;
+  height: 533px;
 }
 .banner_wrap .love_car_tools_wrap {
   float: right;
