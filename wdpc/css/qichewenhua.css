@@ -381,6 +381,29 @@ img {
   background: #f2f3f7;
   padding-left: 15px;
 }
+.header_login_wrapper {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding-top: 12px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+}
+.header_login_wrapper .login_icon1 {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  font-size: 0;
+  background: #231f20 url("../img/new_icons.png") no-repeat center center;
+  background-position: -186px 10px;
+  vertical-align: middle;
+}
 .ad_wrapper {
   width: 1440px;
   height: 120px;
