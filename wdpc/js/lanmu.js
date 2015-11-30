@@ -71,4 +71,12 @@ $(function(){
 		$('.main_img').find('img').attr('src', $(this).attr('src'))
 		$('.main_img').find('.img_tle_wrap').text($(this).data('title'))
 	});
+
+	$('.remodel_header').on('mouseenter', '.nav_wrap .item', function(event) {
+		event.preventDefault();
+		if($(this).hasClass('act')) return;
+		$(this).addClass('act').siblings().removeClass('act')
+		var index = $(this).index()
+		$('.remodel_list_wrap').find('.remodel_list').removeClass('act').eq(index).addClass('act')
+	});
 })

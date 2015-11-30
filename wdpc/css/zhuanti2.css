@@ -603,7 +603,10 @@ img {
 .page_wrapper .btn_wrap {
   font-size: 0;
 }
-.page_wrapper .btn_wrap > a {
+.page_wrapper .btn_wrap .page_num_wrapper {
+  font-size: 20px;
+}
+.page_wrapper .btn_wrap a {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -613,7 +616,7 @@ img {
   font-size: 20px;
   line-height: 30px;
 }
-.page_wrapper .btn_wrap > a.act {
+.page_wrapper .btn_wrap a.act {
   border: none;
   font-weight: bolder;
 }
