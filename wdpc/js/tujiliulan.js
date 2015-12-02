@@ -34,7 +34,10 @@ $(function(){
 		$('.tuji_pop_win').find('.thumb_list').find('img').eq($(this).index()).trigger('click')
 	});
 
+	var isInit = false
 	function initPopWin(eles){
+		if(isInit) return;
+		isInit= true;
 		//初始化弹出窗口的数据
 		var $popImgList = $('.tuji_pop_win').find('.thumb_list').empty()
 		for (var i = 0; i < eles.length; i++) {
