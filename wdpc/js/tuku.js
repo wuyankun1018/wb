@@ -96,7 +96,7 @@ $(function(){
 		$tleItems.eq(nextIndex).trigger('click')
 	}, 5000)
 
-	$('.remodel_header').on('mouseenter', '.tuku_header_item', function(event) {
+	$('.remodel_header').on('mouseenter', '.item', function(event) {
 		event.preventDefault();
 		if($(this).hasClass('act')) return;
 		$(this).addClass('act').siblings().removeClass('act')
