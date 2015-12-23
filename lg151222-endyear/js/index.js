@@ -3,6 +3,19 @@ var WIN_HEIGHT = $(window).height() //页面高度
 	,REM_WIN_WIDTH = 7.5
 	,REM_WIN_HEIGHT = REM_WIN_WIDTH*WIN_HEIGHT/WIN_WIDTH
 
+//屏幕尺寸适配
+;(function(){
+	$('[data-oh]').each(function(index, ele){
+		var $this = $(ele)
+		var oh = parseFloat($this.data('oh'))
+		if(oh>REM_WIN_HEIGHT){
+			var scale = REM_WIN_HEIGHT/oh
+			var ty = (oh-REM_WIN_HEIGHT)/2
+			changeTransform($this,'scale('+scale+') translateY(-'+ty+'rem)')
+		}
+	})
+})();
+
 /* 层级控制器，需要先调用init方法 */
 var viewController = {
 	viewParent: $('.main_container')
@@ -35,23 +48,53 @@ var viewController = {
 			this.currentIndex=0;
 		this.reloadView('prev')
 	}
+	,aniTimes:[]
+	,delayDo:function(fn, time){
+		var aniTimes = this.aniTimes;
+		aniTimes.forEach(function(aid){
+			clearTimeout(aid)
+		})
+		var aid = setTimeout(function(){
+			fn && fn()
+			aniTimes.splice(aniTimes.indexOf(aid),1)
+		}, 1000)
+		aniTimes.push(aid)
+	}
 	,reloadView: function(forward){
 		forward = forward || 'next'
+		var _viewParent = this.viewParent
 		switch(this.currentIndex){
 			case 0:
-				// this.viewParent.find('.page1_wrapper').show()
-				var _viewParent = this.viewParent
-				changeTransform(_viewParent.find('.tranlate_wrapper'), 'translateY(0)')
-				setTimeout(function(){
+				this.delayDo(function(){
 					_viewParent.find('.tranlate_wrapper').find('[class^=p1_f1]').each(function(index,ele){
-						var ty =  parseFloat($(ele).data('rh'))+REM_WIN_HEIGHT
+						var ty =  parseFloat($(ele).data('rh'))+REM_WIN_HEIGHT*1.5
 						changeTransform($(ele), 'translateY(-'+ty+'rem)')
 					})
-				}, 300)
+				}, 1000)
+				
+				_viewParent.find('.tranlate_wrapper').find('[class^=p1_f2]').each(function(index,ele){
+					var ty =  0
+					changeTransform($(ele), 'translateY(-'+ty+'rem)')
+				})
 				break;
 			case 1:
-				// this.viewParent.find('.page1_wrapper').show()
-				changeTransform(this.viewParent.find('.tranlate_wrapper'), 'translateY(-100%)')
+				if(forward=='next'){
+					_viewParent.find('.tranlate_wrapper').find('[class^=p1_f1]').each(function(index,ele){
+						var ty =  3*REM_WIN_HEIGHT
+						changeTransform($(ele), 'translateY(-'+ty+'rem)')
+					})
+				} else {
+					_viewParent.find('.tranlate_wrapper').find('[class^=p1_f1]').each(function(index,ele){
+						var ty =  0
+						changeTransform($(ele), 'translateY(-'+ty+'rem)')
+					})
+				}
+				this.delayDo(function(){
+					_viewParent.find('.tranlate_wrapper').find('[class^=p1_f2]').each(function(index,ele){
+						var ty =  parseFloat($(ele).data('rh'))+REM_WIN_HEIGHT*1.5
+						changeTransform($(ele), 'translateY(-'+ty+'rem)')
+					})
+				},1000)
 				break;
 			default:
 				break;
@@ -73,9 +116,17 @@ document.addEventListener('touchmove', function (event) {
 
 
 //初始化层级控制
-viewController.init(0)
 $('.main_container').on('swipeUp', function(){
 	viewController.next()
 }).on('swipeDown', function(){
 	viewController.prev()
-})
+}).on('tap', '.p1f2_pag', function(event) {
+	event.preventDefault();
+	$(this).toggleClass('show');
+});
+
+window.onload = function(){
+	set
+	$('#loading').remove()
+	viewController.init(0)
+}

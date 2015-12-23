@@ -46,14 +46,21 @@ img {
 body {
   font-size: .24rem;
   overflow: hidden;
+  font-family: Arial;
 }
-.main_container {
+.main_container,
+#loading {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   overflow: hidden;
+}
+#loading {
+  z-index: 100;
+  background: #fff;
+  text-align: center;
 }
 .page1_wrapper {
   position: absolute;
@@ -65,36 +72,35 @@ body {
   background: #ad5d2d url("../image/bg1.png") no-repeat center center;
   background-size: 100%;
 }
-.tranlate_wrapper {
-  height: 100%;
-  width: 100%;
-  transition: all 0.6s;
-  -moz-transition: all 0.6s;
-  /* Firefox 4 */
-  -webkit-transition: all 0.6s;
-  /* Safari 和 Chrome */
-  -o-transition: all 0.6s;
-}
 .frame1_wrapper,
 .frame2_wrapper {
   width: 100%;
   height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.frame1_wrapper .p1_f1_txt,
-.frame1_wrapper .p1_f1_g1_1,
-.frame1_wrapper .p1_f1_g1_2,
-.frame1_wrapper .p1_f1_g1_3,
-.frame1_wrapper .p1_f1_g2_1,
-.frame1_wrapper .p1_f1_g2_2,
-.frame1_wrapper .p1_f1_g2_3,
-.frame1_wrapper .p1_f1_g3_1,
-.frame1_wrapper .p1_f1_g3_2,
-.frame1_wrapper .p1_f1_g3_3,
-.frame1_wrapper .p1_f1_g3_4 {
   position: absolute;
-  top: 100%;
+  top: 0;
+  left: 0;
+}
+.tranlate_wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.tranlate_wrapper .p1_f1_txt,
+.tranlate_wrapper .p1_f1_g1_1,
+.tranlate_wrapper .p1_f1_g1_2,
+.tranlate_wrapper .p1_f1_g1_3,
+.tranlate_wrapper .p1_f1_g2_1,
+.tranlate_wrapper .p1_f1_g2_2,
+.tranlate_wrapper .p1_f1_g2_3,
+.tranlate_wrapper .p1_f1_g3_1,
+.tranlate_wrapper .p1_f1_g3_2,
+.tranlate_wrapper .p1_f1_g3_3,
+.tranlate_wrapper .p1_f1_g3_4,
+.tranlate_wrapper .p1_f2_1,
+.tranlate_wrapper .p1_f2_2,
+.tranlate_wrapper .p1_f2_txt {
+  position: absolute;
+  top: 150%;
   transition: all 1s ease-in-out 1s;
   -moz-transition: all 1s ease-in-out 1s;
   /* Firefox 4 */
@@ -102,20 +108,20 @@ body {
   /* Safari 和 Chrome */
   -o-transition: all 1s ease-in-out 1s;
 }
-.frame1_wrapper .p1_f1_txt {
-  transition: all 1s ease-in-out 0.8s;
-  -moz-transition: all 1s ease-in-out 0.8s;
+.tranlate_wrapper .p1_f1_txt {
+  transition: all 1s ease-in-out 0.5s;
+  -moz-transition: all 1s ease-in-out 0.5s;
   /* Firefox 4 */
-  -webkit-transition: all 1s ease-in-out 0.8s;
+  -webkit-transition: all 1s ease-in-out 0.5s;
   /* Safari 和 Chrome */
-  -o-transition: all 1s ease-in-out 0.8s;
+  -o-transition: all 1s ease-in-out 0.5s;
   background: url("../image/p1_f1_txt.png") no-repeat center center;
   background-size: 100%;
   width: 3.87rem;
   height: 4.82rem;
   left: 1.8rem;
 }
-.frame1_wrapper .p1_f1_g1_1 {
+.tranlate_wrapper .p1_f1_g1_1 {
   transition: all 0.9s ease-in-out 0s;
   -moz-transition: all 0.9s ease-in-out 0s;
   /* Firefox 4 */
@@ -128,7 +134,7 @@ body {
   height: 4.72rem;
   left: -2.2rem;
 }
-.frame1_wrapper .p1_f1_g1_2 {
+.tranlate_wrapper .p1_f1_g1_2 {
   transition: all 1s ease-in-out 0s;
   -moz-transition: all 1s ease-in-out 0s;
   /* Firefox 4 */
@@ -141,7 +147,7 @@ body {
   height: 3.1rem;
   left: 2.17rem;
 }
-.frame1_wrapper .p1_f1_g1_3 {
+.tranlate_wrapper .p1_f1_g1_3 {
   transition: all 0.8s ease-in-out 0s;
   -moz-transition: all 0.8s ease-in-out 0s;
   /* Firefox 4 */
@@ -154,94 +160,194 @@ body {
   height: 4.03rem;
   left: 4.46rem;
 }
-.frame1_wrapper .p1_f1_g2_1 {
-  transition: all 0.9s ease-in-out 0.6s;
-  -moz-transition: all 0.9s ease-in-out 0.6s;
+.tranlate_wrapper .p1_f1_g2_1 {
+  transition: all 0.9s ease-in-out 0.3s;
+  -moz-transition: all 0.9s ease-in-out 0.3s;
   /* Firefox 4 */
-  -webkit-transition: all 0.9s ease-in-out 0.6s;
+  -webkit-transition: all 0.9s ease-in-out 0.3s;
   /* Safari 和 Chrome */
-  -o-transition: all 0.9s ease-in-out 0.6s;
+  -o-transition: all 0.9s ease-in-out 0.3s;
   background: url("../image/p1_f1_g2_1.png") no-repeat center center;
   background-size: 100%;
   width: 2.83rem;
   height: 2.77rem;
   left: -1.27rem;
 }
-.frame1_wrapper .p1_f1_g2_2 {
-  transition: all 1s ease-in-out 0.6s;
-  -moz-transition: all 1s ease-in-out 0.6s;
+.tranlate_wrapper .p1_f1_g2_2 {
+  transition: all 1s ease-in-out 0.3s;
+  -moz-transition: all 1s ease-in-out 0.3s;
   /* Firefox 4 */
-  -webkit-transition: all 1s ease-in-out 0.6s;
+  -webkit-transition: all 1s ease-in-out 0.3s;
   /* Safari 和 Chrome */
-  -o-transition: all 1s ease-in-out 0.6s;
+  -o-transition: all 1s ease-in-out 0.3s;
   background: url("../image/p1_f1_g2_2.png") no-repeat center center;
   background-size: 100%;
   width: 2.2rem;
   height: 1.96rem;
   left: 6.19rem;
 }
-.frame1_wrapper .p1_f1_g2_3 {
-  transition: all 0.8s ease-in-out 0.6s;
-  -moz-transition: all 0.8s ease-in-out 0.6s;
+.tranlate_wrapper .p1_f1_g2_3 {
+  transition: all 0.8s ease-in-out 0.3s;
+  -moz-transition: all 0.8s ease-in-out 0.3s;
   /* Firefox 4 */
-  -webkit-transition: all 0.8s ease-in-out 0.6s;
+  -webkit-transition: all 0.8s ease-in-out 0.3s;
   /* Safari 和 Chrome */
-  -o-transition: all 0.8s ease-in-out 0.6s;
+  -o-transition: all 0.8s ease-in-out 0.3s;
   background: url("../image/p1_f1_g2_3.png") no-repeat center center;
   background-size: 100%;
   width: 4.42rem;
   height: 4.48rem;
   left: 4.64rem;
 }
-.frame1_wrapper .p1_f1_g3_1 {
-  transition: all 0.9s ease-in-out 1.2s;
-  -moz-transition: all 0.9s ease-in-out 1.2s;
+.tranlate_wrapper .p1_f1_g3_1 {
+  transition: all 0.9s ease-in-out 0.8s;
+  -moz-transition: all 0.9s ease-in-out 0.8s;
   /* Firefox 4 */
-  -webkit-transition: all 0.9s ease-in-out 1.2s;
+  -webkit-transition: all 0.9s ease-in-out 0.8s;
   /* Safari 和 Chrome */
-  -o-transition: all 0.9s ease-in-out 1.2s;
+  -o-transition: all 0.9s ease-in-out 0.8s;
   background: url("../image/p1_f1_g3_1.png") no-repeat center center;
   background-size: 100%;
   width: 3.15rem;
   height: 4.57rem;
   left: -1.52rem;
 }
-.frame1_wrapper .p1_f1_g3_2 {
-  transition: all 1s ease-in-out 1.2s;
-  -moz-transition: all 1s ease-in-out 1.2s;
+.tranlate_wrapper .p1_f1_g3_2 {
+  transition: all 1s ease-in-out 0.8s;
+  -moz-transition: all 1s ease-in-out 0.8s;
   /* Firefox 4 */
-  -webkit-transition: all 1s ease-in-out 1.2s;
+  -webkit-transition: all 1s ease-in-out 0.8s;
   /* Safari 和 Chrome */
-  -o-transition: all 1s ease-in-out 1.2s;
+  -o-transition: all 1s ease-in-out 0.8s;
   background: url("../image/p1_f1_g3_2.png") no-repeat center center;
   background-size: 100%;
   width: 3.49rem;
   height: 3.23rem;
   left: 0.93rem;
 }
-.frame1_wrapper .p1_f1_g3_3 {
-  transition: all 0.8s ease-in-out 1.2s;
-  -moz-transition: all 0.8s ease-in-out 1.2s;
+.tranlate_wrapper .p1_f1_g3_3 {
+  transition: all 0.8s ease-in-out 0.8s;
+  -moz-transition: all 0.8s ease-in-out 0.8s;
   /* Firefox 4 */
-  -webkit-transition: all 0.8s ease-in-out 1.2s;
+  -webkit-transition: all 0.8s ease-in-out 0.8s;
   /* Safari 和 Chrome */
-  -o-transition: all 0.8s ease-in-out 1.2s;
+  -o-transition: all 0.8s ease-in-out 0.8s;
   background: url("../image/p1_f1_g3_3.png") no-repeat center center;
   background-size: 100%;
   width: 2.25rem;
   height: 5.37rem;
   left: 3.9rem;
 }
-.frame1_wrapper .p1_f1_g3_4 {
-  transition: all 1.1s ease-in-out 1.2s;
-  -moz-transition: all 1.1s ease-in-out 1.2s;
+.tranlate_wrapper .p1_f1_g3_4 {
+  transition: all 1.1s ease-in-out 0.8s;
+  -moz-transition: all 1.1s ease-in-out 0.8s;
   /* Firefox 4 */
-  -webkit-transition: all 1.1s ease-in-out 1.2s;
+  -webkit-transition: all 1.1s ease-in-out 0.8s;
   /* Safari 和 Chrome */
-  -o-transition: all 1.1s ease-in-out 1.2s;
+  -o-transition: all 1.1s ease-in-out 0.8s;
   background: url("../image/p1_f1_g3_4.png") no-repeat center center;
   background-size: 100%;
   width: 3.75rem;
   height: 3.52rem;
   left: 5.25rem;
+}
+.tranlate_wrapper .p1_f2_1 {
+  transition: all 0.6s ease-in-out 0s;
+  -moz-transition: all 0.6s ease-in-out 0s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.6s ease-in-out 0s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.6s ease-in-out 0s;
+  background: url("../image/p1_f2_1.png") no-repeat center center;
+  background-size: 100%;
+  width: 7.3rem;
+  height: 8.52rem;
+  left: .2rem;
+}
+.tranlate_wrapper .p1_f2_2 {
+  transition: all 0.6s ease-in-out 0.4s;
+  -moz-transition: all 0.6s ease-in-out 0.4s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.6s ease-in-out 0.4s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.6s ease-in-out 0.4s;
+  background: url("../image/p1_f2_2.png") no-repeat center center;
+  background-size: 100%;
+  width: 6.8rem;
+  height: 9.19rem;
+  left: .47rem;
+}
+.tranlate_wrapper .p1_f2_txt {
+  transition: all 0.6s ease-in-out 0.8s;
+  -moz-transition: all 0.6s ease-in-out 0.8s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.6s ease-in-out 0.8s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.6s ease-in-out 0.8s;
+  background: url("../image/p1_f2_txt.png") no-repeat center center;
+  background-size: 100%;
+  width: 4.84rem;
+  height: 3.89rem;
+  left: 1.56rem;
+}
+.tranlate_wrapper .p1f2_top {
+  position: absolute;
+  background: url("../image/p1f2_top.png") no-repeat center center;
+  background-size: 100%;
+  top: 0;
+  left: 0;
+  height: 8.8rem;
+  width: 100%;
+  z-index: 2;
+}
+.tranlate_wrapper .p1f2_pag {
+  position: absolute;
+  background: url("../image/p1f2_pag.png") no-repeat center center;
+  background-size: 100%;
+  left: 0.57rem;
+  top: 3.46rem;
+  width: 6.01rem;
+  height: 6.25rem;
+  z-index: 1;
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.6s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.6s;
+  color: #206c52;
+  font-size: .28rem;
+}
+.tranlate_wrapper .p1f2_pag.show {
+  transform: translateY(38%);
+  -ms-transform: translateY(38%);
+  /* IE 9 */
+  -moz-transform: translateY(38%);
+  /* Firefox */
+  -webkit-transform: translateY(38%);
+  /* Safari 和 Chrome */
+  -o-transform: translateY(38%);
+  /* Opera */
+}
+.tranlate_wrapper .p1f2_pag .head_wrapper {
+  position: absolute;
+  width: 1.58rem;
+  height: 1.58rem;
+  left: 0.87rem;
+  top: 2.94rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  overflow: hidden;
+}
+.tranlate_wrapper .p1f2_pag .head_img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tranlate_wrapper .p1f2_pag .desc {
+  position: absolute;
+  left: 2.71rem;
+  top: 4.29rem;
 }
