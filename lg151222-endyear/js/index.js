@@ -26,24 +26,28 @@ var viewController = {
 		var length = this.length
 		if(this.currentIndex>length-1) 
 			this.currentIndex=length-1;
-		this.reloadView()
+		this.reloadView('next')
 	}
 	,prev: function(){
 		//回到上一层
 		this.currentIndex--
 		if(this.currentIndex<0) 
 			this.currentIndex=0;
-		this.reloadView()
+		this.reloadView('prev')
 	}
-	,reloadView: function(){
+	,reloadView: function(forward){
+		forward = forward || 'next'
 		switch(this.currentIndex){
 			case 0:
 				// this.viewParent.find('.page1_wrapper').show()
-				this.viewParent.find('.tranlate_wrapper').find('[class^=p1]').each(function(index,ele){
-					var ty =  parseFloat($(ele).data('rh'))+REM_WIN_HEIGHT
-					changeTransform($(ele), 'translateY(-'+ty+'rem)')
-				})
-				changeTransform(this.viewParent.find('.tranlate_wrapper'), 'translateY(0)')
+				var _viewParent = this.viewParent
+				changeTransform(_viewParent.find('.tranlate_wrapper'), 'translateY(0)')
+				setTimeout(function(){
+					_viewParent.find('.tranlate_wrapper').find('[class^=p1_f1]').each(function(index,ele){
+						var ty =  parseFloat($(ele).data('rh'))+REM_WIN_HEIGHT
+						changeTransform($(ele), 'translateY(-'+ty+'rem)')
+					})
+				}, 300)
 				break;
 			case 1:
 				// this.viewParent.find('.page1_wrapper').show()
