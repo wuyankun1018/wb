@@ -126,7 +126,6 @@ $('.main_container').on('swipeUp', function(){
 });
 
 window.onload = function(){
-	set
 	$('#loading').remove()
 	viewController.init(0)
 }
