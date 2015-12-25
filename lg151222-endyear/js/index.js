@@ -2,16 +2,39 @@ var WIN_HEIGHT = $(window).height() //页面高度
 	,WIN_WIDTH = $(window).width() //页面宽度
 	,REM_WIN_WIDTH = 7.5
 	,REM_WIN_HEIGHT = REM_WIN_WIDTH*WIN_HEIGHT/WIN_WIDTH
+	,WIN_OH = REM_WIN_HEIGHT>12?REM_WIN_HEIGHT:12
+function transToRem(pxlen){
+	return REM_WIN_WIDTH*pxlen/WIN_WIDTH+0.01
+}
 
 //屏幕尺寸适配
 ;(function(){
+	$('[data-rt]').each(function(index, ele){
+		var $this = $(ele)
+		$this.data('oheight',$(this).height())
+	})
 	$('[data-oh]').each(function(index, ele){
 		var $this = $(ele)
 		var oh = parseFloat($this.data('oh'))
 		if(oh>REM_WIN_HEIGHT){
 			var scale = REM_WIN_HEIGHT/oh
-			var ty = (oh-REM_WIN_HEIGHT)/2
-			changeTransform($this,'scale('+scale+') translateY(-'+ty+'rem)')
+			var trueH = $this.height()
+			var trueW = $this.width()
+			var ty = transToRem((trueH-WIN_HEIGHT)/2)
+			var tx = transToRem(trueW*(1-scale)/2)
+			changeTransform($this,'translateY(-'+ty+'rem) scale('+scale+')')
+			$(this).data('scale', scale)
+			$this.find('[data-align]').each(function(i, el){
+				var $el = $(el)
+					,align = $el.data('align')
+				align.split(' ').forEach(function(al){
+					if(al=='left'){
+						$el.css({
+							'margin-left':-tx+'rem'
+						})
+					}
+				})
+			})
 		}
 	})
 })();
@@ -48,56 +71,44 @@ var viewController = {
 			this.currentIndex=0;
 		this.reloadView('prev')
 	}
-	,aniTimes:[]
-	,delayDo:function(fn, time){
-		var aniTimes = this.aniTimes;
-		aniTimes.forEach(function(aid){
-			clearTimeout(aid)
-		})
-		var aid = setTimeout(function(){
-			fn && fn()
-			aniTimes.splice(aniTimes.indexOf(aid),1)
-		}, 1000)
-		aniTimes.push(aid)
-	}
 	,reloadView: function(forward){
 		forward = forward || 'next'
 		var _viewParent = this.viewParent
 		switch(this.currentIndex){
 			case 0:
-				this.delayDo(function(){
-					_viewParent.find('.tranlate_wrapper').find('[class^=p1_f1]').each(function(index,ele){
-						var ty =  parseFloat($(ele).data('rh'))+REM_WIN_HEIGHT*1.5
-						changeTransform($(ele), 'translateY(-'+ty+'rem)')
-					})
-				}, 1000)
-				
-				_viewParent.find('.tranlate_wrapper').find('[class^=p1_f2]').each(function(index,ele){
-					var ty =  0
-					changeTransform($(ele), 'translateY(-'+ty+'rem)')
-				})
+				hideAll()
+				show(_viewParent.find('[class^=p1_f1]'))
 				break;
 			case 1:
-				if(forward=='next'){
-					_viewParent.find('.tranlate_wrapper').find('[class^=p1_f1]').each(function(index,ele){
-						var ty =  3*REM_WIN_HEIGHT
-						changeTransform($(ele), 'translateY(-'+ty+'rem)')
-					})
-				} else {
-					_viewParent.find('.tranlate_wrapper').find('[class^=p1_f1]').each(function(index,ele){
-						var ty =  0
-						changeTransform($(ele), 'translateY(-'+ty+'rem)')
-					})
-				}
-				this.delayDo(function(){
-					_viewParent.find('.tranlate_wrapper').find('[class^=p1_f2]').each(function(index,ele){
-						var ty =  parseFloat($(ele).data('rh'))+REM_WIN_HEIGHT*1.5
-						changeTransform($(ele), 'translateY(-'+ty+'rem)')
-					})
-				},1000)
+				hideAll()
+				show(_viewParent.find('[class^=p1_f2]'))
+				break;
+			case 2:
+				hideAll()
+				show(_viewParent.find('[class^=p1_f3]'))
+				break;
+			case 3:
+				hideAll()
+				show(_viewParent.find('[class^=p1_f4]'))
 				break;
 			default:
 				break;
+		}
+		function hideAll(){
+			_viewParent.find('[class^=p1_]').each(function(index, ele){
+				var $item = $(ele)
+				var oheight = $item.data('oheight') || 800
+				var ty =  WIN_OH+transToRem(oheight)
+				changeTransform($item, 'translateY(-'+ty+'rem)')
+			})
+		}
+		function show($items){
+			$items.each(function(index,ele){
+				var $this = $(ele)
+				var rt = $this.data('rt') || 0
+				var ty =  parseFloat(rt)+WIN_OH
+				changeTransform($this, 'translateY(-'+ty+'rem)')
+			})
 		}
 	}
 }
@@ -122,7 +133,7 @@ $('.main_container').on('swipeUp', function(){
 	viewController.prev()
 }).on('tap', '.p1f2_pag', function(event) {
 	event.preventDefault();
-	$(this).toggleClass('show');
+	$(this).addClass('show');
 });
 
 window.onload = function(){
