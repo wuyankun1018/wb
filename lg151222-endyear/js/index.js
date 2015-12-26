@@ -15,6 +15,23 @@ window.requestAnimFrame = (function(){
           };
 })();
 
+if(window.DeviceMotionEvent) { 
+	;(function(){ 
+	    var speed = 25;  
+	    var x = y = z = lastX = lastY = lastZ = 0;
+	    window.addEventListener('devicemotion', function(){  
+	        var acceleration =event.accelerationIncludingGravity;  
+	        x = acceleration.x;  
+	        y = acceleration.y;  
+	        if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {  
+	        	$(window).trigger('shake')
+	        }  
+	        lastX = x;  
+	        lastY = y;  
+	    }, false); 
+	})()
+}
+
 //屏幕尺寸适配
 ;(function(){
 	$('[data-rt]').each(function(index, ele){
@@ -89,6 +106,13 @@ var viewController = {
 			hideDtds.push(fadeIn($('.after_3_bg'),0,0,0.6,0))
 		} else if(this.currentIndex<2){
 			$('.after_3_bg').css('opacity',0)
+		}
+
+		//第九页下载处理
+		if(this.currentIndex===8){
+			$('.p1_f9_download').show()
+		} else {
+			$('.p1_f9_download').hide()
 		}
 
 		//时钟处理
@@ -243,10 +267,10 @@ function moveUp(ele, sY, tY, sTime, delay){
         if ((t /= d / 2) < 1) return c / 2 * t * t + b;
         return - c / 2 * ((--t) * (t - 2) - 1) + b;
     }
-    // setTimeout(_move, delay*1000)
+    setTimeout(_move, delay*1000)
     //fortest
-    doneFrameCount = frames
-    _move()
+    // doneFrameCount = frames
+    // _move()
     return dtd.promise();
 }
 
@@ -274,13 +298,13 @@ function fadeIn(ele, sY, tY, sTime, delay, opts){
  		}
 		doneFrameCount++
  	}
- 	// setTimeout(_show, delay*1000)
+ 	setTimeout(_show, delay*1000)
  	
  	//fortest
- 	ele.css({
- 		'opacity':1
- 	})
- 	dtd.resolve(_this)
+ 	// ele.css({
+ 	// 	'opacity':1
+ 	// })
+ 	// dtd.resolve(_this)
 
  	return dtd
 }
@@ -308,9 +332,14 @@ function initEvents(){
 	}).on('tap', '.p1f2_pag', function(event) {
 		event.preventDefault();
 		$(this).addClass('show');
+		$('.p1_f2_tip').remove()
 	}).on('tap', '.next_btn', function(event) {
 		event.preventDefault();
 		viewController.next()
+	}).on('tap', '.p1_f9_sharebtn', function(event) {
+		event.preventDefault();
+		//分享引导层
+		$('#share_masker').show()
 	});
 }
 initEvents()
@@ -320,6 +349,43 @@ function disableEvents(){
 }
 
 window.onload = function(){
+	endLoading()
+}
+
+//加载资源
+var loadingOver = false
+function beginLoading(cb){
+	var currPer = 0
+	var loadingId = setInterval(function(){
+		if(loadingOver){
+			clearInterval(loadingId)
+			currPer=100;
+			setTimeout(function(){
+				cb && cb()
+			},300)
+		}
+		if(currPer<99) currPer++;
+		$('#loading').find('.process').html(currPer+'%')
+	}, 70)
+}
+function endLoading(cb){
+	loadingOver = true
+}
+beginLoading(function(){
 	$('#loading').remove()
 	viewController.init(0)
-}
+})
+
+$('.p1_f9_download').on('tap', function(event) {
+	//下载app
+	location.href = $(this).data('href')
+}).on('click', '.close_btn', function(event) {
+	event.preventDefault();
+	$('.p1_f9_download').remove()
+	return false;
+});
+
+$('#share_masker').on('tap', function(event) {
+	event.preventDefault();
+	$(this).hide()
+});
