@@ -326,7 +326,7 @@ function fadeIn(ele, sY, tY, sTime, delay, opts){
 }
 
 function getCurrTy(ele){
-	var transform = ele.css('transform')
+	var transform = ele.css('transform') || ele.css('-webkit-transform')
 	if(!transform || transform.indexOf('translateY')==-1) return 0;
 	return parseFloat(transform.split('translateY(')[1])
 }
@@ -396,10 +396,11 @@ beginLoading(function(){
 function initShake(){
 	$(window).one('shake', function(event) {
 		event.preventDefault();
-		$('#shake_tip').show()
+		$('#shake_masker').show()
 		disableEvents()
 		setTimeout(function(){
 			window.setRandomWantText()
+			$('#shake_masker').hide()
 			initShake()
 			initEvents()
 		}, 1000)
@@ -463,6 +464,32 @@ $('#share_masker').on('tap', function(event) {
 	_change()
 })();
 
+//f2 pag
+;(function(){
+	var $pag = $('.pag_foot')
+	var $divs = $pag.children()
+	var len = $divs.length
+	var curr = 0
+	function _change(){
+		$divs.eq(curr).show().siblings().hide()
+		curr++
+		if(curr>=len-1) curr =0;
+		setTimeout(_change, curr===len-1?300:100)
+	}
+	_change()
+})()
+
+//audio
+$('#audio_wrapper').on('tap', function(event) {
+	$(this).toggleClass('playing');
+	var $audio = $('#bg_audio')[0]
+	if(!$(this).hasClass('playing')){
+		$audio.pause()
+	} else {
+		$audio.play()
+	}
+});
+
 window.setRandomWantText = function(){
 	var txt = ''
 	if(window.defaultTexts){
@@ -475,4 +502,10 @@ window.setRandomWantText = function(){
 window.initUser = function(name, head_url){
 	name = name || 'sky'
 	head_url = head_url || ''
+	$('.nickname').html(name)
+	$('.head_img').attr('src', head_url)
 }
+window.getWantText =function(){
+	return $('#want_input').val()
+}
+initUser()
