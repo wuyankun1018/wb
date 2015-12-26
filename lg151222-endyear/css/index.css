@@ -74,7 +74,8 @@ body {
 }
 .main_container,
 #loading,
-#share_masker {
+#share_masker,
+#shake_masker {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -112,8 +113,14 @@ body {
   width: 100%;
   left: 0;
 }
-#share_masker {
+#shake_masker {
+  display: none;
   z-index: 99;
+  background: rgba(0, 0, 0, 0.8) url("../image/shake_tip.png") no-repeat center center;
+  background-size: 4rem;
+}
+#share_masker {
+  z-index: 98;
   background: rgba(0, 0, 0, 0.8) url("../image/share_tip.png") no-repeat right top;
   background-size: 3.4rem;
   display: none;
@@ -318,6 +325,19 @@ body {
   opacity: 0;
   position: absolute;
 }
+.next_tip {
+  display: none;
+  position: absolute;
+  background: url("../image/next_tip.png") no-repeat center center;
+  background-size: 100%;
+  width: .74rem;
+  height: .47rem;
+  bottom: .2rem;
+  left: 50%;
+  margin-left: -0.37rem;
+  animation: lightSw 1s linear 0s infinite alternate none;
+  -webkit-animation: lightSw 1s linear 0s infinite alternate none;
+}
 .tranlate_wrapper {
   height: 100%;
   width: 100%;
@@ -328,11 +348,23 @@ body {
   height: 100%;
 }
 .tranlate_wrapper .p1_f1_txt {
-  background: url("../image/p1_f1_txt.png") no-repeat center center;
-  background-size: 100%;
-  width: 3.87rem;
+  width: 3.88rem;
   height: 4.82rem;
   left: 1.8rem;
+}
+.tranlate_wrapper .p1_f1_txt .txt1 {
+  position: absolute;
+  background: url("../image/p1_f1_txt1.png") no-repeat center center;
+  background-size: 100%;
+  top: 0;
+  left: 0;
+}
+.tranlate_wrapper .p1_f1_txt .txt2 {
+  position: absolute;
+  background: url("../image/p1_f1_txt2.png") no-repeat center center;
+  background-size: 100%;
+  top: 0;
+  left: 0;
 }
 .tranlate_wrapper .p1_f1_g1_1 {
   background: url("../image/p1_f1_g1_1.png") no-repeat center center;
@@ -423,11 +455,23 @@ body {
   left: .47rem;
 }
 .tranlate_wrapper .p1_f2_txt {
-  background: url("../image/p1_f2_txt.png") no-repeat center center;
+  width: 4.68rem;
+  height: 4.6rem;
+  left: 1.76rem;
+}
+.tranlate_wrapper .p1_f2_txt .txt1 {
+  position: absolute;
+  background: url("../image/p1_f2_txt1.png") no-repeat center center;
   background-size: 100%;
-  width: 4.84rem;
-  height: 3.89rem;
-  left: 1.56rem;
+  top: 0;
+  left: 0;
+}
+.tranlate_wrapper .p1_f2_txt .txt2 {
+  position: absolute;
+  background: url("../image/p1_f2_txt2.png") no-repeat center center;
+  background-size: 100%;
+  top: 0;
+  left: 0;
 }
 .tranlate_wrapper .p1f2_top {
   position: absolute;
@@ -559,7 +603,7 @@ body {
   left: 4.8rem;
 }
 .tranlate_wrapper .p1_f3_lbg {
-  width: 5.25rem;
+  width: 5.4rem;
   height: 100%;
   background: url("../image/p1_f3_readbg.png") no-repeat center bottom;
   background-size: 100%;
@@ -572,7 +616,7 @@ body {
   position: absolute;
   width: .81rem;
   height: 1.71rem;
-  left: .07rem;
+  left: .12rem;
   bottom: 6.04rem;
   animation: swingSheep 1s linear 0s infinite alternate none;
   -webkit-animation: swingSheep 1s linear 0s infinite alternate none;
@@ -592,8 +636,8 @@ body {
   background: url("../image/p1f3_sheep.png") no-repeat center center;
   background-size: 100%;
   position: absolute;
-  width: 5.32rem;
-  height: 5.73rem;
+  width: 5.36rem;
+  height: 5.33rem;
   left: .07rem;
   bottom: -0.95rem;
   animation: swingSheep 2s linear 0s infinite alternate none;
@@ -688,8 +732,6 @@ body {
   height: 2.89rem;
   left: 1.31rem;
   bottom: 0.8rem;
-  animation: shake 2s linear 0s infinite alternate none;
-  -webkit-animation: shake 2s linear 0s infinite alternate none;
 }
 .tranlate_wrapper .p1_f4_tle {
   width: 2.38rem;

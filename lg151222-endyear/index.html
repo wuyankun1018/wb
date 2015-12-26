@@ -15,6 +15,7 @@
 		<p class="process">0%</p>
 	</div>
 	<div id="share_masker"></div>
+	<div id="shake_masker"></div>
 	<div class="main_container">
 		<div class="page1_wrapper">
 			<div class="tranlate_wrapper">
@@ -29,12 +30,15 @@
 						<div class="p1_f1_g3_1 p1_item" data-rt="-8.08" data-time="1.6" data-delay="1">
 							<div class="swing_s"></div>
 						</div>
-						<div class="p1_f1_g3_2 p1_item" data-rt="-9.15" data-time="1.6" data-delay="2"><div></div></div>
-						<div class="p1_f1_g3_3 p1_item" data-rt="-8.72" data-time="1.6" data-delay="2">
+						<div class="p1_f1_g3_2 p1_item" data-rt="-9.15" data-time="1.6" data-delay="1.3"><div></div></div>
+						<div class="p1_f1_g3_3 p1_item" data-rt="-8.72" data-time="1.6" data-delay="1.3">
 							<div class="swing_s"></div>
 						</div>
-						<div class="p1_f1_g3_4 p1_item" data-rt="-8.30" data-time="1.6" data-delay="2"><div></div></div>
-						<div class="p1_f1_txt p1_item" data-rt="-3.48" data-time="1.6" data-delay="1.5" data-type="fadein"><div></div></div>
+						<div class="p1_f1_g3_4 p1_item" data-rt="-8.30" data-time="1.6" data-delay="1.3"><div></div></div>
+						<div class="p1_f1_txt p1_item" data-rt="-3.48" data-time="1.6" data-delay="3" data-type="fadein">
+							<div class="txt1"></div>
+							<div class="txt2"></div>
+						</div>
 					</div>
 				</div>
 				<div class="frame_wrapper" style="z-index:9;">
@@ -55,7 +59,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="p1_f2_txt p1_item" data-rt="-3.2" data-time="1" data-delay="2.4" data-type="fadein"><div></div></div>
+						<div class="p1_f2_txt p1_item" data-rt="-2.8" data-time="1" data-delay="2.4" data-type="fadein">
+							<div class="txt1"></div>
+							<div class="txt2"></div>
+						</div>
 						<div class="p1_f2_tip p1_item" data-rt="-8.3" data-time="0.8" data-delay="3.4" data-type="fadein"><div></div></div>
 					</div>
 				</div>
@@ -96,7 +103,7 @@
 									<div class="p1f4_meat3 shake_up"></div>
 									<div class="p1f4_meat2"></div>
 									<div class="p1f4_meat1 shake_down"></div>
-									<div class="p1f4_spoon"></div>
+									<div class="p1f4_spoon swing_s"></div>
 								</div>
 							</div>
 						</div>
@@ -221,7 +228,7 @@
 						<div class="p1_f9_tle p1_item" data-rt="-3.1" data-time="0.8" data-delay="0.8" data-type="fadein"><div></div></div>
 						<div class="p1_f9_want p1_item" data-rt="-6.1" data-time="0.8" data-delay="1.6" data-type="fadein">
 							<div>
-								<input type="text" class="want_input">
+								<input type="text" class="want_input" id="want_input">
 							</div>
 						</div>
 						<div class="p1_f9_sharebtn p1_item" data-rt="-8.6" data-time="0.8" data-delay="1.6" data-type="fadein"><div></div></div>
@@ -236,6 +243,7 @@
 				</div>
 			</div>
 			<div class="after_3_bg" style="z-index:1;"></div>
+			<div class="next_tip" style="z-index:50;"></div>	
 			<div class="clock_wrapper">
 				<div class="clock">
 					<div class="shizhen"></div>
@@ -250,6 +258,61 @@
 		</div>
 	</div>
 	<script src="./js/zepto.min.js"></script>
+	<script>
+		window.defaultTexts = [
+			'去减肥'
+			,'去找个女朋友'
+			,'去找个男朋友'
+			,'多陪陪父母'
+			,'看一部喜欢的书'
+			,'去一趟拉萨'
+			,'去一趟海边'
+			,'去青海湖'
+			,'拍星空'
+			,'去一次长白山'
+			,'下厨学一道麻小'
+			,'看一部喜欢的美剧'
+			,'去一次大草原'
+			,'跑一次马拉松'
+			,'听一次许巍的演唱会'
+			,'去山上露营一回'
+			,'重回大学母校看看'
+			,'学会游泳'
+			,'去日本看一次樱花'
+			,'会一门乐器'
+			,'去一次迪士尼，重温童年'
+			,'买一台单反，学学拍照'
+			,'减5斤肉肉'
+			,'说走就走，去一座陌生的城市'
+			,'学习手语'
+			,'学习意大利语'
+			,'到乡间静休几天'
+			,'去玩一回蹦极'
+			,'去天安门看一次升旗'
+			,'亲手做一件手工品'
+			,'学会一道料理'
+			,'学会做几件拿手菜'
+			,'做一回沙发客'
+			,'去青旅住上几日'
+			,'为自己中一棵树'
+			,'摆一次地摊'
+			,'尝尽各种美食'
+			,'拍一套美美的写真'
+			,'到福利院做一回义工'
+			,'到内蒙古骑一次马'
+			,'去钓一次鱼'
+			,'去一趟成都，尽情地吃'
+			,'去爬一回华山'
+			,'去登顶泰山'
+			,'陪父母去旅行一次'
+			,'做一回糕点烘焙'
+			,'写一次回忆录'
+			,'去一趟厦门'
+			,'给自己放3天假'
+			,'去漠河感受一回'
+			,'去张家界天门山走一圈'
+		];
+	</script>
 	<script src="./js/index.js"></script>
 </body>
 </html>

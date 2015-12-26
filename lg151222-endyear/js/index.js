@@ -101,6 +101,9 @@ var viewController = {
 		var _viewParent = this.viewParent
 		var hideDtds = hideAll()
 
+		//翻页提示
+		$('.next_tip').hide()
+
 		//后几页的背景处理
 		if(this.currentIndex==2){
 			hideDtds.push(fadeIn($('.after_3_bg'),0,0,0.6,0))
@@ -117,8 +120,11 @@ var viewController = {
 
 		//时钟处理
 		if(this.currentIndex==1 || this.currentIndex==6){
-			$('.clock_wrapper').removeClass('show33 show45 show70 show99')
+			$('.clock_wrapper').hide().css('opacity',0).removeClass('show33 show45 show70 show99')
 		}
+
+		//摇一摇初始化
+		disShake()
 
 		disableEvents()
 		$.when.apply(this, hideDtds).done(function(){
@@ -139,48 +145,58 @@ var viewController = {
 			var commonDtds = $.when.apply(this, dtds).done(function(){
 				initEvents()
 				$('.clock_wrapper').removeClass('show33 show45 show70 show99')
-			})
+				switch(this.currentIndex){
+					case 0:
+						break;
+					case 1:
+						break;
+					case 2:
+						commonDtds.done(function(){
+							$('.clock_wrapper').addClass('show33')
+						})
+						break;
+					case 3:
+						commonDtds.done(function(){
+							$('.clock_wrapper').addClass('show45')
+						})
+						break;
+					case 4:
+						commonDtds.done(function(){
+							$('.clock_wrapper').addClass('show70')
+						})
+						break;
+					case 5:
+						commonDtds.done(function(){
+							$('.clock_wrapper').addClass('show99')
+						})
+						break;
+					case 6:
+						break;
+					case 7:
+						break;
+					case 8:
+						initShake()
+						break;
+					default:
+						break;
+				}
+				if(this.currentIndex<this.length-1){
+					$('.next_tip').show()
+				}
+			}.bind(this))
 			switch(this.currentIndex){
-				case 0:
-					break;
-				case 1:
-					break;
 				case 2:
-					commonDtds.done(function(){
-						$('.clock_wrapper').addClass('show33')
-					})
-					// show(_viewParent.find('[class^=p1_f3]'))
-					break;
 				case 3:
-					commonDtds.done(function(){
-						$('.clock_wrapper').addClass('show45')
-					})
-					// show(_viewParent.find('[class^=p1_f4]'))
-					break;
 				case 4:
-					commonDtds.done(function(){
-						$('.clock_wrapper').addClass('show70')
-					})
-					// show(_viewParent.find('[class^=p1_f5]'))
-					break;
 				case 5:
-					commonDtds.done(function(){
-						$('.clock_wrapper').addClass('show99')
-					})
-					// show(_viewParent.find('[class^=p1_f6]'))
-					break;
-				case 6:
-					// show(_viewParent.find('[class^=p1_f7]'))
-					break;
-				case 7:
-					// show(_viewParent.find('[class^=p1_f8]'))
-					break;
-				case 8:
-					// show(_viewParent.find('[class^=p1_f9]'))
+					$('.clock_wrapper').css('opacity',1).show()
 					break;
 				default:
 					break;
 			}
+
+			
+			
 		}.bind(this))
 		
 		function hideAll(){
@@ -376,6 +392,23 @@ beginLoading(function(){
 	viewController.init(0)
 })
 
+//最后一页摇一摇动作
+function initShake(){
+	$(window).one('shake', function(event) {
+		event.preventDefault();
+		$('#shake_tip').show()
+		disableEvents()
+		setTimeout(function(){
+			window.setRandomWantText()
+			initShake()
+			initEvents()
+		}, 1000)
+	});
+}
+function disShake(){
+	$(window).off('shake')
+}
+
 $('.p1_f9_download').on('tap', function(event) {
 	//下载app
 	location.href = $(this).data('href')
@@ -389,3 +422,57 @@ $('#share_masker').on('tap', function(event) {
 	event.preventDefault();
 	$(this).hide()
 });
+
+//f1 txt change
+;(function(){
+	var $p1txt = $('.p1_f1_txt')
+	var $txt1 = $p1txt.find('.txt1')
+		,$txt2 = $p1txt.find('.txt2')
+	var show1 = false
+	function _change(){
+		show1 = !show1
+		if(show1){
+			$txt1.hide()
+			$txt2.show()
+		} else {
+			$txt1.show()
+			$txt2.hide()
+		}
+		setTimeout(_change,200)
+	}
+	_change()
+})();
+
+//f2 txt change
+;(function(){
+	var $p1txt = $('.p1_f2_txt')
+	var $txt1 = $p1txt.find('.txt1')
+		,$txt2 = $p1txt.find('.txt2')
+	var show1 = false
+	function _change(){
+		show1 = !show1
+		if(show1){
+			$txt1.hide()
+			$txt2.show()
+		} else {
+			$txt1.show()
+			$txt2.hide()
+		}
+		setTimeout(_change,200)
+	}
+	_change()
+})();
+
+window.setRandomWantText = function(){
+	var txt = ''
+	if(window.defaultTexts){
+		txt = defaultTexts[(Math.random()*defaultTexts.length)|0]
+	}
+	txt = txt || '多陪陪父母'
+	$('#want_input').val(txt)
+}
+
+window.initUser = function(name, head_url){
+	name = name || 'sky'
+	head_url = head_url || ''
+}
