@@ -68,6 +68,10 @@ body {
   animation: swing 2s linear 0s infinite alternate none;
   -webkit-animation: swing 2s linear 0s infinite alternate none;
 }
+.swing_s {
+  animation: swingSheep 2s linear 0s infinite alternate none;
+  -webkit-animation: swingSheep 2s linear 0s infinite alternate none;
+}
 @-webkit-keyframes swing {
   0% {
     -webkit-transform: rotate3d(0, 0, 1, 15deg);
@@ -197,7 +201,7 @@ body {
 }
 .clock_wrapper .percent33 {
   left: 1.8rem;
-  top: 1.9rem;
+  top: .9rem;
   background-position: center 0;
 }
 .clock_wrapper .percent45 {
@@ -282,6 +286,15 @@ body {
   /* Safari 和 Chrome */
   -o-transform: rotate(356.4deg);
   /* Opera */
+}
+.after_3_bg {
+  width: 100%;
+  height: 100%;
+  background-color: #faf0d8;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  position: absolute;
 }
 .tranlate_wrapper {
   height: 100%;
@@ -508,17 +521,6 @@ body {
     background-image: url("../image/p1f2_page_foot_10.png");
   }
 }
-.tranlate_wrapper .p1_f3_bg,
-.tranlate_wrapper .p1_f4_bg,
-.tranlate_wrapper .p1_f5_bg,
-.tranlate_wrapper .p1_f6_bg {
-  width: 100%;
-  height: 100%;
-  background-color: #faf0d8;
-  left: 0;
-  top: 0;
-  opacity: 1;
-}
 .tranlate_wrapper .p1_f3_tle {
   width: 2.46rem;
   height: 1.7rem;
@@ -697,7 +699,7 @@ body {
   white-space: nowrap;
 }
 .tranlate_wrapper .p1_f5_lbg {
-  width: 5rem;
+  width: 5.64rem;
   height: 100%;
   background: url("../image/p1_f5_lbg.png") no-repeat center bottom;
   background-size: 100%;
@@ -709,8 +711,8 @@ body {
   background-size: 100%;
   width: 1.83rem;
   height: 1.96rem;
-  left: 1.2rem;
-  bottom: 4.6rem;
+  left: 1.5rem;
+  bottom: 5.2rem;
 }
 .tranlate_wrapper .p1_f5_lbg .p1f5_light {
   position: absolute;
@@ -718,8 +720,8 @@ body {
   background-size: 100%;
   width: 4.67rem;
   height: 6.88rem;
-  left: -0.36rem;
-  bottom: 2.5rem;
+  left: 0rem;
+  bottom: 3.5rem;
   animation: lightSw 2s linear 0s infinite alternate none;
   -webkit-animation: lightSw 2s linear 0s infinite alternate none;
 }

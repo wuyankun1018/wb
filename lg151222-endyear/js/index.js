@@ -83,10 +83,22 @@ var viewController = {
 		forward = forward || 'next'
 		var _viewParent = this.viewParent
 		var hideDtds = hideAll()
+
+		//后几页的背景处理
+		if(this.currentIndex==2){
+			hideDtds.push(fadeIn($('.after_3_bg'),0,0,0.6,0))
+		} else if(this.currentIndex<2){
+			$('.after_3_bg').css('opacity',0)
+		}
+
+		//时钟处理
+		if(this.currentIndex==1 || this.currentIndex==6){
+			$('.clock_wrapper').removeClass('show33 show45 show70 show99')
+		}
+
 		disableEvents()
 		$.when.apply(this, hideDtds).done(function(){
 			var $eles = _viewParent.find('[class^=p1_f'+(this.currentIndex+1)+']')
-			// $eles.addClass('on_show')
 			var targets = getMoveTargets($eles)
 			var dtds = []
 			targets.forEach(function(target){
@@ -231,23 +243,25 @@ function moveUp(ele, sY, tY, sTime, delay){
         if ((t /= d / 2) < 1) return c / 2 * t * t + b;
         return - c / 2 * ((--t) * (t - 2) - 1) + b;
     }
-    setTimeout(_move, delay*1000)
+    // setTimeout(_move, delay*1000)
     //fortest
-    // doneFrameCount = frames
-    // _move()
+    doneFrameCount = frames
+    _move()
     return dtd.promise();
 }
 
-function fadeIn(ele, sY, tY, sTime, delay){
+function fadeIn(ele, sY, tY, sTime, delay, opts){
 	var _this = this
 	var dtd = $.Deferred();
  	var perT = 1000/60
  	var msTime = sTime*1000
  	var frames = (msTime/perT)|0
  	var doneFrameCount = 0
- 	ele.css({
+
+	ele.css({
  		'opacity':0
  	})
+ 	
  	changeTransform(ele, 'translateY(-'+tY+'rem)')
  	function _show(){
  		if(doneFrameCount<frames){
@@ -260,7 +274,14 @@ function fadeIn(ele, sY, tY, sTime, delay){
  		}
 		doneFrameCount++
  	}
- 	setTimeout(_show, delay*1000)
+ 	// setTimeout(_show, delay*1000)
+ 	
+ 	//fortest
+ 	ele.css({
+ 		'opacity':1
+ 	})
+ 	dtd.resolve(_this)
+
  	return dtd
 }
 
