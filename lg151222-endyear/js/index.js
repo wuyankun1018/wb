@@ -90,9 +90,15 @@ var viewController = {
 			var targets = getMoveTargets($eles)
 			var dtds = []
 			targets.forEach(function(target){
-				dtds.push(moveUp.apply(target[0],target).done(function(ele){
-					$(ele).addClass('on_show')
-				}))
+				if(target[0].data('type')=='fadein'){
+					dtds.push(fadeIn.apply(target[0],target).done(function(ele){
+						$(ele).addClass('on_show')
+					}))
+				} else {
+					dtds.push(moveUp.apply(target[0],target).done(function(ele){
+						$(ele).addClass('on_show')
+					}))
+				}
 			})
 			var commonDtds = $.when.apply(this, dtds).done(function(){
 				initEvents()
@@ -225,29 +231,37 @@ function moveUp(ele, sY, tY, sTime, delay){
         if ((t /= d / 2) < 1) return c / 2 * t * t + b;
         return - c / 2 * ((--t) * (t - 2) - 1) + b;
     }
-    // setTimeout(_move, delay*1000)
+    setTimeout(_move, delay*1000)
     //fortest
-    doneFrameCount = frames
-    _move()
+    // doneFrameCount = frames
+    // _move()
     return dtd.promise();
 }
 
-function fadeIn(ele, sTime, delay){
+function fadeIn(ele, sY, tY, sTime, delay){
+	var _this = this
 	var dtd = $.Deferred();
  	var perT = 1000/60
  	var msTime = sTime*1000
  	var frames = (msTime/perT)|0
  	var doneFrameCount = 0
+ 	ele.css({
+ 		'opacity':0
+ 	})
+ 	changeTransform(ele, 'translateY(-'+tY+'rem)')
  	function _show(){
  		if(doneFrameCount<frames){
  			ele.css({
  				'opacity':doneFrameCount/frames
  			})
  			window.requestAnimFrame(_show)
+ 		} else {
+ 			dtd.resolve(_this)
  		}
 		doneFrameCount++
  	}
  	setTimeout(_show, delay*1000)
+ 	return dtd
 }
 
 function getCurrTy(ele){
