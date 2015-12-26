@@ -3152,6 +3152,13 @@ body {
 .tranlate_wrapper .p1f2_pag.show .pag_foot {
   display: none;
 }
+.tranlate_wrapper .p1f2_pag .next_btn {
+  position: absolute;
+  width: .9rem;
+  height: .9rem;
+  left: 4.2rem;
+  bottom: 2.1rem;
+}
 .tranlate_wrapper .p1f2_pag .head_wrapper {
   position: absolute;
   width: 1.58rem;
@@ -3218,7 +3225,9 @@ body {
   }
 }
 .tranlate_wrapper .p1_f3_bg,
-.tranlate_wrapper .p1_f4_bg {
+.tranlate_wrapper .p1_f4_bg,
+.tranlate_wrapper .p1_f5_bg,
+.tranlate_wrapper .p1_f6_bg {
   width: 100%;
   height: 100%;
   background-color: #faf0d8;
@@ -3287,8 +3296,15 @@ body {
   white-space: nowrap;
 }
 .tranlate_wrapper .p1_f4_eat_bg_wrap {
+  width: 4.92rem;
+  height: 100%;
+  left: 0;
+}
+.tranlate_wrapper .p1_f4_eat_bg_wrap:before {
+  content: '';
+  position: absolute;
   background-color: #a03e30;
-  width: 4.66rem;
+  width: 4.64rem;
   height: 100%;
   left: 0;
 }
@@ -3296,10 +3312,55 @@ body {
   position: absolute;
   background: url("../image/p1_f4_eatbg.png") no-repeat center bottom;
   background-size: 100%;
-  width: 5.92rem;
+  width: 4.89rem;
   height: 100%;
-  top: 0;
-  left: -1.03rem;
+  bottom: 0;
+  left: 0rem;
+}
+.tranlate_wrapper .p1_f4_eat_bg_wrap .p1f4_lbg .p1f4_air {
+  position: absolute;
+  background: url("../image/p1f4_air.png") no-repeat center center;
+  background-size: 100%;
+  width: .89rem;
+  height: 1.66rem;
+  left: 3.47rem;
+  bottom: 7.75rem;
+}
+.tranlate_wrapper .p1_f4_eat_bg_wrap .p1f4_lbg .p1f4_meat3 {
+  position: absolute;
+  background: url("../image/p1f4_meat3.png") no-repeat center center;
+  background-size: 100%;
+  width: 1.60rem;
+  height: 1.35rem;
+  left: 1.79rem;
+  bottom: 5.9rem;
+}
+.tranlate_wrapper .p1_f4_eat_bg_wrap .p1f4_lbg .p1f4_meat2 {
+  position: absolute;
+  background: url("../image/p1f4_meat2.png") no-repeat center center;
+  background-size: 100%;
+  width: 1.60rem;
+  height: 1.35rem;
+  left: 1.64rem;
+  bottom: 6.23rem;
+}
+.tranlate_wrapper .p1_f4_eat_bg_wrap .p1f4_lbg .p1f4_meat1 {
+  position: absolute;
+  background: url("../image/p1f4_meat1.png") no-repeat center center;
+  background-size: 100%;
+  width: 1.60rem;
+  height: 1.35rem;
+  left: 1.45rem;
+  bottom: 6.58rem;
+}
+.tranlate_wrapper .p1_f4_eat_bg_wrap .p1f4_lbg .p1f4_spoon {
+  position: absolute;
+  background: url("../image/p1f4_spoon.png") no-repeat center center;
+  background-size: 100%;
+  width: 2.81rem;
+  height: 2.89rem;
+  left: 1.31rem;
+  bottom: 0.8rem;
 }
 .tranlate_wrapper .p1_f4_tle {
   width: 2.38rem;
@@ -3307,4 +3368,125 @@ body {
   background: url("../image/p1_f4_tle.png") no-repeat center center;
   background-size: 100%;
   left: 4.84rem;
+}
+.tranlate_wrapper .p1_f4_desc {
+  color: #d87b2b;
+  font-size: .27rem;
+  left: 5.1rem;
+  line-height: .48rem;
+  width: 2.1rem;
+}
+.tranlate_wrapper .p1_f4_desc .oneline {
+  white-space: nowrap;
+}
+.tranlate_wrapper .p1_f5_lbg {
+  width: 5rem;
+  height: 100%;
+  background: url("../image/p1_f5_lbg.png") no-repeat center bottom;
+  background-size: 100%;
+  left: 0;
+}
+.tranlate_wrapper .p1_f5_lbg .p1f5_book {
+  position: absolute;
+  background: url("../image/p1f5_book.png") no-repeat center center;
+  background-size: 100%;
+  width: 1.83rem;
+  height: 1.96rem;
+  left: 1.2rem;
+  bottom: 4.6rem;
+}
+.tranlate_wrapper .p1_f5_lbg .p1f5_light {
+  position: absolute;
+  background: url("../image/p1f5_light.png") no-repeat center center;
+  background-size: 100%;
+  width: 4.67rem;
+  height: 6.88rem;
+  left: -0.36rem;
+  bottom: 2.5rem;
+}
+.tranlate_wrapper .p1_f5_tle {
+  width: 2.38rem;
+  height: 1.48rem;
+  background: url("../image/p1_f5_tle.png") no-repeat center center;
+  background-size: 100%;
+  left: 4.84rem;
+}
+.tranlate_wrapper .p1_f5_desc {
+  color: #d87b2b;
+  font-size: .27rem;
+  left: 5.1rem;
+  line-height: .48rem;
+  width: 2.1rem;
+}
+.tranlate_wrapper .p1_f5_desc .oneline {
+  white-space: nowrap;
+}
+.tranlate_wrapper .p1_f6_lbg {
+  width: 5rem;
+  height: 100%;
+  background: url("../image/p1_f6_lbg.png") no-repeat center bottom;
+  background-size: 100%;
+  left: 0;
+}
+.tranlate_wrapper .p1_f6_lbg .p1f6_play {
+  position: absolute;
+  background: url("../image/p1f6_play.png") no-repeat center center;
+  background-size: 100%;
+  width: 1rem;
+  height: 0.74rem;
+  left: 1.7rem;
+  bottom: 10.7rem;
+}
+.tranlate_wrapper .p1_f6_lbg .p1f6_bag1 {
+  position: absolute;
+  background: url("../image/p1f6_bag.png") no-repeat center center;
+  background-size: 100%;
+  width: 2.47rem;
+  height: 3.1rem;
+  left: 0.5rem;
+  bottom: 5.2rem;
+}
+.tranlate_wrapper .p1_f6_lbg .p1f6_bag2 {
+  position: absolute;
+  background: url("../image/p1f6_bag.png") no-repeat center center;
+  background-size: 100%;
+  width: 2.47rem;
+  height: 3.1rem;
+  left: 1.5rem;
+  bottom: 4.9rem;
+}
+.tranlate_wrapper .p1_f6_lbg .p1f6_bag3 {
+  position: absolute;
+  background: url("../image/p1f6_bag.png") no-repeat center center;
+  background-size: 100%;
+  width: 2.47rem;
+  height: 3.1rem;
+  left: 2.5rem;
+  bottom: 4.6rem;
+}
+.tranlate_wrapper .p1_f6_lbg .p1f6_chat {
+  position: absolute;
+  background: url("../image/p1f6_chat.png") no-repeat center center;
+  background-size: 100%;
+  width: 1.38rem;
+  height: 1.32rem;
+  left: 2.48rem;
+  bottom: 1.6rem;
+}
+.tranlate_wrapper .p1_f6_tle {
+  width: 2.31rem;
+  height: 1.35rem;
+  background: url("../image/p1_f6_tle.png") no-repeat center center;
+  background-size: 100%;
+  left: 4.84rem;
+}
+.tranlate_wrapper .p1_f6_desc {
+  color: #d87b2b;
+  font-size: .27rem;
+  left: 5.1rem;
+  line-height: .48rem;
+  width: 2.1rem;
+}
+.tranlate_wrapper .p1_f6_desc .oneline {
+  white-space: nowrap;
 }

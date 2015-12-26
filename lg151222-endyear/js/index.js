@@ -195,7 +195,6 @@ function moveUp(ele, sY, tY, sTime, delay){
  	var msTime = sTime*1000
  	var frames = (msTime/perT)|0
  	delay = delay||0
- 	//todo delay
  	var doneFrameCount = 0
  	function _move(){
  		if(doneFrameCount<frames){
@@ -213,7 +212,10 @@ function moveUp(ele, sY, tY, sTime, delay){
         if ((t /= d / 2) < 1) return c / 2 * t * t + b;
         return - c / 2 * ((--t) * (t - 2) - 1) + b;
     }
-    setTimeout(_move, delay*1000)
+    // setTimeout(_move, delay*1000)
+    //fortest
+    doneFrameCount = frames
+    _move()
     return dtd.promise();
 }
 
@@ -240,6 +242,9 @@ function initEvents(){
 	}).on('tap', '.p1f2_pag', function(event) {
 		event.preventDefault();
 		$(this).addClass('show');
+	}).on('tap', '.next_btn', function(event) {
+		event.preventDefault();
+		viewController.next()
 	});
 }
 initEvents()
