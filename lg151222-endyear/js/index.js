@@ -94,8 +94,9 @@ var viewController = {
 					$(ele).addClass('on_show')
 				}))
 			})
-			$.when.apply(this, dtds).done(function(){
+			var commonDtds = $.when.apply(this, dtds).done(function(){
 				initEvents()
+				$('.clock_wrapper').removeClass('show33 show45 show70 show99')
 			})
 			switch(this.currentIndex){
 				case 0:
@@ -103,15 +104,27 @@ var viewController = {
 				case 1:
 					break;
 				case 2:
+					commonDtds.done(function(){
+						$('.clock_wrapper').addClass('show33')
+					})
 					// show(_viewParent.find('[class^=p1_f3]'))
 					break;
 				case 3:
+					commonDtds.done(function(){
+						$('.clock_wrapper').addClass('show45')
+					})
 					// show(_viewParent.find('[class^=p1_f4]'))
 					break;
 				case 4:
+					commonDtds.done(function(){
+						$('.clock_wrapper').addClass('show70')
+					})
 					// show(_viewParent.find('[class^=p1_f5]'))
 					break;
 				case 5:
+					commonDtds.done(function(){
+						$('.clock_wrapper').addClass('show99')
+					})
 					// show(_viewParent.find('[class^=p1_f6]'))
 					break;
 				case 6:
@@ -217,6 +230,24 @@ function moveUp(ele, sY, tY, sTime, delay){
     doneFrameCount = frames
     _move()
     return dtd.promise();
+}
+
+function fadeIn(ele, sTime, delay){
+	var dtd = $.Deferred();
+ 	var perT = 1000/60
+ 	var msTime = sTime*1000
+ 	var frames = (msTime/perT)|0
+ 	var doneFrameCount = 0
+ 	function _show(){
+ 		if(doneFrameCount<frames){
+ 			ele.css({
+ 				'opacity':doneFrameCount/frames
+ 			})
+ 			window.requestAnimFrame(_show)
+ 		}
+		doneFrameCount++
+ 	}
+ 	setTimeout(_show, delay*1000)
 }
 
 function getCurrTy(ele){
