@@ -64,6 +64,16 @@ if(window.DeviceMotionEvent) {
 	})
 })();
 
+//更新剩余天数
+;(function(){
+	var now = (new Date()).getTime()
+	var last = 1451577600000
+	var ms = last - now
+	var d = Math.ceil(ms/1000/60/60/24)
+	if(d<0) d=0;
+	$('.left_days').html(d)
+})()
+
 /* 层级控制器，需要先调用init方法 */
 var viewController = {
 	viewParent: $('.main_container')
