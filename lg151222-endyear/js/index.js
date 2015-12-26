@@ -489,6 +489,9 @@ $('#audio_wrapper').on('tap', function(event) {
 		$audio.play()
 	}
 });
+try{
+	$('#bg_audio')[0].play()
+} catch(e){}
 
 window.setRandomWantText = function(){
 	var txt = ''
