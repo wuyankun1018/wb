@@ -506,7 +506,8 @@ window.initUser = function(name, head_url){
 	name = name || 'sky'
 	head_url = head_url || ''
 	$('.nickname').html(name)
-	$('.head_img').attr('src', head_url)
+	if(head_url)
+		$('.head_img').attr('src', head_url)
 }
 window.getWantText =function(){
 	return $('#want_input').val()
