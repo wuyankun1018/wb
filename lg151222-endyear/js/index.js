@@ -86,14 +86,14 @@ var viewController = {
 		this.currentIndex++
 		var length = this.length
 		if(this.currentIndex>length-1) 
-			this.currentIndex=length-1;
+			return this.currentIndex=length-1;
 		this.reloadView('next')
 	}
 	,prev: function(){
 		//回到上一层
 		this.currentIndex--
 		if(this.currentIndex<0) 
-			this.currentIndex=0;
+			return this.currentIndex=0;
 		this.reloadView('prev')
 	}
 	,reloadView: function(forward){
