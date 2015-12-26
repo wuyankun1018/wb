@@ -3005,6 +3005,9 @@ body {
   width: 100%;
   position: relative;
 }
+.tranlate_wrapper .p1_item {
+  overflow: hidden;
+}
 .tranlate_wrapper .p1_item > div {
   width: 100%;
   height: 100%;
@@ -3236,6 +3239,52 @@ body {
   background: url("../image/p1_f3_readbg.png") no-repeat center bottom;
   background-size: 100%;
   left: 0;
+}
+.tranlate_wrapper .p1_f3_lbg .p1f3_hand {
+  background: url("../image/p1f3_hand.png") no-repeat center center;
+  background-size: 100%;
+  position: absolute;
+  width: .81rem;
+  height: 1.71rem;
+  left: .07rem;
+  bottom: 6.04rem;
+}
+.tranlate_wrapper .p1_f3_lbg .p1f3_moblight {
+  background: url("../image/p1f3_mob_light.png") no-repeat center center;
+  background-size: 100%;
+  position: absolute;
+  width: 4.61rem;
+  height: 5.26rem;
+  left: -0.27rem;
+  bottom: 4.53rem;
+}
+.tranlate_wrapper .p1_f3_lbg .p1f3_sheep {
+  background: url("../image/p1f3_sheep.png") no-repeat center center;
+  background-size: 100%;
+  position: absolute;
+  width: 5.32rem;
+  height: 5.73rem;
+  left: .07rem;
+  bottom: -0.95rem;
+}
+.tranlate_wrapper .p1_f3_lbg .p1f3_arm {
+  background: url("../image/p1f3_arm.png") no-repeat center center;
+  background-size: 100%;
+  position: absolute;
+  width: 3.06rem;
+  height: 4.27rem;
+  left: .44rem;
+  bottom: 2.24rem;
+}
+.tranlate_wrapper .p1_f3_desc {
+  color: #d87b2b;
+  font-size: .27rem;
+  left: 5.1rem;
+  line-height: .48rem;
+  width: 2.1rem;
+}
+.tranlate_wrapper .p1_f3_desc .oneline {
+  white-space: nowrap;
 }
 .tranlate_wrapper .p1_f4_eat_bg_wrap {
   background-color: #a03e30;
