@@ -72,6 +72,10 @@ body {
   animation: swingSheep 2s linear 0s infinite alternate none;
   -webkit-animation: swingSheep 2s linear 0s infinite alternate none;
 }
+.rotate5 {
+  animation: rotate5 1s linear 0s infinite alternate none;
+  -webkit-animation: rotate5 1s linear 0s infinite alternate none;
+}
 .main_container,
 #loading,
 #share_masker,
@@ -98,9 +102,8 @@ body {
   position: absolute;
   width: 1.96rem;
   height: 3.1rem;
-  top: 3.7rem;
-  left: 50%;
-  margin-left: -0.98rem;
+  top: 3.74rem;
+  left: 2.7rem;
   animation: lightSw 1.4s linear 0s infinite alternate none;
   -webkit-animation: lightSw 1.4s linear 0s infinite alternate none;
 }
@@ -130,8 +133,8 @@ body {
   width: .76rem;
   height: .76rem;
   position: absolute;
-  top: 0;
-  right: .1rem;
+  top: .1rem;
+  right: .24rem;
   background: url("../image/audio_icon.png") no-repeat center center;
   background-size: 100%;
   background-position: 0 -0.74rem;
@@ -261,7 +264,7 @@ body {
 }
 .clock_wrapper .percent99 {
   left: .4rem;
-  top: .4rem;
+  top: .9rem;
   background-position: center -2.22rem;
 }
 .clock_wrapper.show33 {
@@ -987,8 +990,10 @@ body {
   height: 2.1rem;
   left: 2.6rem;
   top: .24rem;
-  animation: shake 2s linear 0s infinite alternate none;
-  -webkit-animation: shake 2s linear 0s infinite alternate none;
+  animation: rotate5 2s linear 0s infinite alternate none;
+  -webkit-animation: rotate5 2s linear 0s infinite alternate none;
+  transform-origin: 93% 20%;
+  -webkit-transform-origin: 93% 20%;
 }
 .tranlate_wrapper .p1_f8_line1,
 .tranlate_wrapper .p1_f8_line2,
@@ -1056,13 +1061,14 @@ body {
 }
 .tranlate_wrapper .p1_f9_want .want_input {
   border: none;
-  font-size: .28rem;
+  font-size: .3rem;
+  font-weight: bolder;
   color: #d87b2b;
   height: .48rem;
   padding: 0;
   background: transparent;
   text-align: center;
-  width: 3rem;
+  width: 3.1rem;
   outline: none;
   margin-top: .4rem;
 }
@@ -1075,18 +1081,50 @@ body {
   margin-left: -1.55rem;
 }
 .tranlate_wrapper .p1_f9_lele {
-  background: url("../image/p1_f9_lele.png") no-repeat center center;
+  background: url("../image/p1_f9_lele.png") no-repeat center bottom;
   background-size: 100%;
   width: 2rem;
   height: 2.9rem;
   left: .5rem;
 }
 .tranlate_wrapper .p1_f9_rele {
-  background: url("../image/p1_f9_rele.png") no-repeat center center;
+  background: url("../image/p1_f9_rele.png") no-repeat center bottom;
   background-size: 100%;
   width: 1.15rem;
   height: 3.45rem;
   left: 5.6rem;
+}
+.tranlate_wrapper .p1_f9_lele_e {
+  width: 1.3rem;
+  height: 1.72rem;
+  left: .5rem;
+}
+.tranlate_wrapper .p1_f9_lele_e > div {
+  background: url("../image/p1_f9_lele_e.png") no-repeat center center;
+  background-size: 100%;
+  animation: rotate5 1s linear 0s infinite alternate none;
+  -webkit-animation: rotate5 1s linear 0s infinite alternate none;
+}
+.tranlate_wrapper .p1_f9_lele_e > div.stop {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+.tranlate_wrapper .p1_f9_rele_e {
+  width: 1.2rem;
+  height: 1.9rem;
+  left: 5.6rem;
+}
+.tranlate_wrapper .p1_f9_rele_e > div {
+  background: url("../image/p1_f9_rele_e.png") no-repeat center center;
+  background-size: 100%;
+  animation: rotate5 1s linear 0s infinite alternate none;
+  -webkit-animation: rotate5 1s linear 0s infinite alternate none;
+  transform-origin: left bottom;
+  -webkit-transform-origin: left bottom;
+}
+.tranlate_wrapper .p1_f9_rele_e > div.stop {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
 }
 .tranlate_wrapper .p1_f9_download {
   background: url("../image/p1_f9_download.png") no-repeat center center;
@@ -1169,5 +1207,15 @@ body {
   100% {
     -webkit-transform: rotate3d(0, 0, 1, -5deg);
     transform: rotate3d(0, 0, 1, -5deg);
+  }
+}
+@-webkit-keyframes rotate5 {
+  0% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
 }

@@ -294,7 +294,7 @@ function moveUp(ele, sY, tY, sTime, delay){
         return - c / 2 * ((--t) * (t - 2) - 1) + b;
     }
     setTimeout(_move, delay*1000)
-    //fortest
+    // fortest
     // doneFrameCount = frames
     // _move()
     return dtd.promise();
@@ -420,13 +420,14 @@ function disShake(){
 	$(window).off('shake')
 }
 
-$('.p1_f9_download').on('tap', function(event) {
+$('.p1_f9_download').on('click', function(event) {
 	//下载app
 	location.href = $(this).data('href')
-}).on('click', '.close_btn', function(event) {
+})
+$('.p1_f9_download .close_btn').on('click', function(event) {
 	event.preventDefault();
+	event.stopPropagation()
 	$('.p1_f9_download').remove()
-	return false;
 });
 
 $('#share_masker').on('tap', function(event) {
@@ -488,6 +489,25 @@ $('#share_masker').on('tap', function(event) {
 	}
 	_change()
 })()
+
+//f9 ani sw
+;(function(){
+	var $ldiv = $('.p1_f9_lele_e>div')
+	var $rdiv = $('.p1_f9_rele_e>div')
+	var show1 = false
+	function _change(){
+		show1 = !show1
+		if(show1){
+			$ldiv.addClass('stop')
+			$rdiv.removeClass('stop')
+		} else {
+			$ldiv.removeClass('stop')
+			$rdiv.addClass('stop')
+		}
+		setTimeout(_change,3000)
+	}
+	_change()
+})();
 
 //audio
 $('#audio_wrapper').on('tap', function(event) {
