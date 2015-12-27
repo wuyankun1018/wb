@@ -69,9 +69,14 @@ if(window.DeviceMotionEvent) {
 	var now = (new Date()).getTime()
 	var last = 1451577600000
 	var ms = last - now
-	var d = Math.ceil(ms/1000/60/60/24)
-	if(d<0) d=0;
-	$('.left_days').html(d)
+	if(ms>0){
+		var d = Math.ceil(ms/1000/60/60/24)
+		$('.day_text').html('距2015年结束还有<b>'+d+'天</b>')
+	} else {
+		ms = -ms
+		var d = Math.ceil(ms/1000/60/60/24)
+		$('.day_text').html('2016年已经开始<b>'+d+'天</b>')
+	}
 })()
 
 /* 层级控制器，需要先调用init方法 */
