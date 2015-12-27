@@ -131,7 +131,7 @@ body {
   display: none;
 }
 #audio_wrapper {
-  z-index: 40;
+  z-index: 101 ;
   width: .76rem;
   height: .76rem;
   position: absolute;
@@ -935,11 +935,11 @@ body {
 }
 .tranlate_wrapper .p1_f7_baozhi {
   width: 2.06rem;
-  height: 2.63rem;
+  height: 2.73rem;
   left: 5rem;
 }
 .tranlate_wrapper .p1_f7_baozhi > div {
-  background: url("../image/p1_f7_baozhi.png") no-repeat center center;
+  background: url("../image/p1_f7_baozhi.png") no-repeat center bottom;
   background-size: 100%;
   animation: swingSheep 2s linear 0s infinite alternate none;
   -webkit-animation: swingSheep 2s linear 0s infinite alternate none;
@@ -1116,11 +1116,11 @@ body {
 }
 .tranlate_wrapper .p1_f9_rele_e {
   width: 1.2rem;
-  height: 1.9rem;
+  height: 2rem;
   left: 5.6rem;
 }
 .tranlate_wrapper .p1_f9_rele_e > div {
-  background: url("../image/p1_f9_rele_e.png") no-repeat center center;
+  background: url("../image/p1_f9_rele_e.png") no-repeat center bottom;
   background-size: 100%;
   animation: rotate5 1s linear 0s infinite alternate none;
   -webkit-animation: rotate5 1s linear 0s infinite alternate none;
