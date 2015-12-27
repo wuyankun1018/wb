@@ -355,10 +355,6 @@ function initEvents(){
 		viewController.next()
 	}).on('swipeDown', function(){
 		viewController.prev()
-	}).on('tap', '.p1f2_pag', function(event) {
-		event.preventDefault();
-		$(this).addClass('show');
-		$('.p1_f2_tip').remove()
 	}).on('tap', '.next_btn', function(event) {
 		event.preventDefault();
 		viewController.next()
@@ -429,7 +425,11 @@ $('.p1_f9_download .close_btn').on('click', function(event) {
 	event.stopPropagation()
 	$('.p1_f9_download').remove()
 });
-
+$('.p1f2_pag').on('tap', function(event) {
+	event.preventDefault();
+	$(this).addClass('show');
+	$('.p1_f2_tip').remove()
+})
 $('#share_masker').on('tap', function(event) {
 	event.preventDefault();
 	$(this).hide()
