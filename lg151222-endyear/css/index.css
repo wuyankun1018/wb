@@ -76,6 +76,10 @@ body {
   animation: rotate5 1s linear 0s infinite alternate none;
   -webkit-animation: rotate5 1s linear 0s infinite alternate none;
 }
+.rotate10 {
+  animation: rotate10 1s linear 0s infinite alternate none;
+  -webkit-animation: rotate10 1s linear 0s infinite alternate none;
+}
 .main_container,
 #loading,
 #share_masker,
@@ -91,19 +95,20 @@ body {
   z-index: 100;
   text-align: center;
   position: absolute;
+}
+#loading .loading_light_bg {
   background: url("../image/loading_bg.png") no-repeat center center;
   background-size: 100%;
-  background-size: 2.12rem;
-  background-position: center -0.38rem;
+  width: 3rem;
+  height: 7.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
-#loading .loading_light {
+#loading .loading_light_bg .loading_light {
   background: url("../image/loading_light.png") no-repeat center center;
   background-size: 100%;
-  position: absolute;
-  width: 1.96rem;
-  height: 3.1rem;
-  top: 3.74rem;
-  left: 2.7rem;
+  width: 100%;
+  height: 100%;
   animation: lightSw 1.4s linear 0s infinite alternate none;
   -webkit-animation: lightSw 1.4s linear 0s infinite alternate none;
 }
@@ -111,10 +116,7 @@ body {
   font-size: .28rem;
   color: #d7bd81;
   line-height: .48rem;
-  top: 7.2rem;
-  position: absolute;
   width: 100%;
-  left: 0;
 }
 #shake_masker {
   display: none;
@@ -841,6 +843,8 @@ body {
   height: 0.74rem;
   left: 1.7rem;
   bottom: 10.7rem;
+  transform-origin: 70% 54%;
+  -webkit-transform-origin: 70% 54%;
 }
 .tranlate_wrapper .p1_f6_lbg .p1f6_bag1 {
   position: absolute;
@@ -1217,5 +1221,15 @@ body {
   100% {
     -webkit-transform: rotate(-5deg);
     transform: rotate(-5deg);
+  }
+}
+@-webkit-keyframes rotate10 {
+  0% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
 }
