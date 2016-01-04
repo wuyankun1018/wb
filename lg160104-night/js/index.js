@@ -51,7 +51,8 @@ var pageViewController = new function(){
 		isMove = true;
 		$('#turn_page_tip').hide()
 		moveUp($parent, start, currIndex*100, 0.6, 0).done(function(){
-			$('#turn_page_tip').show()
+			if(currIndex !== pageLength-1)
+				$('#turn_page_tip').show()
 			isMove = false;
 		})
 	}
