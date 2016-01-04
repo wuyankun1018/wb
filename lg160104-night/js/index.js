@@ -121,3 +121,7 @@ $('#share_masker').on('tap', function(event) {
 	event.preventDefault();
 	$(this).hide()
 });
+
+window.onload= function(){
+	$('.dot_line').addClass('ani')
+}
