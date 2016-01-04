@@ -49,6 +49,7 @@ var pageViewController = new function(){
 		// })
 		if(isMove) return;
 		isMove = true;
+		$parent.find('.page_item').removeClass('show_ani').eq(currIndex).addClass('show_ani')
 		$('#turn_page_tip').removeClass('show').show()
 		moveUp($parent, start, currIndex*100, 0.6, 0).done(function(){
 			if(currIndex !== pageLength-1)
