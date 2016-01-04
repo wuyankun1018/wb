@@ -469,16 +469,16 @@ body {
   margin-right: auto;
   background-color: #00f9c6;
   margin-top: .08rem;
-  animation: lightSw 3s linear 0s infinite normal none;
-  -webkit-animation: lightSw 3s linear 0s infinite normal none;
+  animation: lightSw 2.4s linear 0s infinite alternate none;
+  -webkit-animation: lightSw 2.4s linear 0s infinite alternate none;
 }
 #turn_page_tip .circle.item1 {
-  animation-delay: 2s;
-  -webkit-animation-delay: 2s;
+  animation-delay: 1.6s;
+  -webkit-animation-delay: 1.6s;
 }
 #turn_page_tip .circle.item2 {
-  animation-delay: 1s;
-  -webkit-animation-delay: 1s;
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
 }
 #turn_page_tip .circle.item3 {
   animation-delay: 0s;
@@ -494,13 +494,13 @@ body {
 }
 @-webkit-keyframes lightSw {
   0% {
-    opacity: .4;
+    opacity: 1;
   }
   33% {
-    opacity: 1;
+    opacity: .4;
   }
   100% {
-    opacity: 1;
+    opacity: .4;
   }
 }
 @-webkit-keyframes flyRight {
