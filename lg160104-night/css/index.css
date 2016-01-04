@@ -372,7 +372,7 @@ body {
 .page_item:nth-child(8) .btn_wrapper {
   position: absolute;
   z-index: 2;
-  bottom: 2.6rem;
+  bottom: 1.6rem;
   left: 0;
   width: 100%;
   text-align: center;
@@ -463,16 +463,16 @@ body {
   margin-right: auto;
   background-color: #00f9c6;
   margin-top: .08rem;
-  animation: lightSw 1.5s linear 0s infinite alternate none;
-  -webkit-animation: lightSw 1.5s linear 0s infinite alternate none;
+  animation: lightSw 3s linear 0s infinite normal none;
+  -webkit-animation: lightSw 3s linear 0s infinite normal none;
 }
 #turn_page_tip .circle.item1 {
-  animation-delay: 1s;
-  -webkit-animation-delay: 1s;
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
 }
 #turn_page_tip .circle.item2 {
-  animation-delay: 0.5s;
-  -webkit-animation-delay: 0.5s;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 #turn_page_tip .circle.item3 {
   animation-delay: 0s;
@@ -488,7 +488,7 @@ body {
 }
 @-webkit-keyframes lightSw {
   0% {
-    opacity: .5;
+    opacity: .4;
   }
   33% {
     opacity: 1;

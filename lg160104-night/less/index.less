@@ -76,7 +76,7 @@ body{font-size: .24rem;font-family: Arial;color: #00f9c6;}
 		.white{font-size: .3rem;line-height: .42rem;margin-top: .6rem;color: #fff;}
 		.txtc{font-size: .24rem;text-align: center;margin-top: .2rem;}
 		p{line-height: .36rem;}
-		.btn_wrapper{.pa;z-index: 2;bottom: 2.6rem;left: 0;width: 100%;text-align: center;}
+		.btn_wrapper{.pa;z-index: 2;bottom: 1.6rem;left: 0;width: 100%;text-align: center;}
 		.btn{width: 2rem;text-align: center;line-height: .64rem;border: 1px solid @lgreen;display: inline-block;margin: 0 .16rem;background: rgba(0,249,198,.16);}
 	}
 	.border_a{border: 1px solid @lgreen;}
@@ -99,16 +99,16 @@ body{font-size: .24rem;font-family: Arial;color: #00f9c6;}
 	&.show{opacity: 1;}
 	.logo{width: 1.14rem;height: .43rem;.bgi("../image/page_logo.png");.auto;margin-top: .16rem;}
 	.circle{width: .12rem;height: .12rem;.border-r(50%);.auto;background-color:@lgreen;margin-top: .08rem;
-		.Animate(@name:lightSw,@duration:1.5s,@timingfunction:linear,@delay:0s,@count:infinite,@direction:alternate, @fillmode:none);
-		&.item1{.aniDelay(@t:1s)}
-		&.item2{.aniDelay(@t:.5s)}
+		.Animate(@name:lightSw,@duration:3s,@timingfunction:linear,@delay:0s,@count:infinite,@direction:normal, @fillmode:none);
+		&.item1{.aniDelay(@t:2s)}
+		&.item2{.aniDelay(@t:1s)}
 		&.item3{.aniDelay(@t:0s)}
 	}
 	.db_arrow{width: .32rem;height: .34rem;.auto;.bgi("../image/db_arrow.png");}
 }
 @-webkit-keyframes lightSw {
   0% {
-    opacity: .5;
+    opacity: .4;
   }
   33% {
   	opacity: 1;
