@@ -266,21 +266,21 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  animation: meteorShow 4s linear 0s infinite normal backwards;
-  -webkit-animation: meteorShow 4s linear 0s infinite normal backwards;
+  animation: meteorShow 2s linear 0s infinite normal backwards;
+  -webkit-animation: meteorShow 2s linear 0s infinite normal backwards;
 }
 .page_item:nth-child(2) .bg_wrap .item1 {
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
 }
 .page_item:nth-child(2) .bg_wrap .item2 {
-  animation-delay: 1.5s;
-  -webkit-animation-delay: 1.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
   top: 1.5rem;
 }
 .page_item:nth-child(2) .bg_wrap .item3 {
-  animation-delay: 3s;
-  -webkit-animation-delay: 3s;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
   top: 2.5rem;
 }
 .page_item:nth-child(2) .con_wrap {
