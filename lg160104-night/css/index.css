@@ -238,9 +238,6 @@ body {
   left: 5.43rem;
   position: absolute;
 }
-.page_item:nth-child(2) .ml156 {
-  margin-top: 1.56rem;
-}
 .page_item:nth-child(2) .txtr {
   text-align: right;
 }
@@ -248,7 +245,7 @@ body {
   line-height: .42rem;
 }
 .page_item:nth-child(2) p {
-  line-height: .36rem;
+  line-height: .42rem;
 }
 .page_item:nth-child(3) {
   padding-left: 1.2rem;
@@ -370,12 +367,8 @@ body {
   line-height: .36rem;
 }
 .page_item:nth-child(8) .btn_wrapper {
-  position: absolute;
-  z-index: 2;
-  bottom: 1.6rem;
-  left: 0;
-  width: 100%;
   text-align: center;
+  margin-top: .4rem;
 }
 .page_item:nth-child(8) .btn {
   width: 2rem;
@@ -385,6 +378,9 @@ body {
   display: inline-block;
   margin: 0 .16rem;
   background: rgba(0, 249, 198, 0.16);
+}
+.page_item .fw {
+  color: #fff;
 }
 .page_item .border_a {
   border: 1px solid #00f9c6;
