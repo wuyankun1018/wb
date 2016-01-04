@@ -95,6 +95,8 @@ body{font-size: .24rem;font-family: Arial;color: #00f9c6;}
 	.f24{font-size: .24rem;}
 }
 #turn_page_tip{position: fixed;bottom: .8rem;width: 100%;left: 0;text-align: center;
+	opacity: 0;.transition(all .6s);
+	&.show{opacity: 1;}
 	.logo{width: 1.14rem;height: .43rem;.bgi("../image/page_logo.png");.auto;margin-top: .16rem;}
 	.circle{width: .12rem;height: .12rem;.border-r(50%);.auto;background-color:@lgreen;margin-top: .08rem;
 		.Animate(@name:lightSw,@duration:1.5s,@timingfunction:linear,@delay:0s,@count:infinite,@direction:alternate, @fillmode:none);
