@@ -301,12 +301,22 @@ body {
   text-indent: .2rem;
   line-height: .36rem;
 }
+.page_item:nth-child(5) {
+  background: url("../image/bg5.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+.page_item:nth-child(6) {
+  background: url("../image/bg6.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+.page_item:nth-child(7) {
+  background: url("../image/bg7.png") no-repeat center center;
+  background-size: 100% 100%;
+}
 .page_item:nth-child(5),
 .page_item:nth-child(6),
 .page_item:nth-child(7) {
   padding-left: 1.2rem;
-  background: url("../image/bg5.png") no-repeat center center;
-  background-size: 100% 100%;
   padding-right: 1.2rem;
 }
 .page_item:nth-child(5) .logo,
@@ -368,7 +378,7 @@ body {
 }
 .page_item:nth-child(8) .btn_wrapper {
   text-align: center;
-  margin-top: .4rem;
+  margin-top: .6rem;
 }
 .page_item:nth-child(8) .btn {
   width: 2rem;
