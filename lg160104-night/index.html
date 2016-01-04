@@ -8,6 +8,48 @@
 	<script>
 	(function(doc,win){var resizeEvt="orientationchange" in win?"orientationchange":"resize",use_screen_base=750,base_size=parseInt(use_screen_base),docE=doc.documentElement,recalc=function(){var triggerRepaints=docE.clientWidth;var clientWidth=win.innerWidth;docE.style.fontSize=100*(clientWidth/base_size)+"px"};recalc();win.addEventListener(resizeEvt,recalc,false)})(document,window);
 	</script>
+	<style>
+		.dot_line > div {
+		  display: inline-block;
+		  height: .04rem;
+		  width: .02rem;
+		  border: 1px solid #00f9c6;
+		  background: #fff;
+		  border-radius: 50%;
+		  -webkit-border-radius: 50%;
+		  position: absolute;
+		  left: 0;
+		  top: 0;
+		  animation: flyRight 4s ease-in 0s infinite normal none;
+		  -webkit-animation: flyRight 4s ease-in 0s infinite normal none;
+		}
+		@-webkit-keyframes flyRight {
+		  0% {
+		    transform: translateX(0);
+		    -ms-transform: translateX(0);
+		    -moz-transform: translateX(0);
+		    -webkit-transform: translateX(0);
+		    -o-transform: translateX(0);
+		    opacity: 1;
+		  }
+		  50% {
+		    opacity: 0;
+		    transform: translateX(4rem);
+		    -ms-transform: translateX(4rem);
+		    -moz-transform: translateX(4rem);
+		    -webkit-transform: translateX(4rem);
+		    -o-transform: translateX(4rem);
+		  }
+		  100% {
+		    opacity: 0;
+		    transform: translateX(4rem);
+		    -ms-transform: translateX(4rem);
+		    -moz-transform: translateX(4rem);
+		    -webkit-transform: translateX(4rem);
+		    -o-transform: translateX(4rem);
+		  }
+		}
+	</style>
 </head>
 <body>
 	<div id="share_masker"></div>
@@ -28,6 +70,7 @@
 					<div style="animation-delay: 1s;-webkit-animation-delay: 1s;"></div>
 					<div style="animation-delay: 1.1s;-webkit-animation-delay:1 .1s;"></div>
 					<div style="animation-delay: 1.2s;-webkit-animation-delay: 1.2s;"></div>
+					<div style="animation-delay: 1.3s;-webkit-animation-delay: 1.3s;"></div>
 					<div style="animation-delay: 1.4s;-webkit-animation-delay: 1.4s;"></div>
 					<div style="animation-delay: 1.5s;-webkit-animation-delay: 1.5s;"></div>
 					<div style="animation-delay: 1.6s;-webkit-animation-delay: 1.6s;"></div>
@@ -50,6 +93,7 @@
 					<div style="animation-delay: 1s;-webkit-animation-delay: 1s;"></div>
 					<div style="animation-delay: 1.1s;-webkit-animation-delay:1 .1s;"></div>
 					<div style="animation-delay: 1.2s;-webkit-animation-delay: 1.2s;"></div>
+					<div style="animation-delay: 1.3s;-webkit-animation-delay: 1.3s;"></div>
 					<div style="animation-delay: 1.4s;-webkit-animation-delay: 1.4s;"></div>
 					<div style="animation-delay: 1.5s;-webkit-animation-delay: 1.5s;"></div>
 					<div style="animation-delay: 1.6s;-webkit-animation-delay: 1.6s;"></div>
