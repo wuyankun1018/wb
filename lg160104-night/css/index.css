@@ -287,6 +287,22 @@ body {
   position: relative;
   z-index: 2;
 }
+.page_item:nth-child(2).show_ani .con_wrap > div:nth-child(1) {
+  animation: nameShowLeft 0.6s ease-in-out 0.6s 1 normal backwards;
+  -webkit-animation: nameShowLeft 0.6s ease-in-out 0.6s 1 normal backwards;
+}
+.page_item:nth-child(2).show_ani .con_wrap > div:nth-child(2) {
+  animation: nameShowLeft 0.6s ease-in-out 1.2s 1 normal backwards;
+  -webkit-animation: nameShowLeft 0.6s ease-in-out 1.2s 1 normal backwards;
+}
+.page_item:nth-child(2).show_ani .con_wrap > div:nth-child(3) {
+  animation: nameShowLeft 0.6s ease-in-out 1.8s 1 normal backwards;
+  -webkit-animation: nameShowLeft 0.6s ease-in-out 1.8s 1 normal backwards;
+}
+.page_item:nth-child(2).show_ani .con_wrap > div:nth-child(4) {
+  animation: opacityShow 0.6s ease-in-out 2.4s 1 normal backwards;
+  -webkit-animation: opacityShow 0.6s ease-in-out 2.4s 1 normal backwards;
+}
 .page_item:nth-child(3) {
   padding-left: 1.2rem;
   background: url("../image/bg3.png") no-repeat center center;
@@ -308,6 +324,10 @@ body {
 .page_item:nth-child(3) .f76 {
   color: #fff;
   line-height: 1.08rem;
+}
+.page_item:nth-child(3).show_ani .power_wrap {
+  animation: powerIn 0.6s ease-in-out 0.6s 1 normal backwards;
+  -webkit-animation: powerIn 0.6s ease-in-out 0.6s 1 normal backwards;
 }
 .page_item:nth-child(4) {
   padding-left: 1.2rem;
@@ -340,6 +360,22 @@ body {
 .page_item:nth-child(4) .border_a {
   text-indent: .2rem;
   line-height: .36rem;
+}
+.page_item:nth-child(4).show_ani .power_wrap {
+  animation: powerIn 0.6s ease-in-out 0.6s 1 normal backwards;
+  -webkit-animation: powerIn 0.6s ease-in-out 0.6s 1 normal backwards;
+}
+.page_item:nth-child(4).show_ani .moveFromLeft {
+  animation: nameShowLeft 0.6s ease-in-out 0.6s 1 normal backwards;
+  -webkit-animation: nameShowLeft 0.6s ease-in-out 0.6s 1 normal backwards;
+}
+.page_item:nth-child(4).show_ani .con_wrap p:nth-child(even) {
+  animation: nameShowLeft 0.6s ease-in-out 1.2s 1 normal backwards;
+  -webkit-animation: nameShowLeft 0.6s ease-in-out 1.2s 1 normal backwards;
+}
+.page_item:nth-child(4).show_ani .con_wrap p:nth-child(odd) {
+  animation: nameShowRight 0.6s ease-in-out 1.2s 1 normal backwards;
+  -webkit-animation: nameShowRight 0.6s ease-in-out 1.2s 1 normal backwards;
 }
 .page_item:nth-child(5) {
   background: url("../image/bg5.png") no-repeat center center;
@@ -389,17 +425,23 @@ body {
   color: #fff;
   line-height: 1.08rem;
 }
+.page_item:nth-child(5).show_ani .power_wrap,
+.page_item:nth-child(6).show_ani .power_wrap,
+.page_item:nth-child(7).show_ani .power_wrap {
+  animation: powerIn 0.6s ease-in-out 0.6s 1 normal backwards;
+  -webkit-animation: powerIn 0.6s ease-in-out 0.6s 1 normal backwards;
+}
 .page_item:nth-child(5).show_ani .border_l,
 .page_item:nth-child(6).show_ani .border_l,
 .page_item:nth-child(7).show_ani .border_l {
-  animation: nameShowLeft 0.6s ease-in-out 0.6s 1 normal backwards;
-  -webkit-animation: nameShowLeft 0.6s ease-in-out 0.6s 1 normal backwards;
+  animation: nameShowLeft 0.6s ease-in-out 1.8s 1 normal backwards;
+  -webkit-animation: nameShowLeft 0.6s ease-in-out 1.8s 1 normal backwards;
 }
 .page_item:nth-child(5).show_ani .border_l:nth-of-type(2),
 .page_item:nth-child(6).show_ani .border_l:nth-of-type(2),
 .page_item:nth-child(7).show_ani .border_l:nth-of-type(2) {
-  animation-delay: 0.9s;
-  -webkit-animation-delay: 0.9s;
+  animation-delay: 2.1s;
+  -webkit-animation-delay: 2.1s;
 }
 .page_item:nth-child(8) {
   padding-left: 1.2rem;
@@ -442,6 +484,18 @@ body {
   display: inline-block;
   margin: 0 .16rem;
   background: rgba(0, 249, 198, 0.16);
+}
+.page_item:nth-child(8).show_ani .power_wrap {
+  animation: powerIn 0.6s ease-in-out 0.6s 1 normal backwards;
+  -webkit-animation: powerIn 0.6s ease-in-out 0.6s 1 normal backwards;
+}
+.page_item:nth-child(8).show_ani .moveFromLeft {
+  animation: nameShowLeft 0.6s ease-in-out 0.6s 1 normal backwards;
+  -webkit-animation: nameShowLeft 0.6s ease-in-out 0.6s 1 normal backwards;
+}
+.page_item:nth-child(8).show_ani .moveFromRight {
+  animation: nameShowRight 0.6s ease-in-out 0.6s 1 normal backwards;
+  -webkit-animation: nameShowRight 0.6s ease-in-out 0.6s 1 normal backwards;
 }
 .page_item .fw {
   color: #fff;
@@ -667,6 +721,40 @@ body {
     -webkit-transform: translateX(0rem);
     /* Safari 和 Chrome */
     -o-transform: translateX(0rem);
+    /* Opera */
+  }
+}
+@-webkit-keyframes opacityShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes powerIn {
+  0% {
+    opacity: 0;
+    transform: scale(5);
+    -ms-transform: scale(5);
+    /* IE 9 */
+    -moz-transform: scale(5);
+    /* Firefox */
+    -webkit-transform: scale(5);
+    /* Safari 和 Chrome */
+    -o-transform: scale(5);
+    /* Opera */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    -ms-transform: scale(1);
+    /* IE 9 */
+    -moz-transform: scale(1);
+    /* Firefox */
+    -webkit-transform: scale(1);
+    /* Safari 和 Chrome */
+    -o-transform: scale(1);
     /* Opera */
   }
 }
