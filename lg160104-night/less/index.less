@@ -6,10 +6,10 @@ body{font-size: .24rem;font-family: Arial;color: #00f9c6;}
 .main_container{overflow: hidden;z-index: 1;}
 #share_masker{z-index: 10;background: rgba(0,0,0,.8) url("../image/share_tip.png") no-repeat right top;background-size: 3.4rem;display: none;}
 .page_item{height: 100%;.pr;overflow: hidden;
-	&:before{content: '';
+	&:before{content: '';z-index: 2;
 		.pa;left: .42rem;right: .42rem; top: .36rem;bottom: .36rem; border: .03rem solid @lgreen; 
 	}
-	&:after{content: '';
+	&:after{content: '';z-index: 2;
 		.pa;left: .27rem;right: .27rem; top: .22rem;bottom: .22rem; border: .06rem solid @lgreen; 
 	}
 	p{font-size: .3rem;white-space: nowrap;}
@@ -46,10 +46,17 @@ body{font-size: .24rem;font-family: Arial;color: #00f9c6;}
 	}
 	&:nth-child(2){padding-left: 1.2rem;padding-right: .8rem;
 		.bgi("../image/bg2.png");
-		.logo{width: 1.28rem;height: .5rem;background: url("../image/main_logo.png") no-repeat center top;background-size: 100%;top: .67rem;left: 5.43rem;.pa;}
+		.logo{width: 1.28rem;height: .5rem;background: url("../image/main_logo.png") no-repeat center top;background-size: 100%;top: .67rem;left: 5.43rem;.pa;z-index: 2;}
 		.txtr{text-align: right;}
 		.f30{line-height:.42rem; }
 		p{line-height: .42rem;}
+		.bg_wrap{.pa;z-index: 1;top: .5rem;left: 0;width: 100%;height: 100%;
+			.meteor{.bgi("../image/meteor.png");width: 1.5rem;height: .9rem;.pa;top: 0;left: 0;.Animate(@name:meteorShow,@duration:2.4s,@timingfunction:linear,@delay:0s,@count:infinite,@direction:normal, @fillmode:backwards);}
+			.item1{.aniDelay(@t:0s);}
+			.item2{.aniDelay(@t:.8s);top: 1.5rem;}
+			.item3{.aniDelay(@t:1.6s);top: 2.5rem;}
+		}
+		.con_wrap{.pr;z-index: 2;}
 	}
 	&:nth-child(3){padding-left: 1.2rem;.bgi("../image/bg3.png");padding-right: 1.3rem;
 		.logo{width: 3rem;height: 1.79rem;.bgi("../image/main_logo.png");margin-top: 1.1rem;}
@@ -132,5 +139,15 @@ body{font-size: .24rem;font-family: Arial;color: #00f9c6;}
   100% {
   	opacity: 0;
     .transform(translateX(4rem));
+  }
+}
+@-webkit-keyframes meteorShow {
+  0% {
+    .transform(translateX(7.5rem));
+    opacity: 1;
+  }
+  100% {
+  	opacity: 0;
+    .transform(translateX(-3rem) translateY(2.81rem));
   }
 }

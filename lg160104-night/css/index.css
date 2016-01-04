@@ -80,6 +80,7 @@ body {
 }
 .page_item:before {
   content: '';
+  z-index: 2;
   position: absolute;
   left: .42rem;
   right: .42rem;
@@ -89,6 +90,7 @@ body {
 }
 .page_item:after {
   content: '';
+  z-index: 2;
   position: absolute;
   left: .27rem;
   right: .27rem;
@@ -237,6 +239,7 @@ body {
   top: .67rem;
   left: 5.43rem;
   position: absolute;
+  z-index: 2;
 }
 .page_item:nth-child(2) .txtr {
   text-align: right;
@@ -246,6 +249,43 @@ body {
 }
 .page_item:nth-child(2) p {
   line-height: .42rem;
+}
+.page_item:nth-child(2) .bg_wrap {
+  position: absolute;
+  z-index: 1;
+  top: .5rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.page_item:nth-child(2) .bg_wrap .meteor {
+  background: url("../image/meteor.png") no-repeat center center;
+  background-size: 100% 100%;
+  width: 1.5rem;
+  height: .9rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: meteorShow 2.4s linear 0s infinite normal backwards;
+  -webkit-animation: meteorShow 2.4s linear 0s infinite normal backwards;
+}
+.page_item:nth-child(2) .bg_wrap .item1 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+}
+.page_item:nth-child(2) .bg_wrap .item2 {
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+  top: 1.5rem;
+}
+.page_item:nth-child(2) .bg_wrap .item3 {
+  animation-delay: 1.6s;
+  -webkit-animation-delay: 1.6s;
+  top: 2.5rem;
+}
+.page_item:nth-child(2) .con_wrap {
+  position: relative;
+  z-index: 2;
 }
 .page_item:nth-child(3) {
   padding-left: 1.2rem;
@@ -541,6 +581,32 @@ body {
     -webkit-transform: translateX(4rem);
     /* Safari 和 Chrome */
     -o-transform: translateX(4rem);
+    /* Opera */
+  }
+}
+@-webkit-keyframes meteorShow {
+  0% {
+    transform: translateX(7.5rem);
+    -ms-transform: translateX(7.5rem);
+    /* IE 9 */
+    -moz-transform: translateX(7.5rem);
+    /* Firefox */
+    -webkit-transform: translateX(7.5rem);
+    /* Safari 和 Chrome */
+    -o-transform: translateX(7.5rem);
+    /* Opera */
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-3rem) translateY(2.81rem);
+    -ms-transform: translateX(-3rem) translateY(2.81rem);
+    /* IE 9 */
+    -moz-transform: translateX(-3rem) translateY(2.81rem);
+    /* Firefox */
+    -webkit-transform: translateX(-3rem) translateY(2.81rem);
+    /* Safari 和 Chrome */
+    -o-transform: translateX(-3rem) translateY(2.81rem);
     /* Opera */
   }
 }
