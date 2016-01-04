@@ -49,10 +49,12 @@ var pageViewController = new function(){
 		// })
 		if(isMove) return;
 		isMove = true;
-		$('#turn_page_tip').removeClass('show')
+		$('#turn_page_tip').removeClass('show').show()
 		moveUp($parent, start, currIndex*100, 0.6, 0).done(function(){
 			if(currIndex !== pageLength-1)
 				$('#turn_page_tip').addClass('show')
+			else
+				$('#turn_page_tip').hide()
 			isMove = false;
 		})
 	}

@@ -379,6 +379,8 @@ body {
 .page_item:nth-child(8) .btn_wrapper {
   text-align: center;
   margin-top: .6rem;
+  position: relative;
+  z-index: 11;
 }
 .page_item:nth-child(8) .btn {
   width: 2rem;
@@ -440,6 +442,7 @@ body {
   width: 100%;
   left: 0;
   text-align: center;
+  z-index: 1;
   opacity: 0;
   transition: all 0.6s;
   -moz-transition: all 0.6s;
