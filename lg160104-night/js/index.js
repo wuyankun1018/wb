@@ -124,4 +124,6 @@ $('#share_masker').on('tap', function(event) {
 
 window.onload= function(){
 	$('.dot_line').addClass('ani')
+	// var html = $('#svg_tpl').html()+$('#svg_tpl2').html()
+	// $('.page_item').append(html)
 }

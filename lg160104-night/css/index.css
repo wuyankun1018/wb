@@ -758,3 +758,39 @@ body {
     /* Opera */
   }
 }
+.border_svg rect {
+  width: 100%;
+  height: 100%;
+  stroke-width: .06rem;
+  stroke: #00f9c6;
+  stroke-dasharray: 70% 30%;
+  fill: transparent;
+  animation: borderTrans 2s linear 0s infinite normal none;
+  -webkit-animation: borderTrans 2s linear 0s infinite normal none;
+}
+.svg_container {
+  position: absolute;
+  left: .42rem;
+  right: .42rem;
+  top: .36rem;
+  bottom: .36rem;
+}
+.svg_container2 {
+  position: absolute;
+  left: .27rem;
+  right: .27rem;
+  top: .22rem;
+  bottom: .22rem;
+}
+.svg_container2 .border_svg rect {
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+@-webkit-keyframes borderTrans {
+  0% {
+    stroke-dashoffset: 100%;
+  }
+  100% {
+    stroke-dashoffset: 0%;
+  }
+}
