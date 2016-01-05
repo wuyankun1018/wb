@@ -122,6 +122,21 @@ $('#share_masker').on('tap', function(event) {
 	$(this).hide()
 });
 
+//audio
+$('#audio_wrapper').on('tap', function(event) {
+	$(this).toggleClass('playing');
+	var $audio = $('#bg_audio')[0]
+	if(!$(this).hasClass('playing')){
+		$audio.pause()
+	} else {
+		$audio.play()
+	}
+});
+try{
+	$('#bg_audio')[0].play()
+} catch(e){}
+
+
 window.onload= function(){
 	$('.dot_line').addClass('ani')
 	// var html = $('#svg_tpl').html()+$('#svg_tpl2').html()
