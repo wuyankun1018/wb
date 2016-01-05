@@ -534,6 +534,8 @@ body {
   width: 1.33rem;
   height: 1.33rem;
   vertical-align: middle;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
 }
 .page_item:nth-child(5) table .name,
 .page_item:nth-child(6) table .name,
