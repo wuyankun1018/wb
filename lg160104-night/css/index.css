@@ -75,15 +75,15 @@ body {
 }
 #audio_wrapper {
   z-index: 9 ;
-  width: .64rem;
-  height: .64rem;
+  width: 0.512rem;
+  height: 0.512rem;
   position: absolute;
   top: .56rem;
   left: .56rem;
   background: url("../image/audio_icon.png") no-repeat center center;
   background-size: 100% 100%;
-  background-position: -0.75rem 0;
-  background-size: 1.5rem auto;
+  background-position: -0.6rem 0;
+  background-size: 1.2rem auto;
 }
 #audio_wrapper.playing {
   background-position: 0 0rem;
