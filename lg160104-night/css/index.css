@@ -351,9 +351,6 @@ body {
 .page_item:nth-child(3) .svg_wrap {
   position: relative;
 }
-.page_item:nth-child(3) .svg_wrap p {
-  text-align: center;
-}
 .page_item:nth-child(4) {
   padding-left: 1.2rem;
   background: url("../image/bg4.png") no-repeat center center;
