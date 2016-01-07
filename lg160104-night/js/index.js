@@ -136,6 +136,14 @@ try{
 	$('#bg_audio')[0].play()
 } catch(e){}
 
+//微信分享
+	var datas = {
+	title: "不好意思，1月12日，五棵松体育馆因为我们又堵了。",
+	desc: "拉勾网2015年终盛典—野心时代·拉勾之夜！",
+	imgUrl: "http://ca.lagou.com/template/lagouzhiye/image/share.jpg",
+	goToUrl: false
+}
+share(datas);
 
 window.onload= function(){
 	$('.dot_line').addClass('ani')

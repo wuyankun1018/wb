@@ -4,14 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<title>拉勾之夜</title>
-	<link rel="stylesheet" href="./css/index.css">
+	#parse("common/mcommon.html")
+	<link rel="stylesheet" href="../css/index.css?v=2">
 	<script>
 	(function(doc,win){var resizeEvt="orientationchange" in win?"orientationchange":"resize",use_screen_base=750,base_size=parseInt(use_screen_base),docE=doc.documentElement,recalc=function(){var triggerRepaints=docE.clientWidth;var clientWidth=win.innerWidth;docE.style.fontSize=100*(clientWidth/base_size)+"px"};recalc();win.addEventListener(resizeEvt,recalc,false)})(document,window);
 	</script>
 </head>
 <body>
 	<div id="audio_wrapper" class="playing"></div>
-	<audio src="image/bgmusic.mp3" id="bg_audio" autoplay loop></audio>
+	<audio src="../image/bgmusic.MP3" id="bg_audio" autoplay loop></audio>
 	<div id="share_masker"></div>
 	<div class="main_container">
 		<div class="page_container">
@@ -68,30 +69,30 @@
 				<div class="logo"></div>
 				<div class="con_wrap">
 					<div style="margin-top:1.2rem;">
-						<p>这一年 </p>
-						<p>每一个咖啡馆里的人</p>
-						<p>似乎都在谈论</p>
-						<p>创业、融资、估值、风口、资本寒冬……</p>
+						<p class="ani_p" style="animation-delay: .6s;-webkit-animation-delay: .6s;">这一年</p>
+						<p class="ani_p" style="animation-delay: .9s;-webkit-animation-delay: .9s;">每一个咖啡馆里的人</p>
+						<p class="ani_p" style="animation-delay: 1.2s;-webkit-animation-delay: 1.2s;">似乎都在谈论</p>
+						<p class="ani_p" style="animation-delay: 1.5s;-webkit-animation-delay: 1.5s;">创业、融资、估值、风口、资本寒冬……</p>
 					</div>
 					<div style="margin-top:.3rem;">
-						<p>这一年，</p>
-						<p>陪伴你的</p>
-						<p>也许只是天通苑到中关村的地铁</p>
-						<p>无休止的加班</p>
-						<p>朋友圈次次刷新的热点狂欢</p>
+						<p class="ani_p" style="animation-delay: 2s;-webkit-animation-delay: 2s;">这一年</p>
+						<p class="ani_p" style="animation-delay: 2.3s;-webkit-animation-delay: 2.3s;">陪伴你的</p>
+						<p class="ani_p" style="animation-delay: 2.6s;-webkit-animation-delay: 2.6s;">也许只是天通苑到中关村的地铁</p>
+						<p class="ani_p" style="animation-delay: 2.9s;-webkit-animation-delay: 2.9s;">无休止的加班</p>
+						<p class="ani_p" style="animation-delay: 3.2s;-webkit-animation-delay: 3.2s;">朋友圈次次刷新的热点狂欢</p>
 					</div>
 					<div style="margin-top:.3rem;">
-						<p>梦想离现实很近</p>
-						<p>梦想离现实很远</p>
-						<p>我们相信</p>
-						<p>发现每一个普通人的不普通</p>
-						<p>让每一簇最微小的光彼此照亮</p>
-						<p>这就是属于</p>
-						<p>每一个人的野心时代</p>
+						<p class="ani_p" style="animation-delay: 3.7s;-webkit-animation-delay: 3.7s;">梦想离现实很近</p>
+						<p class="ani_p" style="animation-delay: 4s;-webkit-animation-delay: 4s;">梦想离现实很远</p>
+						<p class="ani_p" style="animation-delay: 4.3s;-webkit-animation-delay: 4.3s;">我们相信</p>
+						<p class="ani_p" style="animation-delay: 4.6s;-webkit-animation-delay: 4.6s;">发现每一个普通人的不普通</p>
+						<p class="ani_p" style="animation-delay: 4.9s;-webkit-animation-delay: 4.9s;">让每一簇最微小的光彼此照亮</p>
+						<p class="ani_p" style="animation-delay: 5.2s;-webkit-animation-delay: 5.2s;">这就是属于</p>
+						<p class="ani_p" style="animation-delay: 5.5s;-webkit-animation-delay: 5.5s;">每一个人的野心时代</p>
 					</div>
 					<div>
-						<p class="txtr f30">——拉勾</p>
-						<p class="txtr f24">邀请你来听我的跨年盛典</p>
+						<p class="txtr f30" style="animation-delay: 6s;-webkit-animation-delay: 6s;">——拉勾</p>
+						<p class="txtr f24" style="animation-delay: 6s;-webkit-animation-delay: 6s;">邀请你来听我的跨年盛典</p>
 					</div>
 				</div>
 				<div class="bg_wrap">
@@ -110,7 +111,7 @@
 				</div>
 				<p class="mt20 l42 power_wrap" style="animation-delay: .9s;-webkit-animation-delay: .9s;">拉勾之夜</p>
 				<div class="power_wrap svg_wrap" style="animation-delay: .9s;-webkit-animation-delay: .9s;">
-					<p class="l42">有干货有见解，有星空有音乐</p>
+					<p class="l42">&nbsp;&nbsp;有干货有见解，有星空有音乐</p>
 					<div class="svg_container" style="position:absolute;z-index:2;">
 						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="border_svg">
 							<rect></rect>
@@ -136,12 +137,12 @@
 					<p>著名文艺女青年<span class="u_white">现场弹唱</span></p>
 					<p><span class="u_white">黑洞科学家</span>，聊一聊宇宙与星空</p>
 					<p><span class="u_white">国际超模</span>转型变身最潮CEO</p>
-					<p>《小王子》<span class="u_white">音乐剧</span>法方制作人</p>
+					<p>《小王子》<span class="u_white">音乐剧</span>法籍制作人</p>
 					<p>……</p>
 				</div>
 				<p class="moveFromLeft" style="animation-delay: 1.8s;-webkit-animation-delay: 1.8s;"><span class="white">现场还将颁出</span></p>
 				<div class="power_wrap" style="position:relative;animation-delay: 2.4s;-webkit-animation-delay: 2.4s;">
-					<p>2015中国互联网年度最佳雇主</p>
+					<p>&nbsp;&nbsp;2015中国互联网年度最佳雇主</p>
 					<div class="svg_container" style="position:absolute;z-index:2;">
 						<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" class="border_svg">
 							<rect></rect>
@@ -166,7 +167,47 @@
 						<tr>
 							<td class="head_td">
 								<div class="head_wrap">
-									<img src="image/xudandan.png" alt="">
+									<img src="../image/daizhikang.png" alt="">
+								</div>
+							</td>
+							<td>
+								<p class="name">戴志康</p>
+								<p class="desc">知名天使投资人</p>
+								<p class="desc">Discuz!创始人</p>
+								<p class="desc">财富"中国40位40岁以下的商界精英"</p>
+							</td>
+						</tr>
+						<tr>
+							<td class="head_td">
+								<div class="head_wrap">
+									<img src="../image/wangfeng.png" alt="">
+								</div>
+							</td>
+							<td>
+								<p class="name">王峰</p>
+								<p class="desc">连续创业者、投资人</p>
+								<p class="desc">蓝港在线、斧子科技创始人</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="page_item">
+				<div class="logo"></div>
+				<p class="f48 l56 mt140 tle_wrap">
+					拉勾之夜 · <b class="fw">颠覆力量</b>
+				</p>
+				<div class="f24 l36 mt20 power_wrap" style="animation-delay: 1.2s;-webkit-animation-delay: 1.2s;">
+					<p>他们总是习惯</p>
+					<p>用想象力与大胆去发掘</p>
+					<p>颠覆这个世界的商业力量</p>
+				</div>
+				<div class="name_wrap power_wrap" style="animation-delay: 1.8s;-webkit-animation-delay: 1.8s;">
+					<table>
+						<tr>
+							<td class="head_td">
+								<div class="head_wrap">
+									<img src="../image/xudandan.png" alt="">
 								</div>
 							</td>
 							<td>
@@ -178,26 +219,13 @@
 						<tr>
 							<td class="head_td">
 								<div class="head_wrap">
-									<img src="image/daiyusen.png" alt="">
+									<img src="../image/daiyusen.png?v=1" alt="">
 								</div>
 							</td>
 							<td>
 								<p class="name">戴雨森</p>
 								<p class="desc">聚美优品联合创始人</p>
 								<p class="desc">产品副总裁</p>
-							</td>
-						</tr>
-						<tr>
-							<td class="head_td">
-								<div class="head_wrap">
-									<img src="image/daizhikang.png" alt="">
-								</div>
-							</td>
-							<td>
-								<p class="name">戴志康</p>
-								<p class="desc">知名天使投资人</p>
-								<p class="desc">Discuz!创始人</p>
-								<p class="desc">财富"中国40位40岁以下的商界精英"</p>
 							</td>
 						</tr>
 					</table>
@@ -215,25 +243,25 @@
 					<p>&nbsp;</p>
 					<p>TA们</p>
 					<p>以傲慢与偏执</p>
-					<p>回敬傲慢与偏执</p>
+					<p>回敬傲慢与偏见</p>
 				</div>
 				<div class="name_wrap power_wrap" style="animation-delay: 1.8s;-webkit-animation-delay: 1.8s;">
 					<table>
 						<tr>
 							<td class="head_td">
 								<div class="head_wrap">
-									<img src="image/zhuxiaomu.png" alt="">
+									<img src="../image/zhuxiaomu.png" alt="">
 								</div>
 							</td>
 							<td>
 								<p class="name">朱萧木</p>
-								<p class="desc">锤子科技产品总监</p>
+								<p class="desc">锤子科技UX产品总监</p>
 							</td>
 						</tr>
 						<tr>
 							<td class="head_td">
 								<div class="head_wrap">
-									<img src="image/lijiaoshou.png" alt="">
+									<img src="../image/lijiaoshou.png" alt="">
 								</div>
 							</td>
 							<td>
@@ -263,7 +291,7 @@
 						<tr>
 							<td class="head_td">
 								<div class="head_wrap">
-									<img src="image/zhangdong.png" alt="">
+									<img src="../image/zhangdong.png" alt="">
 								</div>
 							</td>
 							<td>
@@ -274,7 +302,7 @@
 						<tr>
 							<td class="head_td">
 								<div class="head_wrap">
-									<img src="image/xiaohu.png" alt="">
+									<img src="../image/xiaohu.png" alt="">
 								</div>
 							</td>
 							<td>
@@ -304,7 +332,7 @@
 						<tr>
 							<td class="head_td">
 								<div class="head_wrap">
-									<img src="image/shaoyibei.png" alt="">
+									<img src="../image/shaoyibei.png" alt="">
 								</div>
 							</td>
 							<td>
@@ -317,7 +345,7 @@
 						<tr>
 							<td class="head_td">
 								<div class="head_wrap">
-									<img src="image/dubo.png" alt="">
+									<img src="../image/dubo.png" alt="">
 								</div>
 							</td>
 							<td>
@@ -344,7 +372,7 @@
 						<tr>
 							<td class="head_td">
 								<div class="head_wrap">
-									<img src="image/goulijun.png" alt="">
+									<img src="../image/goulijun.png" alt="">
 								</div>
 							</td>
 							<td>
@@ -357,7 +385,7 @@
 						<tr>
 							<td class="head_td">
 								<div class="head_wrap">
-									<img src="image/menglu.png" alt="">
+									<img src="../image/menglu.png" alt="">
 								</div>
 							</td>
 							<td>
@@ -394,6 +422,9 @@
 					<a href="http://t.cn/R4fRF7Y" class="btn moveFromLeft" style="animation-delay: 3.5s;-webkit-animation-delay: 3.5s;">我要去现场</a>
 					<a class="btn share moveFromRight" style="animation-delay: 3.5s;-webkit-animation-delay: 3.5s;">邀请朋友</a>
 				</div>
+				<div class="logos_wrap">
+					<img src="../image/logos.png" alt="">
+				</div>
 			</div>
 		</div>
 		<div id="turn_page_tip" class="show">
@@ -415,7 +446,9 @@
 			</svg>
 		</div>
 	</script>
-	<script src="./js/zepto.min.js"></script>
-	<script src="./js/index.js"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="$!{base}/template/common/share.js?v=$!{s_version}"></script>
+	<script src="../js/zepto.min.js"></script>
+	<script src="../js/index.js?v=$!{s_version}"></script>
 </body>
 </html>
