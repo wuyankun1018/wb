@@ -981,14 +981,14 @@ body {
     /* Opera */
   }
   100% {
-    transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
+    transform: translateX(-17.23rem);
+    -ms-transform: translateX(-17.23rem);
     /* IE 9 */
-    -moz-transform: translateX(-100%);
+    -moz-transform: translateX(-17.23rem);
     /* Firefox */
-    -webkit-transform: translateX(-100%);
+    -webkit-transform: translateX(-17.23rem);
     /* Safari 和 Chrome */
-    -o-transform: translateX(-100%);
+    -o-transform: translateX(-17.23rem);
     /* Opera */
   }
 }
