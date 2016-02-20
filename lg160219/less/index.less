@@ -42,13 +42,13 @@ html,body{width: 100%;font-size: .28rem;height: 100%;overflow: hidden;font-famil
 .txt(){
 	background: url("../image/p1txt.png") no-repeat;.pa;background-size: 5rem;
 }
-.txt1{.txt();left:(5.36-3.06)/2rem;width: 3.06rem;height: 1.18rem;background-position: 0 0;top: .7-1.28rem;
+.txt1{opacity:0;.txt();left:(5.36-3.06)/2rem;width: 3.06rem;height: 1.18rem;background-position: 0 0;top: .7-1.28rem;
 }
-.txt2{.txt();left:(5.36-3.12)/2rem;width: 3.12rem;height: .78rem;background-position: 0 -1.71rem;top: 2.4-1.28rem;
+.txt2{opacity:0;.txt();left:(5.36-3.12)/2rem;width: 3.12rem;height: .78rem;background-position: 0 -1.71rem;top: 2.4-1.28rem;
 }
-.txt3{.txt();left:(5.36-4.38)/2rem;width: 4.38rem;height: 1.06rem;background-position: 0 -3.02rem;top: 3.6-1.28rem;
+.txt3{opacity:0;.txt();left:(5.36-4.38)/2rem;width: 4.38rem;height: 1.06rem;background-position: 0 -3.02rem;top: 3.6-1.28rem;
 }
-.txt4{.txt();left:(5.36-2.04)/2rem;width: 2.04rem;height: .81rem;background-position: 0 -4.61rem;top: 5-1.28rem;
+.txt4{opacity:0;.txt();left:(5.36-2.04)/2rem;width: 2.04rem;height: .81rem;background-position: 0 -4.61rem;top: 5-1.28rem;
 }
 .lb_corner{width: .68rem;height: .68rem;.pa;border: .04rem solid transparent;border-bottom-color: #fff;border-left-color: #fff;.pa;left: -.4rem;bottom: -.4rem;}
 .rt_corner{width: .68rem;height: .68rem;.pa;border: .04rem solid transparent;border-top-color: #fff;border-right-color: #fff;.pa;top: -.4rem;right: -.4rem;}
@@ -65,16 +65,16 @@ html,body{width: 100%;font-size: .28rem;height: 100%;overflow: hidden;font-famil
 
 .aniAction{
 	.txt1{
-		.Animate(@name:fadeIn,@duration:1.2s,@timingfunction:linear,@delay:0s,@count:1,@direction:normal, @fillmode:backwards)
+		opacity:1;.Animate(@name:fadeIn,@duration:1.2s,@timingfunction:linear,@delay:0s,@count:1,@direction:normal, @fillmode:backwards)
 	}
 	.txt2{
-		.Animate(@name:widthShow,@duration:.7s,@timingfunction:linear,@delay:1s,@count:1,@direction:normal, @fillmode:backwards)
+		opacity:1;.Animate(@name:widthShow,@duration:.7s,@timingfunction:linear,@delay:1s,@count:1,@direction:normal, @fillmode:backwards)
 	}
 	.txt3{
-		.Animate(@name:widthShow,@duration:.7s,@timingfunction:linear,@delay:1.7s,@count:1,@direction:normal, @fillmode:backwards)
+		opacity:1;.Animate(@name:widthShow,@duration:.7s,@timingfunction:linear,@delay:1.7s,@count:1,@direction:normal, @fillmode:backwards)
 	}
 	.txt4{
-		.Animate(@name:widthShow,@duration:.7s,@timingfunction:linear,@delay:2.4s,@count:1,@direction:normal, @fillmode:backwards)
+		opacity:1;.Animate(@name:widthShow,@duration:.7s,@timingfunction:linear,@delay:2.4s,@count:1,@direction:normal, @fillmode:backwards)
 	}
 	.center_tip{
 		.Animate(@name:shakeUpDown,@duration:1s,@timingfunction:linear,@delay:3s,@count:infinite,@direction:alternate, @fillmode:backwards)

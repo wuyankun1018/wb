@@ -100,6 +100,7 @@ body {
   height: 100%;
 }
 .txt1 {
+  opacity: 0;
   background: url("../image/p1txt.png") no-repeat;
   position: absolute;
   background-size: 5rem;
@@ -110,6 +111,7 @@ body {
   top: -0.58rem;
 }
 .txt2 {
+  opacity: 0;
   background: url("../image/p1txt.png") no-repeat;
   position: absolute;
   background-size: 5rem;
@@ -120,6 +122,7 @@ body {
   top: 1.12rem;
 }
 .txt3 {
+  opacity: 0;
   background: url("../image/p1txt.png") no-repeat;
   position: absolute;
   background-size: 5rem;
@@ -130,6 +133,7 @@ body {
   top: 2.32rem;
 }
 .txt4 {
+  opacity: 0;
   background: url("../image/p1txt.png") no-repeat;
   position: absolute;
   background-size: 5rem;
@@ -193,18 +197,22 @@ body {
   font-size: .32rem;
 }
 .aniAction .txt1 {
+  opacity: 1;
   animation: fadeIn 1.2s linear 0s 1 normal backwards;
   -webkit-animation: fadeIn 1.2s linear 0s 1 normal backwards;
 }
 .aniAction .txt2 {
+  opacity: 1;
   animation: widthShow 0.7s linear 1s 1 normal backwards;
   -webkit-animation: widthShow 0.7s linear 1s 1 normal backwards;
 }
 .aniAction .txt3 {
+  opacity: 1;
   animation: widthShow 0.7s linear 1.7s 1 normal backwards;
   -webkit-animation: widthShow 0.7s linear 1.7s 1 normal backwards;
 }
 .aniAction .txt4 {
+  opacity: 1;
   animation: widthShow 0.7s linear 2.4s 1 normal backwards;
   -webkit-animation: widthShow 0.7s linear 2.4s 1 normal backwards;
 }
