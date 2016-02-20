@@ -35,6 +35,7 @@ var maxLen = 90+530+546+530+90
 var curr = 0
 
 window.onload = function(){
+	$('.loading').remove()
 	window.requestAnimationFrame(function(){
 		curr += 10
 		draw(curr)
