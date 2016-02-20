@@ -108,8 +108,6 @@ body {
   height: 1.18rem;
   background-position: 0 0;
   top: -0.58rem;
-  animation: fadeIn 1.2s linear 0s 1 normal backwards;
-  -webkit-animation: fadeIn 1.2s linear 0s 1 normal backwards;
 }
 .txt2 {
   background: url("../image/p1txt.png") no-repeat;
@@ -120,8 +118,6 @@ body {
   height: .78rem;
   background-position: 0 -1.71rem;
   top: 1.12rem;
-  animation: widthShow 0.7s linear 1s 1 normal backwards;
-  -webkit-animation: widthShow 0.7s linear 1s 1 normal backwards;
 }
 .txt3 {
   background: url("../image/p1txt.png") no-repeat;
@@ -132,8 +128,6 @@ body {
   height: 1.06rem;
   background-position: 0 -3.02rem;
   top: 2.32rem;
-  animation: widthShow 0.7s linear 1.7s 1 normal backwards;
-  -webkit-animation: widthShow 0.7s linear 1.7s 1 normal backwards;
 }
 .txt4 {
   background: url("../image/p1txt.png") no-repeat;
@@ -144,8 +138,6 @@ body {
   height: .81rem;
   background-position: 0 -4.61rem;
   top: 3.72rem;
-  animation: widthShow 0.7s linear 2.4s 1 normal backwards;
-  -webkit-animation: widthShow 0.7s linear 2.4s 1 normal backwards;
 }
 .lb_corner {
   width: .68rem;
@@ -177,8 +169,6 @@ body {
   border-bottom: .3rem solid transparent;
   border-left: .15rem solid transparent;
   border-right: .15rem solid transparent;
-  animation: shakeUpDown 1s linear 3s infinite alternate backwards;
-  -webkit-animation: shakeUpDown 1s linear 3s infinite alternate backwards;
 }
 .input_wrap,
 .btn_wrap {
