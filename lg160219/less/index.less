@@ -1,5 +1,5 @@
 @import url("../common.less");
-html,body{width: 100%;font-size: .28rem;height: 100%;overflow: hidden;font-family: Arial;}
+html,body{width: 100%;font-size: .28rem;font-family: Arial;}
 .transform(@x){
 	transform:@x;
 	-ms-transform:@x; 	/* IE 9 */
@@ -28,7 +28,7 @@ html,body{width: 100%;font-size: .28rem;height: 100%;overflow: hidden;font-famil
   -webkit-transition: @p; /* Safari 和 Chrome */
   -o-transition: @p;
 }
-.page_container{position: absolute;left: 0;right: 0;top: 0;bottom: 0;
+.page_container{position: absolute;left: 0;right: 0;top: 0;bottom: 0;overflow: hidden;
 	background: url("../image/bg.jpg") center top no-repeat;background-size: cover;
 }
 .loading{position: absolute;left: 0;right: 0;top: 0;bottom: 0;background-color: #000;color:#fff;z-index: 4;text-align: center;line-height: 10rem;}
@@ -61,7 +61,7 @@ html,body{width: 100%;font-size: .28rem;height: 100%;overflow: hidden;font-famil
 	border-right: .15rem solid transparent;
 }
 .input_wrap,.btn_wrap{text-align: center;margin-top: .4rem;}
-.name_input{text-align: center;background: transparent;font-size: .32rem;border: .03rem solid #fff;width: 4.34rem;color: #fff;height: .74rem;padding: 0;}
+.name_input{text-align: center;background: transparent;font-size: .32rem;border: .03rem solid #fff;width: 4.34rem;color: #fff;height: .74rem;padding: 0;border-radius: 0;-webkit-border-radius:0;}
 .sub_btn{width: 4.4rem;color: #fff;background:#1ccea3;font-size: .32rem;height: .8rem;border: none;}
 
 .aniAction{
