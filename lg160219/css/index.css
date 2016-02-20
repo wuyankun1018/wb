@@ -195,18 +195,19 @@ body {
   text-align: center;
   background: transparent;
   font-size: .32rem;
-  line-height: .74rem;
-  border: 1px solid #fff;
-  width: 4.4rem;
+  border: .03rem solid #fff;
+  width: 4.34rem;
   color: #fff;
+  height: .74rem;
+  padding: 0;
 }
 .sub_btn {
   width: 4.4rem;
   color: #fff;
   background: #1ccea3;
-  border: none;
-  line-height: .74rem;
   font-size: .32rem;
+  height: .8rem;
+  border: none;
 }
 .aniAction .txt1 {
   opacity: 1;
