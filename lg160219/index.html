@@ -3,17 +3,58 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<title>页面标题</title>
+	<title>2016，你靠什么走向人生巅峰？</title>
 	<link rel="stylesheet" href="./css/index.css">
 	<script>
 	(function(doc,win){var resizeEvt="orientationchange" in win?"orientationchange":"resize",use_screen_base=750,base_size=parseInt(use_screen_base),docE=doc.documentElement,recalc=function(){var triggerRepaints=docE.clientWidth;var clientWidth=win.innerWidth;docE.style.fontSize=100*(clientWidth/base_size)+"px"};recalc();win.addEventListener(resizeEvt,recalc,false)})(document,window);
 	</script>
 </head>
 <body>
+	<audio src="image/bg_music.mp3" id="bg_audio" autoplay loop></audio>
+	<script>
+		document.getElementById('bg_audio').play()
+	</script>
 	<div class="page_container">
-		page
+		<div class="p1_con">
+			<div class="p1_top">
+				<div class="canvas_div">
+					<canvas class="bg_canvas" width="546" height="530"></canvas>
+				</div>
+				<div class="txt1"></div>
+				<div class="txt2"></div>
+				<div class="txt3"></div>
+				<div class="txt4"></div>
+				<div class="lb_corner"></div>
+				<div class="rt_corner"></div>
+			</div>
+			<div class="center_tip"></div>
+			<div class="input_wrap">
+				<input type="text" class="name_input" placeholder="输入姓名">
+			</div>
+			<div class="btn_wrap">
+				<button type="button" class="sub_btn">立即测试</button>
+			</div>
+		</div>
+		<div class="p2_con">
+			<div class="p2_top">
+				<p class="p2_name">sky</p>
+				<p class="p2_for">是靠</p>
+				<p class="p2_result">力量</p>
+				<p class="p2_line">——</p>
+				<p class="desc_line1">满满的power</p>
+				<p class="desc_line2">生来就仿佛君临天下</p>
+				<p class="desc_line3">忍不住想要被你临幸</p>
+				<p class="p2_dot">...</p>
+				<div class="lb_corner"></div>
+				<div class="rt_corner"></div>
+			</div>
+			<div class="btn_wrap2">
+				<button type="button" class="share_btn">炫耀出去</button>
+				<a href="###" class="notice_link">涨薪通知<b>1</b></a>
+			</div>
+		</div>
 	</div>
-
+	<div id="share_mask" style="display:none;"></div>
 	<script src="./js/zepto.min.js"></script>
 	<script src="./js/index.js"></script>
 </body>

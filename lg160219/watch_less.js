@@ -5,7 +5,7 @@ fs.watch('./less/', { persistent: true, interval: 500 }, function(e, filename){
 	var file = filename.slice(0,-5)
 	var s = 'lessc ./less/'+filename+' ./css/'+file+'.css'
 	exec(s, function(){
-		// console.log(arguments)
+		console.log(arguments)
 	})
 	// console.log(s)
 
