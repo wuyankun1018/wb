@@ -37,7 +37,7 @@ var curr = 0
 window.onload = function(){
 	$('.loading').remove()
 	window.requestAnimationFrame(function(){
-		curr += 10
+		curr += 15
 		draw(curr)
 		if(curr<maxLen){
 			window.requestAnimationFrame(arguments.callee)
