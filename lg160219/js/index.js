@@ -31,8 +31,9 @@ var draw = function(len){
 window.requestAnimationFrame = window.requestAnimationFrame 
 	|| window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
-var maxLen = 90+530+546+530+90
-var curr = 0
+var maxLen = 90+530+546+530+90,curr = 0
+
+window.shareTxt = '2016，你靠什么走向人生巅峰？'
 
 window.onload = function(){
 	$('.loading').remove()
@@ -50,24 +51,7 @@ $('.share_btn').on('click', function(event) {
 	event.preventDefault();
 	$('#share_mask').show()
 })
-$('#share_mask').on('click', function(event) {
-	event.preventDefault();
-	$(this).hide()
-});
-$('.sub_btn').on('click', function(event) {
-	var name = $('.name_input').val().trim()
-	if(!name) return;
-	var data = randomDatas[randomDatas.length*Math.random()|0]
-	$(".p2_name").html(name)
-	$(".p2_result").html(data[0])
-	$(".desc_line1").html(data[1])
-	$(".desc_line2").html(data[2])
-	$(".desc_line3").html(data[3]||'')
-	$('.p1_con').hide()
-	setTimeout(function(){
-		$('.p2_con').addClass('p2Action')
-	},200)
-});
+
 var randomDatas = [
 	[
 		'精明'
@@ -189,10 +173,23 @@ var randomDatas = [
 		,'可以捡'
 	]
 ]
-// ctx.moveTo(90,0) //0
-// ctx.lineTo(0,0) //90
-// ctx.lineTo(0,530) //530
-// ctx.lineTo(546,530) //546
-// ctx.lineTo(546,0) //530
-// ctx.lineTo(456,0) //90
-// ctx.stroke()
+
+$('#share_mask').on('click', function(event) {
+	event.preventDefault();
+	$(this).hide()
+});
+$('.sub_btn').on('click', function(event) {
+	var name = $('.name_input').val().trim()
+	if(!name) return;
+	var data = randomDatas[randomDatas.length*Math.random()|0]
+	window.shareTxt = '2016，'+name+'是靠'+data[0]+'走向人生巅峰'
+	$(".p2_name").html(name)
+	$(".p2_result").html(data[0])
+	$(".desc_line1").html(data[1])
+	$(".desc_line2").html(data[2])
+	$(".desc_line3").html(data[3]||'')
+	$('.p1_con').hide()
+	setTimeout(function(){
+		$('.p2_con').addClass('p2Action')
+	},200)
+});
