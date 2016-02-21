@@ -69,6 +69,7 @@ $(function(){
 		}
 		isLoading = true
 		$('.rider_list').render('loading-item-tmp', {}, !isReload)
+		$('.loading')[0] && $('.loading')[0].scrollIntoView()
 		index = LoadIndex
 		var opts = {
 			skill:$('[data-key=skill]').find('.selected').data('value')
@@ -111,16 +112,17 @@ $(function(){
 		})
 	}
 
-	$(".rider_list").scroll(function(){
-         var $this =$(this),
-         viewH =$(this).height(),//可见高度
-         contentH =$(this).get(0).scrollHeight,//内容高度
-         scrollTop =$(this).scrollTop();//滚动高度
-        //if(contentH - viewH - scrollTop <= 100) { //到达底部100px时,加载新内容
-        if(scrollTop/(contentH -viewH)>=0.95){ //到达底部100px时,加载新内容
-        	loadListData()
-        }
-     }).on('click', '.right_wrap', function(event) {
+	var windowHeight = $(window).height()
+	window.onscroll=function(){
+		// var a = document.documentElement.scrollTop==0? document.body.clientHeight : document.documentElement.clientHeight;
+		var b = document.documentElement.scrollTop==0? document.body.scrollTop : document.documentElement.scrollTop;
+		var c = document.documentElement.scrollTop==0? document.body.scrollHeight : document.documentElement.scrollHeight;
+		if(c-b<windowHeight+10){
+			loadListData()
+		}
+	}
+
+	$(".rider_list").on('click', '.right_wrap', function(event) {
      	event.preventDefault();
      	var cid = $(this).parents('.rider_item').data('cid')
      	try{

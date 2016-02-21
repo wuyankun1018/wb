@@ -60,14 +60,6 @@ li {
   clear: both;
   height: 0;
 }
-.container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  overflow: hidden;
-}
 .tab_mask {
   position: absolute;
   width: 100%;
@@ -84,8 +76,9 @@ li {
   color: #8a8a8a;
   height: .76rem;
   z-index: 3;
-  position: relative;
   background: #fff;
+  position: fixed;
+  width: 100%;
 }
 .nav_tab_show .tab_wrap {
   font-size: 0;
@@ -158,13 +151,7 @@ li {
   color: #4eb97b;
 }
 .rider_list {
-  position: absolute;
-  top: .76rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: auto;
-  background-color: #f2f2f2;
+  padding-top: .78rem;
 }
 .rider_list .rider_item {
   padding: .3rem 0;
