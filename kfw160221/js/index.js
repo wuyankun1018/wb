@@ -88,6 +88,7 @@ $(function(){
 			dataArr.forEach(function(item){
 				item.scoreArr = []
 				item.noneScoreArr = []
+				item.score = item.score|0
 				for(var i=0;i<item.score;i++){
 					item.scoreArr.push(i)
 				}

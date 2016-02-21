@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<title>骑士列表</title>
 	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/iconfont.css">
+	<link rel="stylesheet" href="./css/iconfont.woff">
 	<script>
 	(function(doc,win){var resizeEvt="orientationchange" in win?"orientationchange":"resize",use_screen_base=640,base_size=parseInt(use_screen_base),docE=doc.documentElement,recalc=function(){var triggerRepaints=docE.clientWidth;var clientWidth=win.innerWidth;docE.style.fontSize=100*(clientWidth/base_size)+"px"};recalc();win.addEventListener(resizeEvt,recalc,false)})(document,window);
 	</script>
@@ -81,16 +83,16 @@
 					{{/if}}
 				</div>
 				{{if $value.gender==1}}
-				<i class="male">&nbsp;</i>
+				<i class="iconfont male">&#xe69e;</i>
 				{{else if $value.gender==2}}
-				<i class="female">&nbsp;</i>
+				<i class="iconfont female">&#xe69f;</i>
 				{{else}}
 
 				{{/if}}
 			</div>
 			<div class="center_wrap">
 				<p class="name_wrap">
-					{{$value.name}}<i {{if $value.audit_status}}class="audit"{{/if}}>&nbsp;</i>
+					{{$value.name}}<i {{if class="iconfont {{if $value.audit_status}}audit{{else}}n_audit{{/if}}">&#xe6a1;</i>
 				</p>
 				<p class="distance">{{$value.distance}}km</p>
 				<div class="clear_f"></div>
@@ -98,18 +100,18 @@
 				<div class="status">
 					<span class="star_wrap">
 						{{each $value.scoreArr}}
-						<i class="star">&nbsp;</i>
+						<i class="iconfont star">&#xe64f;</i>
 						{{/each}}
 						{{each $value.noneScoreArr}}
-						<i class="none_star">&nbsp;</i>
+						<i class="iconfont n_star">&#xe64f;</i>
 						{{/each}}
 					</span>
 					<span class="times">
-						<i>&nbsp;</i>
+						<i class="iconfont service">&#xe6a5;</i>
 						服务{{$value.service_times}}次
 					</span>
 					<span class="online_status">
-						<i>&nbsp;</i>
+						<i class="iconfont online_icon">&#xe6a6;</i>
 						{{if $value.online}}
 						在线
 						{{else}}
@@ -118,7 +120,9 @@
 					</span>
 				</div>
 			</div>
-			<div class="right_wrap"></div>
+			<div class="right_wrap">
+				<i class="iconfont chat">&#xe6ac;</i>
+			</div>
 			<div class="clear_f"></div>
 		</div>
 		{{/each}}
