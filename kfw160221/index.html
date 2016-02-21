@@ -10,6 +10,22 @@
 	</script>
 </head>
 <body>
+	<script type="text/html" id="nav-tmp">
+		{{each list as value}}
+		<li data-value="{{value.id}}">
+			{{value.title}}
+			{{if value.has_child}}
+			<div class="child_list_wrap">
+				<ul class="child_list">
+					{{each value.child as chil index}}
+					<li data-value="{{chil.id}}">{{chil.title}}</li>
+					{{/each}}
+				</ul>
+			</div>
+			{{/if}}
+		</li>
+		{{/each}}
+	</script>
 	<div class="container">
 		<div class="nav_tab_show">
 			<div class="tab_wrap">
@@ -20,7 +36,7 @@
 			<div class="con_wrap">
 				<ul class="select_list" data-key="skill">
 					<li data-value="0" class="selected">全部类别</li>
-					<li data-value="0">跑腿</li>
+					<!-- <li data-value="0">跑腿</li>
 					<li data-value="0">代办</li>
 					<li data-value="0">
 						维修
@@ -34,7 +50,7 @@
 						</div>
 					</li>
 					<li data-value="0">企业</li>
-					<li data-value="0">求助</li>
+					<li data-value="0">求助</li> -->
 				</ul>
 				<ul class="select_list" data-key="sort">
 					<li data-value="service" class="selected">服务最多</li>
@@ -60,6 +76,8 @@
 				<div class="head_wrap">
 					{{if $value.head_portrait_url}}
 					<img src="{{$value.head_portrait_url}}" alt="头像">
+					{{else}}
+					<img src="http://sp.shenqiapp.com/static_f/imgs/img_c/head@2x.png" alt="头像">
 					{{/if}}
 				</div>
 				{{if $value.gender==1}}
@@ -92,7 +110,11 @@
 					</span>
 					<span class="online_status">
 						<i>&nbsp;</i>
+						{{if $value.online}}
 						在线
+						{{else}}
+						不在线
+						{{/if}}
 					</span>
 				</div>
 			</div>

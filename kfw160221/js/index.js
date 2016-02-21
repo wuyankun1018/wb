@@ -33,6 +33,7 @@ $(function(){
 		var $list = $(this).parents('.select_list')
 		$list.find('.selected').removeClass('selected')
 		if($(this).find('.child_list_wrap').length){
+			$list.find('.show_child_list').removeClass('show_child_list')
 			$list.addClass('show_child_list')
 			$(this).addClass('show_child_list')
 		} else {
@@ -140,6 +141,13 @@ $(function(){
 
  	function init(){
 		loadListData(1)
+		$.post('/flow/v1_0/city/getCitySkillList', defaultOpts, function(res, textStatus, xhr) {
+			var arr = res.data.data || []
+			arr.forEach(function(item){
+				item.has_child = item.child && item.child.length
+			})
+			$('[data-key="skill"]').render('nav-tmp', {list:arr}, true)
+		},'json');
 	}
 
 	init()

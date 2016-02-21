@@ -130,7 +130,7 @@ li {
   width: 40%;
   border-right: #dfdfdf solid 1px;
 }
-.nav_tab_show .con_wrap > ul.act.show_child_list .child_list_wrap {
+.nav_tab_show .con_wrap > ul.act.show_child_list .show_child_list .child_list_wrap {
   display: block;
 }
 .nav_tab_show .con_wrap > ul > li {
