@@ -31,15 +31,17 @@ $(function(){
 
 	$('.con_wrap').on('click', 'li', function(event) {
 		var $list = $(this).parents('.select_list')
-		$list.find('.selected').removeClass('selected')
+		
 		if($(this).find('.child_list_wrap').length){
-			$list.find('.show_child_list').removeClass('show_child_list')
-			$list.addClass('show_child_list')
-			$(this).addClass('show_child_list')
+			// $list.find('.show_child_list').removeClass('show_child_list')
+			// $list.addClass('show_child_list')
+			$(this).addClass('show_child_list').siblings('.show_child_list').removeClass('show_child_list')
 		} else {
+			$list.find('.selected').removeClass('selected')
 			$(this).addClass('selected')
 			freshTabItem($list.index(), $(this).html().trim())
 		}
+		event.stopPropagation()
 	});
 
 	$('.tab_mask').on('click', function(event) {
