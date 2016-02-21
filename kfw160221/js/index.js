@@ -58,16 +58,18 @@ $(function(){
 
 	var LoadIndex = 0
 		,isLoading = false
-		,isLoadOver = false
+		,isLoadListOver = false
 	function loadListData(isReload){
-		if(isLoading) return;
-		if(!isReload && isLoadOver) return;
 		if(isReload){
+			if(isLoading){
+				isLoading.abort()
+			}
 			LoadIndex = 0;
-			isLoadOver = false;
+			isLoadListOver = false;
 			$('.rider_list').empty()
 		}
-		isLoading = true
+		if(isLoading) return;
+		if(!isReload && isLoadListOver) return;
 		$('.rider_list').render('loading-item-tmp', {}, !isReload)
 		$('.loading')[0] && $('.loading')[0].scrollIntoView()
 		index = LoadIndex
@@ -79,7 +81,7 @@ $(function(){
 		}
 		opts = $.extend(opts, defaultOpts);
 		
-		$.post('/flow/v1_0/courier/list', opts, function(res){
+		isLoading = $.post('/flow/v1_0/courier/list', opts, function(res){
 			console.log(res)
 			var dataArr = res.data.data || [];
 			dataArr.forEach(function(item){
@@ -102,7 +104,7 @@ $(function(){
 				$('.rider_list').render('item-tmp',{list:dataArr},!isReload)
 			} else {
 				$('.rider_list').render('none-item-tmp', {}, !isReload)
-				isLoadOver = true
+				isLoadListOver = true
 			}
 		}, 'json').fail(function(){
 			alert('获取数据失败')
