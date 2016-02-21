@@ -1,4 +1,5 @@
 window.shareTxt = '2016，你靠什么走向人生巅峰？'
+window.shareLink = location.href.split('?')[0].replace('/share.html','/index.html')
 
 window.onload = function(){
 	$('.loading').remove()
@@ -148,7 +149,6 @@ function getUrlParam(name){
 
 var name = getUrlParam('rname').replace(/</g,'&lt;').replace(/>/g,'&gt;')
 var data = randomDatas[getUrlParam('rindex')|0]
-window.shareTxt = '2016，'+name+'是靠'+data[0]+'走向人生巅峰'
 $(".p2_name").html(name)
 $(".p2_result").html(data[0])
 $(".desc_line1").html(data[1])
