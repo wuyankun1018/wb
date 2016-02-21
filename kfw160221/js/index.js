@@ -137,7 +137,7 @@ $(function(){
      }).on('click', '.left_wrap,.center_wrap', function(event) {
      	event.preventDefault();
      	var cid = $(this).parents('.rider_item').data('cid')
-     	window.open('/flow/view/courier_home?courier_id='+'cid')
+     	window.open('/flow/view/courier_home?courier_id='+cid)
      });
 
  	function init(){
