@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<title>骑士列表</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<script>
+	(function(doc,win){var resizeEvt="orientationchange" in win?"orientationchange":"resize",use_screen_base=640,base_size=parseInt(use_screen_base),docE=doc.documentElement,recalc=function(){var triggerRepaints=docE.clientWidth;var clientWidth=win.innerWidth;docE.style.fontSize=100*(clientWidth/base_size)+"px"};recalc();win.addEventListener(resizeEvt,recalc,false)})(document,window);
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="nav_tab_show">
+			<div class="tab_wrap">
+				<div class="tab_item"><p class="tab_name">全部类别</p></div>
+				<div class="tab_item"><p class="tab_name">服务最多</p></div>
+				<div class="tab_item"><p class="tab_name">在线</p></div>
+			</div>
+			<div class="con_wrap">
+				<ul class="select_list" data-key="skill">
+					<li data-value="0" class="selected">全部类别</li>
+					<li data-value="0">跑腿</li>
+					<li data-value="0">代办</li>
+					<li data-value="0">
+						维修
+						<div class="child_list_wrap">
+							<ul class="child_list">
+								<li data-value="0">水电维修</li>
+								<li data-value="0">开锁维修</li>
+								<li data-value="0">电脑维修</li>
+								<li data-value="0">家电维修</li>
+							</ul>
+						</div>
+					</li>
+					<li data-value="0">企业</li>
+					<li data-value="0">求助</li>
+				</ul>
+				<ul class="select_list" data-key="sort">
+					<li data-value="service" class="selected">服务最多</li>
+					<li data-value="score">评分最高</li>
+					<li data-value="distance">距离最近</li>
+				</ul>
+				<ul class="select_list" day-key="online">
+					<li data-value="1" class="selected">在线</li>
+					<li data-value="0">全部</li>
+				</ul>
+			</div>
+		</div>
+		<div class="tab_mask"></div>
+		
+		<div class="rider_list">
+			
+		</div>
+	</div>
+	<script type="text/html" id="item-tmp">
+		{{each list}}
+		<div class="rider_item" data-cid="{{$value.cid}}" data-index="{{$value.index}}">
+			<div class="left_wrap">
+				<div class="head_wrap">
+					{{if $value.head_portrait_url}}
+					<img src="{{$value.head_portrait_url}}" alt="头像">
+					{{/if}}
+				</div>
+				{{if $value.gender==1}}
+				<i class="male">&nbsp;</i>
+				{{else if $value.gender==2}}
+				<i class="female">&nbsp;</i>
+				{{else}}
+
+				{{/if}}
+			</div>
+			<div class="center_wrap">
+				<p class="name_wrap">
+					{{$value.name}}<i {{if $value.audit_status}}class="audit"{{/if}}>&nbsp;</i>
+				</p>
+				<p class="distance">{{$value.distance}}km</p>
+				<div class="clear_f"></div>
+				<p class="desc">{{$value.about}}</p>
+				<div class="status">
+					<span class="star_wrap">
+						{{each $value.scoreArr}}
+						<i class="star">&nbsp;</i>
+						{{/each}}
+						{{each $value.noneScoreArr}}
+						<i class="none_star">&nbsp;</i>
+						{{/each}}
+					</span>
+					<span class="times">
+						<i>&nbsp;</i>
+						服务{{$value.service_times}}次
+					</span>
+					<span class="online_status">
+						<i>&nbsp;</i>
+						在线
+					</span>
+				</div>
+			</div>
+			<div class="right_wrap"></div>
+			<div class="clear_f"></div>
+		</div>
+		{{/each}}
+	</script>
+	<script type="text/html" id="none-item-tmp">
+		<div class="has_no_more">没有更多了</div>
+	</script>
+	<script type="text/html" id="loading-item-tmp">
+		<div class="loading">数据加载中</div>
+	</script>
+	
+	<script src="/static_f/js/zepto.min2.js"></script>
+	<script src="/static_f/js/jquery-2.1.1.js"></script>  
+	<script src="/static_f/js/template.js"></script>   
+	<script src="./js/index.js"></script>
+</body>
+</html>
