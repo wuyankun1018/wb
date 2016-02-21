@@ -2,7 +2,7 @@ window.shareTxt = '2016，你靠什么走向人生巅峰？'
 
 window.onload = function(){
 	$('.loading').remove()
-	
+	$('.p2_con').addClass('p2Action')
 }
 
 
@@ -154,7 +154,7 @@ $(".p2_result").html(data[0])
 $(".desc_line1").html(data[1])
 $(".desc_line2").html(data[2])
 $(".desc_line3").html(data[3]||'')
-$('.p2_con').addClass('p2Action')
+
 
 $('.share_btn').on('click', function(event) {
 	location.href = location.href.split('?')[0].replace('/share.html','/index.html')
