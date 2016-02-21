@@ -1,57 +1,10 @@
-var canvas = $('.bg_canvas')[0]
-var ctx = canvas.getContext('2d')
-var clear = function(){
-	ctx.clearRect(0,0, 546,530)
-}
-var draw = function(len){
-	ctx.clearRect(0,0, 546,530)
-	ctx.beginPath()
-	ctx.strokeStyle = '#fff'
-	ctx.lineWidth = 10
-	ctx.moveTo(90,0)
-	ctx.lineTo(90-len<0?0:90-len,0)
-	len = len - 90
-	if(len>0){
-		ctx.lineTo(0,len>530?530:len)
-	}
-	len = len-530
-	if(len>0){
-		ctx.lineTo(len>546?546:len,530)
-	}
-	len = len-546
-	if(len>0){
-		ctx.lineTo(546,530-len<0?0:530-len)
-	}
-	len = len -530
-	if(len>0){
-		ctx.lineTo(546-len<456?456:546-len,0)
-	}
-	ctx.stroke()
-}
-window.requestAnimationFrame = window.requestAnimationFrame 
-	|| window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-
-var maxLen = 90+530+546+530+90,curr = 0
-
 window.shareTxt = '2016，你靠什么走向人生巅峰？'
-window.shareLink =  location.href
 
 window.onload = function(){
 	$('.loading').remove()
-	window.requestAnimationFrame(function(){
-		curr += 15
-		draw(curr)
-		if(curr<maxLen){
-			window.requestAnimationFrame(arguments.callee)
-		}
-	})
-	$('.p1_con').addClass('aniAction')
+	
 }
 
-$('.share_btn').on('click', function(event) {
-	event.preventDefault();
-	$('#share_mask').show()
-})
 
 var randomDatas = [
 	[
@@ -175,24 +128,34 @@ var randomDatas = [
 	]
 ]
 
-$('#share_mask').on('click', function(event) {
-	event.preventDefault();
-	$(this).hide()
-});
-$('.sub_btn').on('click', function(event) {
-	var name = $('.name_input').val().trim()
-	if(!name) return;
-	var _index = randomDatas.length*Math.random()|0
-	var data = randomDatas[_index]
-	window.shareTxt = '2016，'+name+'是靠'+data[0]+'走向人生巅峰'
-	window.shareLink = location.href.split('?')[0].replace('/index.html','/share.html')+'?rindex='+_index+'&rname='+name
-	$(".p2_name").html(name)
-	$(".p2_result").html(data[0])
-	$(".desc_line1").html(data[1])
-	$(".desc_line2").html(data[2])
-	$(".desc_line3").html(data[3]||'')
-	$('.p1_con').hide()
-	setTimeout(function(){
-		$('.p2_con').addClass('p2Action')
-	},200)
+function getUrlParam(name){  
+     var pattern = new RegExp("[?&]"+name+"\=([^&]+)", "g");  
+     var matcher = pattern.exec(location.href);  
+     var items = null;  
+     if(null != matcher){  
+             try{  
+                    items = decodeURIComponent(decodeURIComponent(matcher[1]));  
+             }catch(e){  
+                     try{  
+                             items = decodeURIComponent(matcher[1]);  
+                     }catch(e){  
+                             items = matcher[1];  
+                     }  
+             }  
+     }  
+     return items || '';  
+} 
+
+var name = getUrlParam('rname').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+var data = randomDatas[getUrlParam('rindex')|0]
+window.shareTxt = '2016，'+name+'是靠'+data[0]+'走向人生巅峰'
+$(".p2_name").html(name)
+$(".p2_result").html(data[0])
+$(".desc_line1").html(data[1])
+$(".desc_line2").html(data[2])
+$(".desc_line3").html(data[3]||'')
+$('.p2_con').addClass('p2Action')
+
+$('.share_btn').on('click', function(event) {
+	location.href = location.href.split('?')[0].replace('/share.html','/index.html')
 });
