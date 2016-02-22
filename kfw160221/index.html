@@ -83,35 +83,43 @@
 					{{/if}}
 				</div>
 				{{if $value.gender==1}}
-				<i class="iconfont male">&#xe69e;</i>
+				<i class="iconfont male">&#xe63c;</i>
 				{{else if $value.gender==2}}
-				<i class="iconfont female">&#xe69f;</i>
+				<i class="iconfont female">&#xe64f;</i>
 				{{else}}
 
 				{{/if}}
 			</div>
 			<div class="center_wrap">
 				<p class="name_wrap">
-					{{$value.name}}<i {{if class="iconfont {{if $value.audit_status}}audit{{else}}n_audit{{/if}}">&#xe6a1;</i>
+					{{$value.name}}
+					<i {{if class="iconfont {{if $value.audit_status}}audit{{else}}n_audit{{/if}}">&#xe650;</i>
+					<i {{if class="iconfont {{if $value.train_status}}audit{{else}}n_audit{{/if}}">&#xe651;</i>
+					<i {{if class="iconfont {{if $value.guarantee_status}}audit{{else}}n_audit{{/if}}">&#xe652;</i>
 				</p>
 				<p class="distance">{{$value.distance}}km</p>
 				<div class="clear_f"></div>
+				<div class="skills_wrap">
+					{{each $value.skills as skill}}
+					<span style="background:{{skill.color}}">{{skill.title}}</span>
+					{{/each}}
+				</div>
 				<p class="desc">{{$value.about}}</p>
 				<div class="status">
 					<span class="star_wrap">
 						{{each $value.scoreArr}}
-						<i class="iconfont star">&#xe64f;</i>
+						<i class="iconfont star">&#xe630;</i>
 						{{/each}}
 						{{each $value.noneScoreArr}}
-						<i class="iconfont n_star">&#xe64f;</i>
+						<i class="iconfont n_star">&#xe630;</i>
 						{{/each}}
 					</span>
 					<span class="times">
-						<i class="iconfont service">&#xe6a5;</i>
+						<i class="iconfont service">&#xe653;</i>
 						服务{{$value.service_times}}次
 					</span>
 					<span class="online_status">
-						<i class="iconfont online_icon">&#xe6a6;</i>
+						<i class="iconfont online_icon">&#xe654;</i>
 						{{if $value.online}}
 						在线
 						{{else}}
@@ -121,7 +129,7 @@
 				</div>
 			</div>
 			<div class="right_wrap">
-				<i class="iconfont chat">&#xe6ac;</i>
+				<i class="iconfont chat">&#xe655;</i>
 			</div>
 			<div class="clear_f"></div>
 		</div>

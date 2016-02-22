@@ -237,7 +237,6 @@ li {
 .rider_list .rider_item .center_wrap .desc {
   font-size: .22rem;
   line-height: .48rem;
-  height: .48rem;
   color: #A0A0A0;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -247,6 +246,7 @@ li {
 .rider_list .rider_item .center_wrap .status {
   font-size: .2rem;
   color: #c4c4c4;
+  overflow: hidden;
 }
 .rider_list .rider_item .center_wrap .star_wrap,
 .rider_list .rider_item .center_wrap .times {
@@ -266,6 +266,18 @@ li {
 .rider_list .rider_item .center_wrap .n_audit,
 .rider_list .rider_item .center_wrap .audit {
   margin-left: .06rem;
+}
+.rider_list .rider_item .center_wrap .skills_wrap {
+  line-height: 200%;
+  color: #fff;
+  font-size: .12rem;
+  margin: .04rem 0;
+}
+.rider_list .rider_item .center_wrap .skills_wrap span {
+  padding: .02rem .04rem;
+  border-radius: .04rem;
+  -webkit-border-radius: .04rem;
+  white-space: nowrap;
 }
 .rider_list .rider_item .right_wrap {
   text-align: center;
