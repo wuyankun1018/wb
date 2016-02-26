@@ -72,7 +72,6 @@ $(function(){
 		lazyLoad(actIndex+1)
 		var transform = 'translateY('+(-$pagesContainer.data('actIndex')*100)+'%)'
 		changeTransform.call($pagesContainer, transform)
-		location.hash = 'index='+$pagesContainer.data('actIndex')
 	}).on('swipeDown', function(event) {
 		if(isChildEle(noSwipeSelectors, $(event.target))) return;
 		var actIndex = $pagesContainer.data('actIndex')|0
@@ -83,7 +82,6 @@ $(function(){
 		lazyLoad(actIndex+1)
 		var transform = 'translateY('+(-$pagesContainer.data('actIndex')*100)+'%)'
 		changeTransform.call($pagesContainer, transform)
-		location.hash = 'index='+$pagesContainer.data('actIndex')
 	}).on('initTab', function(event, index) {
 		var actIndex = $pagesContainer.data('actIndex')|0
 		var transform = 'translateY('+(-$pagesContainer.data('actIndex')*100)+'%)'
@@ -92,5 +90,8 @@ $(function(){
 		$pagesContainer.addClass('tz')
 	}).trigger('initTab')
 
+	$('.share_btn,.share_mask').on('click', function(event) {
+		$('.share_mask').toggle()
+	});
 
 })
