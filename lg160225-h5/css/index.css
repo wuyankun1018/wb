@@ -77,23 +77,34 @@ body {
   position: relative;
 }
 .pages_container .page_item:nth-child(1) {
-  background-color: red;
+  background: url("../image/p1.png") no-repeat;
+  background-size: cover;
 }
 .pages_container .page_item:nth-child(2) {
-  background-color: blue;
+  background: url("../image/p2.png") no-repeat;
+  background-size: cover;
 }
 .pages_container .page_item:nth-child(3) {
-  background-color: green;
+  background: url("../image/p3.png") no-repeat;
+  background-size: cover;
 }
 .pages_container .page_item:nth-child(4) {
-  background-color: yellow;
+  background: url("../image/p4.png") no-repeat;
+  background-size: cover;
 }
 .pages_container .page_item:nth-child(5) {
-  background-color: pink;
+  background: url("../image/p5.png") no-repeat;
+  background-size: cover;
 }
 .pages_container .page_item:nth-child(6) {
-  background-color: orange;
+  background: url("../image/p6.png") no-repeat;
+  background-size: cover;
 }
 .pages_container .page_item:nth-child(7) {
-  background-color: black;
+  background: url("../image/p7.png") no-repeat;
+  background-size: cover;
+}
+.pages_container .page_item:nth-child(8) {
+  background: url("../image/p8.png") no-repeat;
+  background-size: cover;
 }
