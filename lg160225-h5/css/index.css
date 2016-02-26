@@ -1,0 +1,99 @@
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+table,
+th,
+td,
+map {
+  margin: 0;
+  padding: 0;
+}
+button {
+  outline: none;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:visited {
+  color: #000;
+}
+img {
+  border: none;
+}
+/**
+* 定义颜色
+* */
+/**
+* 定义atom原子化样式
+* */
+/**
+* 定义常用图像尺寸
+**/
+html,
+body {
+  font-size: 0.24rem;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial;
+}
+.pages_container {
+  height: 100%;
+}
+.pages_container.tz {
+  /* Firefox 4 */
+  /* Safari 和 Chrome */
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.6s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.6s;
+}
+.pages_container .page_item {
+  height: 100%;
+  position: relative;
+}
+.pages_container .page_item:nth-child(1) {
+  background-color: red;
+}
+.pages_container .page_item:nth-child(2) {
+  background-color: blue;
+}
+.pages_container .page_item:nth-child(3) {
+  background-color: green;
+}
+.pages_container .page_item:nth-child(4) {
+  background-color: yellow;
+}
+.pages_container .page_item:nth-child(5) {
+  background-color: pink;
+}
+.pages_container .page_item:nth-child(6) {
+  background-color: orange;
+}
+.pages_container .page_item:nth-child(7) {
+  background-color: black;
+}

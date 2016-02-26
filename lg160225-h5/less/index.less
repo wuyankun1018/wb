@@ -1,0 +1,17 @@
+@import url("../common.less");
+html,body{.f(.24rem);.h(100%);.hidden;font-family: Arial;}
+.pages_container{.h(100%);
+	&.tz{.transition(all .6s);}
+	.page_item{.h(100%);.pr;
+		
+		&:nth-child{
+			&(1){background-color: red;}
+			&(2){background-color: blue;}
+			&(3){background-color: green;}
+			&(4){background-color: yellow;}
+			&(5){background-color: pink;}
+			&(6){background-color: orange;}
+			&(7){background-color: black;}
+		}
+	}
+}
