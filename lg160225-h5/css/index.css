@@ -299,41 +299,21 @@ body {
   font-size: 0.3rem;
 }
 .pages_container .page_item .p6_scroll_wrap {
-  width: 6.82rem;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5.94rem;
   margin-top: 3.1rem;
-  background: url("../image/bankuai_bg.png") no-repeat;
-  background-size: cover;
 }
 .pages_container .page_item .p6_scroll_wrap .scroll_wrap {
   width: 5.6rem;
   margin-left: auto;
   margin-right: auto;
   height: 5.94rem;
-  overflow: hidden;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w {
-  white-space: nowrap;
-  font-size: 0;
-  width: 1000%;
-  /* Firefox 4 */
-  /* Safari 和 Chrome */
-  transition: all 0.6s;
-  -moz-transition: all 0.6s;
-  /* Firefox 4 */
-  -webkit-transition: all 0.6s;
-  /* Safari 和 Chrome */
-  -o-transition: all 0.6s;
-}
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item {
+.pages_container .page_item .p6_scroll_wrap .s_item {
   width: 5.6rem;
   height: 5.94rem;
   float: left;
   overflow: hidden;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .s_tle {
+.pages_container .page_item .p6_scroll_wrap .s_item .s_tle {
   font-size: 0.38rem;
   font-weight: bold;
   text-align: center;
@@ -342,7 +322,7 @@ body {
   position: relative;
   margin-bottom: 0.2rem;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .s_tle:before {
+.pages_container .page_item .p6_scroll_wrap .s_item .s_tle:before {
   height: 1px;
   background: #fff;
   width: 4.1rem;
@@ -365,25 +345,25 @@ body {
   /* Opera */
   z-index: 1;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .s_tle > span {
+.pages_container .page_item .p6_scroll_wrap .s_item .s_tle > span {
   background: #00d683;
   position: relative;
   z-index: 10;
   padding: 0 .1rem;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .desc1 {
+.pages_container .page_item .p6_scroll_wrap .s_item .desc1 {
   font-size: 0.3rem;
   color: #2a1969;
   text-align: center;
   line-height: 150%;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .desc2 {
+.pages_container .page_item .p6_scroll_wrap .s_item .desc2 {
   font-size: 0.24rem;
   color: #2a1969;
   text-align: center;
   line-height: 150%;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice {
+.pages_container .page_item .p6_scroll_wrap .s_item .notice {
   border: 1px solid #00d683;
   width: 5rem;
   margin-left: auto;
@@ -400,16 +380,16 @@ body {
   margin-bottom: 0.3rem;
   text-align: center;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice h3 {
+.pages_container .page_item .p6_scroll_wrap .s_item .notice h3 {
   text-align: center;
   font-size: 0.3rem;
   line-height: 0.6rem;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice p {
+.pages_container .page_item .p6_scroll_wrap .s_item .notice p {
   white-space: normal;
   padding: 0 .24rem;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice .n_foot {
+.pages_container .page_item .p6_scroll_wrap .s_item .notice .n_foot {
   background-color: #FFF;
   position: absolute;
   border: 1px solid #00d683;
@@ -419,7 +399,7 @@ body {
   left: -1px;
   bottom: -0.2rem;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice .n_foot:after {
+.pages_container .page_item .p6_scroll_wrap .s_item .notice .n_foot:after {
   background-color: #FFF;
   content: '';
   position: absolute;
@@ -428,7 +408,7 @@ body {
   right: -0.2rem;
   top: 0;
 }
-.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice .n_foot:before {
+.pages_container .page_item .p6_scroll_wrap .s_item .notice .n_foot:before {
   content: '';
   position: absolute;
   border-top: 1px solid #00d683;
@@ -574,4 +554,166 @@ body {
   -webkit-animation: rotate360 3s linear 0s infinite normal none;
 }
 @-webkit-keyframes rotate360 {
+}
+.p6_scroll_wrap {
+  perspective: 500px;
+  -webkit-perspective: 500px;
+}
+.p6_scroll_wrap .scroll_wrap {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 5.6rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5.94rem;
+}
+.p6_scroll_wrap .scroll_wrap .s_item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: translateZ(-200px);
+  -ms-transform: translateZ(-200px);
+  /* IE 9 */
+  -moz-transform: translateZ(-200px);
+  /* Firefox */
+  -webkit-transform: translateZ(-200px);
+  /* Safari 和 Chrome */
+  -o-transform: translateZ(-200px);
+  /* Opera */
+  background-position: center center;
+  background-color: #fff;
+}
+.p6_scroll_wrap .scroll_wrap .s_item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.p6_scroll_wrap .scroll_wrap .s_item.act {
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  /* IE 9 */
+  -moz-transform: translateZ(0px);
+  /* Firefox */
+  -webkit-transform: translateZ(0px);
+  /* Safari 和 Chrome */
+  -o-transform: translateZ(0px);
+  /* Opera */
+}
+.p6_scroll_wrap .scroll_wrap .s_item.act_p1 {
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: translateZ(-65px) translateX(-0.9rem);
+  -ms-transform: translateZ(-65px) translateX(-0.9rem);
+  /* IE 9 */
+  -moz-transform: translateZ(-65px) translateX(-0.9rem);
+  /* Firefox */
+  -webkit-transform: translateZ(-65px) translateX(-0.9rem);
+  /* Safari 和 Chrome */
+  -o-transform: translateZ(-65px) translateX(-0.9rem);
+  /* Opera */
+  opacity: .3;
+}
+.p6_scroll_wrap .scroll_wrap .s_item.act_p2 {
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: translateZ(-100px) translateX(-1.5rem);
+  -ms-transform: translateZ(-100px) translateX(-1.5rem);
+  /* IE 9 */
+  -moz-transform: translateZ(-100px) translateX(-1.5rem);
+  /* Firefox */
+  -webkit-transform: translateZ(-100px) translateX(-1.5rem);
+  /* Safari 和 Chrome */
+  -o-transform: translateZ(-100px) translateX(-1.5rem);
+  /* Opera */
+  opacity: .1;
+}
+.p6_scroll_wrap .scroll_wrap .s_item.act_p3 {
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: translateZ(-101px) translateX(-1.5rem);
+  -ms-transform: translateZ(-101px) translateX(-1.5rem);
+  /* IE 9 */
+  -moz-transform: translateZ(-101px) translateX(-1.5rem);
+  /* Firefox */
+  -webkit-transform: translateZ(-101px) translateX(-1.5rem);
+  /* Safari 和 Chrome */
+  -o-transform: translateZ(-101px) translateX(-1.5rem);
+  /* Opera */
+  opacity: .1;
+}
+.p6_scroll_wrap .scroll_wrap .s_item.act_n1 {
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: translateZ(-65px) translateX(0.9rem);
+  -ms-transform: translateZ(-65px) translateX(0.9rem);
+  /* IE 9 */
+  -moz-transform: translateZ(-65px) translateX(0.9rem);
+  /* Firefox */
+  -webkit-transform: translateZ(-65px) translateX(0.9rem);
+  /* Safari 和 Chrome */
+  -o-transform: translateZ(-65px) translateX(0.9rem);
+  /* Opera */
+  opacity: .3;
+}
+.p6_scroll_wrap .scroll_wrap .s_item.act_n2 {
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: translateZ(-100px) translateX(1.5rem);
+  -ms-transform: translateZ(-100px) translateX(1.5rem);
+  /* IE 9 */
+  -moz-transform: translateZ(-100px) translateX(1.5rem);
+  /* Firefox */
+  -webkit-transform: translateZ(-100px) translateX(1.5rem);
+  /* Safari 和 Chrome */
+  -o-transform: translateZ(-100px) translateX(1.5rem);
+  /* Opera */
+  opacity: .1;
+}
+.p6_scroll_wrap .scroll_wrap .s_item.act_n3 {
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: translateZ(-101px) translateX(1.5rem);
+  -ms-transform: translateZ(-101px) translateX(1.5rem);
+  /* IE 9 */
+  -moz-transform: translateZ(-101px) translateX(1.5rem);
+  /* Firefox */
+  -webkit-transform: translateZ(-101px) translateX(1.5rem);
+  /* Safari 和 Chrome */
+  -o-transform: translateZ(-101px) translateX(1.5rem);
+  /* Opera */
+  opacity: .1;
+}
+.p6_scroll_wrap.tz .s_item {
+  /* Firefox 4 */
+  /* Safari 和 Chrome */
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.6s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.6s;
 }

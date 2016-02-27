@@ -98,6 +98,8 @@ $(function(){
 		event.preventDefault();
 	});
 
+
+	/*
 	$('.p6_scroll_wrap').on('swipeLeft', function(event) {
 		console.log('l+1')
 		var sitems = $('.dot_wrap').find('div')
@@ -118,8 +120,61 @@ $(function(){
 		sitems.eq(index).addClass('act').siblings().removeClass('act')
 		changeTransform.call($(this).find('.scroll_w'), 'translateX(-'+5.6*index+'rem)')
 	})
+	*/
 
-	
+	//p6
+	function initImgSection(){
+		var $imgSection = $('.p6_scroll_wrap')
+			,$imgItems = $imgSection.find('.s_item')
+			,imgItemsLength = $imgItems.length
+
+		$imgSection.on('swipeLeft', function(event) {
+			console.log('left +1')
+			var index = getCycleIndex($imgItems.filter('.act').index()+1, imgItemsLength)
+			$imgItems.eq(index).trigger('change_tab')
+		}).on('swipeRight', function(event) {
+			console.log('right -1')
+			var index = getCycleIndex($imgItems.filter('.act').index()-1, imgItemsLength)
+			$imgItems.eq(index).trigger('change_tab')
+		}).on('change_tab', '.s_item', function(event, type) {
+			var $items = $imgItems
+				,_index = $(this).index()
+				,length = $items.length
+			
+			$items.removeClass('act act_n1 act_n2 act_n3 act_p1 act_p2 act_p3')
+			$items.eq(_index).addClass('act')
+			$('.dot_wrap').children().eq(_index).addClass('act').siblings().removeClass('act')
+			if(length>1){
+				$items.eq(getCycleIndex(_index-1, length)).addClass('act_p1')
+				$items.eq(getCycleIndex(_index+1, length)).addClass('act_n1')
+			}
+			if(length>3){
+				$items.eq(getCycleIndex(_index-2, length)).addClass('act_p2')
+				$items.eq(getCycleIndex(_index+2, length)).addClass('act_n2')
+			}
+			if(length>5){
+				$items.eq(getCycleIndex(_index-3, length)).addClass('act_p3')
+				$items.eq(getCycleIndex(_index+3, length)).addClass('act_n3')
+			}
+		}).on('change_sub', function(event, index, type) {
+			$imgItems.eq(index).trigger('change_tab')
+			if(!this.inited){
+				$imgSection.css('width') //for read
+				$imgSection.addClass('tz')
+				this.inited = 1;
+			}
+		}).trigger('change_sub', actIndex)
+
+		function getCycleIndex(_i, length){
+			if(_i<0)
+				return _i+length
+			if(_i>=length)
+				return _i-length
+			return _i
+		}
+
+	}
+	initImgSection()
 	
 	//嘉宾轮播
 	;(function(){

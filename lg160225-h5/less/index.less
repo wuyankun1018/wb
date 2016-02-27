@@ -72,37 +72,35 @@ html,body{.f(.24rem);.h(100%);.hidden;font-family: Arial;color:#fff;}
 			.tle_td{.w(1.4rem);text-align: left;}
 			button{.h(.88rem);border: none;.bgc(@green);color:#fff;.border-r(.05rem);vertical-align: middle;padding: 0 .4rem;.f(.3rem);}
 		}
-		.p6_scroll_wrap{.w(6.82rem);.auto;.h(5.94rem);.mt(3.1rem);background: url("../image/bankuai_bg.png") no-repeat;background-size: cover;
-			.scroll_wrap{.w(5.6rem);.auto;.h(5.94rem);.hidden;}
-			.scroll_w{white-space: nowrap;font-size: 0;width: 1000%;.transition(all .6s);
-				.s_item{.w(5.6rem);.h(5.94rem);.left;overflow: hidden;
-					.s_tle{.f(.38rem);.fb;.c;.bgc(@green);.l(.88rem);.pr;.mb(.2rem);
-						&:before{.h(1px);background: #fff;width: 4.1rem;content:'';.pa;left: 50%;top: 50%;.transform(translateX(-50%));z-index: 1;}
-						&>span{background: @green;.pr;z-index: 10;padding: 0 .1rem;}
-					}
-					.desc1{.f(.3rem);.fc(#2a1969);.c;.l(150%);}
-					.desc2{.f(.24rem);.fc(#2a1969);.c;.l(150%);}
-					.notice{border:1px solid @green;.w(5rem);.auto;.mt(.1rem);line-height: 150%;.f(.3rem);.fc(#2a1969);.pr;border-bottom: none;padding-bottom: .1rem;.bgwhite;padding-top: .2rem;.mb(.3rem);.c;
-						h3{.c;.f(.3rem);.l(.6rem);}
-						p{white-space:normal;padding: 0 .24rem;}
-						.n_foot{.bgwhite;
-							.pa;border: 1px solid @green;border-top: none;height: .2rem;width: 4.8rem;left: -1px;bottom: -.2rem;
-							&:after{.bgwhite;
-								content:'';.pa;
-								border-top: 1px solid @green;
-								width: .2rem;
-								right: -.2rem;
-								top: 0;
-							}
-							&:before{
-								content:'';.pa;
-								border-top: 1px solid @green;
-								width: .3rem;
-								height: .3rem;
-								right: -.36rem;
-								top: .06rem;
-								.transform(rotate(-45deg));
-							}
+		.p6_scroll_wrap{.mt(3.1rem);
+			.scroll_wrap{.w(5.6rem);.auto;.h(5.94rem);}
+			.s_item{.w(5.6rem);.h(5.94rem);.left;overflow: hidden;
+				.s_tle{.f(.38rem);.fb;.c;.bgc(@green);.l(.88rem);.pr;.mb(.2rem);
+					&:before{.h(1px);background: #fff;width: 4.1rem;content:'';.pa;left: 50%;top: 50%;.transform(translateX(-50%));z-index: 1;}
+					&>span{background: @green;.pr;z-index: 10;padding: 0 .1rem;}
+				}
+				.desc1{.f(.3rem);.fc(#2a1969);.c;.l(150%);}
+				.desc2{.f(.24rem);.fc(#2a1969);.c;.l(150%);}
+				.notice{border:1px solid @green;.w(5rem);.auto;.mt(.1rem);line-height: 150%;.f(.3rem);.fc(#2a1969);.pr;border-bottom: none;padding-bottom: .1rem;.bgwhite;padding-top: .2rem;.mb(.3rem);.c;
+					h3{.c;.f(.3rem);.l(.6rem);}
+					p{white-space:normal;padding: 0 .24rem;}
+					.n_foot{.bgwhite;
+						.pa;border: 1px solid @green;border-top: none;height: .2rem;width: 4.8rem;left: -1px;bottom: -.2rem;
+						&:after{.bgwhite;
+							content:'';.pa;
+							border-top: 1px solid @green;
+							width: .2rem;
+							right: -.2rem;
+							top: 0;
+						}
+						&:before{
+							content:'';.pa;
+							border-top: 1px solid @green;
+							width: .3rem;
+							height: .3rem;
+							right: -.36rem;
+							top: .06rem;
+							.transform(rotate(-45deg));
 						}
 					}
 				}
@@ -140,4 +138,22 @@ html,body{.f(.24rem);.h(100%);.hidden;font-family: Arial;color:#fff;}
 @-webkit-keyframes rotate360{
 	0%{}
 	0%{}
+}
+
+.p6_scroll_wrap{perspective:500px;-webkit-perspective:500px;
+	.scroll_wrap{.pr;transform-style: preserve-3d;.w(5.6rem);.auto;.h(5.94rem);
+		.s_item{.w(100%);.h(100%);.pa;left: 0;top: 0;background-repeat: no-repeat;background-size: cover;.transform(translateZ(-200px));background-position: center center;background-color: #fff;
+			img{width: 100%;height: 100%;.block;}
+			&.act{.transform(translateZ(0px));}
+			&.act_p1{.transform(translateZ(-65px) translateX(-.9rem));opacity: .3;}
+			&.act_p2{.transform(translateZ(-100px) translateX(-1.5rem));opacity: .1;}
+			&.act_p3{.transform(translateZ(-101px) translateX(-1.5rem));opacity: .1;}
+			&.act_n1{.transform(translateZ(-65px) translateX(.9rem));opacity: .3;}
+			&.act_n2{.transform(translateZ(-100px) translateX(1.5rem));opacity: .1;}
+			&.act_n3{.transform(translateZ(-101px) translateX(1.5rem));opacity: .1;}
+		}
+	}
+	&.tz{
+		.s_item{.transition(all .6s);}
+	}
 }
