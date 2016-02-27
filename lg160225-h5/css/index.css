@@ -94,7 +94,7 @@ body {
   position: absolute;
   content: '';
   width: 2.41rem;
-  height: 0.74rem;
+  height: 0.5rem;
   left: 50%;
   /* IE 9 */
   /* Firefox */
@@ -109,9 +109,42 @@ body {
   /* Safari 和 Chrome */
   -o-transform: translateX(-50%);
   /* Opera */
-  background: url("../image/footer.png") no-repeat;
+  background: url("../image/footer.png") no-repeat top;
+  background-size: cover;
+  bottom: 0.54rem;
+}
+.pages_container .page_item:before {
+  position: absolute;
+  content: '';
+  width: 2.41rem;
+  height: 0.24rem;
+  left: 50%;
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  /* IE 9 */
+  -moz-transform: translateX(-50%);
+  /* Firefox */
+  -webkit-transform: translateX(-50%);
+  /* Safari 和 Chrome */
+  -o-transform: translateX(-50%);
+  /* Opera */
+  background: url("../image/footer.png") no-repeat bottom;
   background-size: cover;
   bottom: .3rem;
+  animation: ll 2s linear 0s infinite alternate none;
+  -webkit-animation: ll 2s linear 0s infinite alternate none;
+}
+@-webkit-keyframes ll {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .pages_container .page_item:last-child:after {
   display: none;
@@ -523,4 +556,22 @@ body {
 }
 .green_f {
   color: #00d683;
+}
+#audio_wrapper {
+  z-index: 9 ;
+  width: .64rem;
+  height: .64rem;
+  position: absolute;
+  top: .4rem;
+  right: .4rem;
+  background: url("../image/music.png") no-repeat;
+  background-size: auto .64rem;
+  background-position: -0.72rem 0;
+}
+#audio_wrapper.playing {
+  background-position: 0 0rem;
+  animation: rotate360 3s linear 0s infinite normal none;
+  -webkit-animation: rotate360 3s linear 0s infinite normal none;
+}
+@-webkit-keyframes rotate360 {
 }

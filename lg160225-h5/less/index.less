@@ -8,11 +8,26 @@ html,body{.f(.24rem);.h(100%);.hidden;font-family: Arial;color:#fff;}
 		&:after{.pa;
 			content:'';
 			.w(2.41rem);
-			.h(.74rem);
+			.h(.5rem);
 			left: 50%;
 			.transform(translateX(-50%));
-			background:url("../image/footer.png") no-repeat;background-size: cover;
+			background:url("../image/footer.png") no-repeat top;background-size: cover;
+			bottom: .3+.24rem;
+		}
+		&:before{
+			.pa;
+			content:'';
+			.w(2.41rem);
+			.h(0.24rem);
+			left: 50%;
+			.transform(translateX(-50%));
+			background:url("../image/footer.png") no-repeat bottom;background-size: cover;
 			bottom: .3rem;
+			.Animate(@name:ll,@duration:2s,@timingfunction:linear,@delay:0s,@count:infinite,@direction:alternate, @fillmode:none);
+		}
+		@-webkit-keyframes ll{
+			0%{opacity: 0;}
+			100%{opacity: 1;}
 		}
 		&:last-child{
 			&:after{.none;}
@@ -119,3 +134,10 @@ html,body{.f(.24rem);.h(100%);.hidden;font-family: Arial;color:#fff;}
 	}
 }
 .green_f{color: @green;}
+#audio_wrapper{z-index: 9 ; width: .64rem;height: .64rem;.pa;top: .4rem;right: .4rem;background: url("../image/music.png") no-repeat;background-size: auto .64rem;background-position: -.72rem 0;
+	&.playing{background-position: 0 0rem;.Animate(@name:rotate360,@duration:3s,@timingfunction:linear,@delay:0s,@count:infinite,@direction:normal, @fillmode:none);}
+}
+@-webkit-keyframes rotate360{
+	0%{}
+	0%{}
+}
