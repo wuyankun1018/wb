@@ -215,3 +215,307 @@ body {
   color: #765fcc;
   line-height: 200%;
 }
+.pages_container .page_item .sub_table {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.3rem;
+  line-height: 1rem;
+  margin-top: 1.8rem;
+}
+.pages_container .page_item .sub_table input {
+  height: 0.88rem;
+  width: 5.5rem;
+  -webkit-border-radius: 0.05rem;
+  border-radius: 0.05rem;
+  border: none;
+  text-indent: .1rem;
+  font-size: 0.3rem;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.pages_container .page_item .sub_table select {
+  height: 0.88rem;
+  font-size: 0.3rem;
+  width: 5.5rem;
+  box-sizing: border-box;
+  text-indent: .1rem;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url("../image/arrow_down.png") no-repeat scroll right center transparent;
+  background-color: #fff;
+  padding-right: 14px;
+  vertical-align: middle;
+}
+.pages_container .page_item .sub_table .mobile_input {
+  width: 4rem;
+}
+.pages_container .page_item .sub_table .tle_td {
+  width: 1.4rem;
+  text-align: left;
+}
+.pages_container .page_item .sub_table button {
+  height: 0.88rem;
+  border: none;
+  background-color: #00d683;
+  color: #fff;
+  -webkit-border-radius: 0.05rem;
+  border-radius: 0.05rem;
+  vertical-align: middle;
+  padding: 0 .4rem;
+  font-size: 0.3rem;
+}
+.pages_container .page_item .p6_scroll_wrap {
+  width: 6.82rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5.94rem;
+  margin-top: 3.1rem;
+  background: url("../image/bankuai_bg.png") no-repeat;
+  background-size: cover;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_wrap {
+  width: 5.6rem;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5.94rem;
+  overflow: hidden;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w {
+  white-space: nowrap;
+  font-size: 0;
+  width: 1000%;
+  /* Firefox 4 */
+  /* Safari 和 Chrome */
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.6s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.6s;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item {
+  width: 5.6rem;
+  height: 5.94rem;
+  float: left;
+  overflow: hidden;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .s_tle {
+  font-size: 0.38rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #00d683;
+  line-height: 0.88rem;
+  position: relative;
+  margin-bottom: 0.2rem;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .s_tle:before {
+  height: 1px;
+  background: #fff;
+  width: 4.1rem;
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  /* IE 9 */
+  -moz-transform: translateX(-50%);
+  /* Firefox */
+  -webkit-transform: translateX(-50%);
+  /* Safari 和 Chrome */
+  -o-transform: translateX(-50%);
+  /* Opera */
+  z-index: 1;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .s_tle > span {
+  background: #00d683;
+  position: relative;
+  z-index: 10;
+  padding: 0 .1rem;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .desc1 {
+  font-size: 0.3rem;
+  color: #2a1969;
+  text-align: center;
+  line-height: 150%;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .desc2 {
+  font-size: 0.24rem;
+  color: #2a1969;
+  text-align: center;
+  line-height: 150%;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice {
+  border: 1px solid #00d683;
+  width: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.1rem;
+  line-height: 150%;
+  font-size: 0.3rem;
+  color: #2a1969;
+  position: relative;
+  border-bottom: none;
+  padding-bottom: .1rem;
+  background-color: #FFF;
+  padding-top: .2rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice h3 {
+  text-align: center;
+  font-size: 0.3rem;
+  line-height: 0.6rem;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice p {
+  white-space: normal;
+  padding: 0 .24rem;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice .n_foot {
+  background-color: #FFF;
+  position: absolute;
+  border: 1px solid #00d683;
+  border-top: none;
+  height: .2rem;
+  width: 4.8rem;
+  left: -1px;
+  bottom: -0.2rem;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice .n_foot:after {
+  background-color: #FFF;
+  content: '';
+  position: absolute;
+  border-top: 1px solid #00d683;
+  width: .2rem;
+  right: -0.2rem;
+  top: 0;
+}
+.pages_container .page_item .p6_scroll_wrap .scroll_w .s_item .notice .n_foot:before {
+  content: '';
+  position: absolute;
+  border-top: 1px solid #00d683;
+  width: .3rem;
+  height: .3rem;
+  right: -0.36rem;
+  top: .06rem;
+  /* IE 9 */
+  /* Firefox */
+  /* Safari 和 Chrome */
+  /* Opera */
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  /* IE 9 */
+  -moz-transform: rotate(-45deg);
+  /* Firefox */
+  -webkit-transform: rotate(-45deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(-45deg);
+  /* Opera */
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap {
+  position: relative;
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .man_show {
+  width: 4.2rem;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .man_show .man_list {
+  font-size: 0;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .man_show .man_list.tz {
+  /* Firefox 4 */
+  /* Safari 和 Chrome */
+  transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.6s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.6s;
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .man_show .man_list .man_item {
+  width: 1.93rem;
+  height: 3.15rem;
+  position: relative;
+  display: inline-block;
+  margin: 0 .1rem;
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .man_show .man_list .man_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .man_show .man_list .man_name {
+  line-height: 0.4rem;
+  font-size: 0.18rem;
+  color: #FFF;
+  background-color: #00d683;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .man_show .man_list .man_name:hover {
+  color: #FFF;
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .lbtn_wrap {
+  position: absolute;
+  width: 0.8rem;
+  height: 0.8rem;
+  top: 40%;
+  left: 0rem;
+  padding-top: .4rem;
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .rbtn_wrap {
+  position: absolute;
+  width: 0.8rem;
+  height: 0.8rem;
+  top: 40%;
+  right: 0rem;
+  padding-top: .4rem;
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .left_btn {
+  background: url("../image/l_btn.png") no-repeat center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  width: 0.21rem;
+  height: 0.34rem;
+}
+.pages_container .page_item .p6_scroll_wrap .man_s_wrap .right_btn {
+  background: url("../image/r_btn.png") no-repeat center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  width: 0.21rem;
+  height: 0.34rem;
+}
+.pages_container .page_item .dot_wrap {
+  text-align: center;
+  font-size: 0;
+  line-height: .8rem;
+}
+.pages_container .page_item .dot_wrap > div {
+  background-color: #554787;
+  margin: 0 .05rem;
+  width: 0.12rem;
+  height: 0.12rem;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+}
+.pages_container .page_item .dot_wrap > div.act {
+  background-color: #00d683;
+}
+.green_f {
+  color: #00d683;
+}

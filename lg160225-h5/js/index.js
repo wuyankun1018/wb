@@ -94,4 +94,68 @@ $(function(){
 		$('.share_mask').toggle()
 	});
 
+	$('.scroll_wrap').on('click', 'a', function(event) {
+		event.preventDefault();
+	});
+
+	$('.p6_scroll_wrap').on('swipeLeft', function(event) {
+		console.log('l+1')
+		var sitems = $('.dot_wrap').find('div')
+		var act = sitems.filter('.act')
+		var index = act.index()
+		index++
+		if(index>=sitems.length) index = 0;
+		sitems.eq(index).addClass('act').siblings().removeClass('act')
+		changeTransform.call($(this).find('.scroll_w'), 'translateX(-'+5.6*index+'rem)')
+
+	}).on('swipeRight', function(event) {
+		console.log('r-1')
+		var sitems = $('.dot_wrap').find('div')
+		var act = sitems.filter('.act')
+		var index = act.index()
+		index--
+		if(index<0) index = sitems.length-1;
+		sitems.eq(index).addClass('act').siblings().removeClass('act')
+		changeTransform.call($(this).find('.scroll_w'), 'translateX(-'+5.6*index+'rem)')
+	})
+
+	
+	
+	//嘉宾轮播
+	;(function(){
+		var actIndex = 0;
+		var wrap = $('.man_list')
+		var manItem = wrap.find('.man_item')
+			,length = manItem.length
+			,width = 2.13
+		wrap.append(manItem.clone())
+		wrap.prepend(manItem.clone())
+		manItem.addClass('curr')
+		changeTransform.call(wrap, 'translateX(-'+width*length+'rem)')
+
+		$('.man_s_wrap').on('click', '.lbtn_wrap', function(event) {
+			actIndex--;
+			moveTo()
+		}).on('click', '.rbtn_wrap', function(event) {
+			actIndex++;
+			moveTo()
+		})
+
+		function moveTo(){
+			//actIndex min:0 max:length-6
+			wrap.removeClass('tz')
+			console.log(actIndex)
+			if(actIndex<0){
+				changeTransform.call(wrap, 'translateX(-'+2*width*length+'rem)')
+				actIndex = actIndex+length
+			} else if(actIndex>length){
+				changeTransform.call(wrap, 'translateX(-'+width*length+'rem)')
+				actIndex = actIndex-length
+			}
+			wrap.css('width') 
+			wrap.addClass('tz')
+			changeTransform.call(wrap, 'translateX(-'+width*(actIndex+length)+'rem)')
+		}
+
+	})()
 })
