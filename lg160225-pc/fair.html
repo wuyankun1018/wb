@@ -11,20 +11,20 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="description" content="梦想者市集">
 	<title>梦想者市集</title>
-	<link type="text/css" rel="stylesheet" href="fair.css">
+	<link type="text/css" rel="stylesheet" href="css/fair.css">
 </head>
 <body>
-<div class="topBox">
+<div class="topBox" id="m1">
     <div class="nav_bg">
         <ul class="nav">
-            <li><a href="#" target="_blank">市集地图</a></li>
-            <li><a href="#" target="_blank">梦想者市集</a></li>
-            <li><a href="#" target="_blank">万能的拉勾</a></li>
-            <li><a href="#" target="_blank">梦想PLUS</a></li>
-            <li><a href="#" target="_blank">市集特色</a></li>
+            <li><a href="#m1">市集地图</a></li>
+            <li><a href="#m2">梦想者市集</a></li>
+            <li><a href="#m3">万能的拉勾</a></li>
+            <li><a href="#m4">梦想PLUS</a></li>
+            <li><a href="#m5">市集特色</a></li>
         </ul>
-        <h4 class="yellow"><a href="#" target="_blank">市集报名入口</a></h4>
-        <h4 class="green"><a href="#" target="_blank">线上招聘专场</a></h4>
+        <h4 class="yellow"><a href="#m5">市集报名入口</a></h4>
+        <h4 class="green"><a href="http://www.lagou.com/activity/dist/promotion/mainMeeting/pc/index.html?utm_source=m_bd_mf_sj_lagou" target="_blank">线上招聘专场</a></h4>
         <div class="clear"></div>
         <a class="top green" href="#">TOP</a>
     </div>
@@ -32,124 +32,110 @@
 </div>
 <div class="bjzhan"></div> 
 <!--梦想者市集tab切换-->
-<div class="fair">
+<div class="fair" id="m2">
 	<div class="tab">
-    	<a class="active" href="#">社交</a>|
-        <a href="#">O2O</a>
-        <a href="#">电商</a>
-        <a href="#">硬件</a>
-        <a href="#">生活方式</a>
-        <a href="#">36氪星球</a>
+    	<a class="active" data-type="shejiao">社交</a>|
+        <a data-type="o2o">O2O</a>|
+        <a data-type="dianshang">电商</a>|
+        <a data-type="shangye">商业&硬件</a>|
+        <a data-type="shenghuo">生活方式</a>|
+        <a data-type="xingqiu">36氪星球</a>
     </div>
     <div class="fair_con">
     	<span class="arrow_l1"></span>
         <span class="arrow_r1"></span>
-        <ul class="con">
-        	<li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></span>
-                    <span class="tle">拉勾网</span>
-                </a>
-            </li>
-            <li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></span>
-                    <span class="tle">拉勾网</span>
-                </a>
-            </li>
-            <li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></span>
-                    <span class="tle">拉勾网</span>
-                </a>
-            </li>
-            <li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></span>
-                    <span class="tle">拉勾网</span>
-                </a>
-            </li>
-            <li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></span>
-                    <span class="tle">拉勾网</span>
-                </a>
-            </li>
-            <li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></span>
-                    <span class="tle">拉勾网</span>
-                </a>
-            </li>
-        </ul>
+        <div class="con_show">
+            <ul class="con">
+            <!--             	
+                <li data-type="o2o">
+                	<a href="#" target="_blank">
+                    	<span class="pic"><img src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></span>
+                        <span class="tle">拉勾网</span>
+                    </a>
+                </li>
+            -->            
+            </ul>
+        </div>
     </div>
     <div class="clear"></div>
 </div>
-<div class="all_powerful"></div>
-<div class="plus"></div>
+<div class="all_powerful" id="m3"></div>
+<div class="plus" id="m4"></div>
 <!--特邀嘉宾-->
 <div class="guest">
 	<div class="guest_con">
     	<span class="arrow_l2"></span>
         <span class="arrow_r2"></span>
-        <ul class="con">
-        	<li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://d05.res.meilishuo.net/pic/_o/93/23/17dd96f96df98434e0a3152e2f05_640_832.cj.jpg_23efd9a0_s3_q0_150_5_0_224_340.jpg" /></span>
-                    <span class="tle">拉勾网</span>
-                    <div class="details">
-                    	<h4>CTO</h4>
-                        <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://d05.res.meilishuo.net/pic/_o/93/23/17dd96f96df98434e0a3152e2f05_640_832.cj.jpg_23efd9a0_s3_q0_150_5_0_224_340.jpg" /></span>
-                    <span class="tle">拉勾网</span>
-                    <div class="details">
-                    	<h4>CTO</h4>
-                        <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://d05.res.meilishuo.net/pic/_o/93/23/17dd96f96df98434e0a3152e2f05_640_832.cj.jpg_23efd9a0_s3_q0_150_5_0_224_340.jpg" /></span>
-                    <span class="tle">拉勾网</span>
-                    <div class="details">
-                    	<h4>CTO</h4>
-                        <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://d05.res.meilishuo.net/pic/_o/93/23/17dd96f96df98434e0a3152e2f05_640_832.cj.jpg_23efd9a0_s3_q0_150_5_0_224_340.jpg" /></span>
-                    <span class="tle">拉勾网</span>
-                    <div class="details">
-                    	<h4>CTO</h4>
-                        <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-            	<a href="#" target="_blank">
-                	<span class="pic"><img src="http://d05.res.meilishuo.net/pic/_o/93/23/17dd96f96df98434e0a3152e2f05_640_832.cj.jpg_23efd9a0_s3_q0_150_5_0_224_340.jpg" /></span>
-                    <span class="tle">拉勾网</span>
-                    <div class="details">
-                    	<h4>CTO</h4>
-                        <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
-                    </div>
-                </a>
-            </li>
-        </ul>
+        <div class="guest_show">
+            <ul class="con">
+            	<li>
+                	<a href="#" target="_blank">
+                    	<span class="pic"><img src="images/m/ella.jpg" /></span>
+                        <span class="tle">「拉勾」CMO 鲍艾乐</span>
+                        <div class="details">
+                        	<h4>「拉勾」CMO</h4>
+                            <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <span class="pic"><img src="images/m/yanglu.jpg" /></span>
+                        <span class="tle">「在行」联合创始人 杨璐</span>
+                        <div class="details">
+                            <h4>「在行」联合创始人</h4>
+                            <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <span class="pic"><img src="images/m/lanningyu.jpg" /></span>
+                        <span class="tle">「天使汇」创始人 兰宁羽</span>
+                        <div class="details">
+                            <h4>「天使汇」创始人</h4>
+                            <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <span class="pic"><img src="images/m/zhanghengde.jpg" /></span>
+                        <span class="tle">「住百家」CEO 张亨德</span>
+                        <div class="details">
+                            <h4>「住百家」CEO</h4>
+                            <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <span class="pic"><img src="images/m/ella.jpg" /></span>
+                        <span class="tle">1111</span>
+                        <div class="details">
+                            <h4>CTO</h4>
+                            <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <span class="pic"><img src="images/m/ella.jpg" /></span>
+                        <span class="tle">2222</span>
+                        <div class="details">
+                            <h4>CTO</h4>
+                            <p>简介什么的：还说上百个还说上百个,还说上百个还说上百个还说上百个,还说上百个还说上百个还说。</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="clear"></div>
 </div>
-<div class="features"></div>
+<div class="features" id="m5"></div>
 <!--活动报名-->
-<div class="login">
+<div class="login" id="m6">
 	<form>
     
     </form>
@@ -159,37 +145,57 @@
     	<h3>合作伙伴</h3>
         <h4>- 战略合作 -</h4>
         <div class="pic">
-        	<a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
+        	<a href="http://36kr.com/" target="_blank"><img src="images/zhanlue/36krlogo.jpg" /></a>
+            <a href="http://www.zaih.com/" target="_blank"><img src="images/zhanlue/在行logo.jpg" /></a>
+            <a href="http://www.ingdan.com/" target="_blank"><img src="images/zhanlue/硬蛋logo.jpg" /></a>
+            <a href="http://www.geekbang.org/" target="_blank"><img src="images/zhanlue/INFOQ-logo.jpg" /></a>
+            <a href="http://www.geekbang.org/" target="_blank"><img src="images/zhanlue/极客邦logo.jpg" /></a>
         </div>
         <h4>- 媒体合作 -</h4>
         <div class="pic">
-        	<a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
+            <a href="http://www.jiemian.com/" target="_blank"><img src="images/meiti/界面logo.jpg" /></a>
+            <a href="http://it.sohu.com/" target="_blank"><img src="images/meiti/搜狐科技logo.jpg" /></a>
+            <a href="http://www.it168.com/" target="_blank"><img src="images/meiti/IT168logo.jpg" /></a>
+            <a href="http://www.huxiu.com/" target="_blank"><img src="images/meiti/虎嗅logo.jpg" /></a>
+            <a href="https://www.itjuzi.com/" target="_blank"><img src="images/meiti/IT桔子logo.jpg" /></a>
+            <a href="http://www.tmtpost.com/" target="_blank"><img src="images/meiti/钛媒体logo.jpg" /></a>
+            <a href="http://www.bbwc.cn/" target="_blank"><img src="images/meiti/商业周刊.jpg" /></a>/中文版
+            <a href="http://xueqiu.com/" target="_blank"><img src="images/meiti/雪球logo.jpg" /></a>
+            <a href="http://www.myzaker.com/index.html" target="_blank"><img src="images/meiti/zakerlogo.jpg" /></a>
+            <a href="http://toutiao.com/" target="_blank"><img src="images/meiti/今日头条.jpg" /></a>
+            <a href="http://www.huaxi100.com/" target="_blank"><img src="images/meiti/华西都市网logo.jpg" /></a>
+            <a href="http://www.ebrun.com/" target="_blank"><img src="images/meiti/亿邦动力logo.jpg" /></a>
         </div>
         <h4>- 品牌合作 -</h4>
         <div class="pic">
-        	<a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
-            <a href="#" target="_blank"><img width="132" src="http://www.lagou.com/image1/M00/00/0E/Cgo8PFTUWCaASxOHAABpnD0-I-g402.png" /></a>
+            <a href="http://www.wezeit.com/" target="_blank"><img src="images/pinpai/微在logo.jpg" /></a>
+            <a href="http://site.douban.com/onewaystreet/" target="_blank"><img src="images/pinpai/单向街.jpg" /></a>
+            <a href="https://www.aliyun.com/?utm_medium=text&utm_source=bdbrand&utm_campaign=bdbrand&utm_content=se_32492" target="_blank"><img src="images/pinpai/阿里云logo.jpg" /></a>
+            <a href="http://www.benlai.com/" target="_blank"><img src="images/pinpai/本来生活logo.jpg" /></a>
+            <a href="http://www.jianlc.com/?source=pinzhuanpc" target="_blank"><img src="images/pinpai/简理财logo.jpg" /></a>
+            <a href="http://class.hujiang.com/" target="_blank"><img src="images/pinpai/沪江网校logo.jpg" /></a>
+            <a href="http://www.zealer.com/" target="_blank"><img src="images/pinpai/zealer-logo.jpg" /></a>
+            <a href="http://www.roobo.com/" target="_blank"><img src="images/pinpai/roobo（布丁机械人）logo.jpg" /></a>
+            <a href="http://www.smzdm.com/" target="_blank"><img src="images/pinpai/什么值得买logo.jpg" /></a>
+            <a href="http://www.fun.tv/" target="_blank"><img src="images/pinpai/风行logo.jpg" /></a>
+            <a href="http://www.jiashuangkuaizi.com/" target="_blank"><img src="images/pinpai/回家吃饭logo.jpg" /></a>
+            <a href="http://www.nuomi.com/?utm_source=baidu&utm_medium=brand_wangye&utm_term=&utm_content=&utm_campaign=title&cid=002301" target="_blank"><img src="images/pinpai/糯米logo.jpg" /></a>
+            <a target="_blank"><img src="images/pinpai/瑞恩珠宝logo.jpg" /></a>
+            <a href="http://www.guohead.com/" target="_blank"><img src="images/pinpai/果合网logo.jpg" /></a>
+            <a href="http://www.mooninbox.com/#homes" target="_blank"><img src="images/pinpai/月亮盒子.jpg" /></a>
+            <a href="http://www.qiniu.com/cdnjiangjia?utm_campaign=cdnjiangjia&utm_source=baidu&utm_medium=advposition&utm_content=png" target="_blank"><img src="images/pinpai/七牛logo.jpg" /></a>
+            <a href="http://angelcrunch.com/" target="_blank"><img src="images/pinpai/天使汇logo.jpg" /></a>
+            <a href="http://www.ui.cn/" target="_blank"><img src="images/pinpai/UI中国logo.jpg" /></a>
+            <a href="http://www.letv.com/" target="_blank"><img src="images/pinpai/乐视网logo.jpg" /></a>
+            <a href="http://www.iqiyi.com/" target="_blank"><img src="images/pinpai/爱奇艺logo.jpg" /></a>
+            <a href="http://www.fanli.com/?showsignup=4" target="_blank"><img src="images/pinpai/返利logo.jpg" /></a>
+            <a href="http://bj.jumei.com/?referer=bdppzq_bt&utm_content=title&utm_source=baidu_ppzq" target="_blank"><img src="images/pinpai/聚美优品logo.jpg" /></a>
         </div>
     </div>
     <div class="logo">
     	<a href="#" target="_blank"><img src="images/logo.jpg" /></a>
     </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/fair.js"></script>
 </div>
 </body>
