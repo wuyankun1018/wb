@@ -154,6 +154,11 @@ $(function(){
 		var width = $('.guest').find('li:first').outerWidth(true)
 		var ul = $('.guest').find('ul.con')
 		var length = ul.children().length
+		if(length<5){
+			$('.guest_show').width(length*width)
+			$('.arrow_l2,.arrow_r2').hide()
+			return;
+		}
 		var p =ul.children().clone()
 		var n =ul.children().clone()
 		$('.guest').find('li').addClass('curr').first().addClass('start')

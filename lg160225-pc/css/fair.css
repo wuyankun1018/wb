@@ -1,5 +1,5 @@
 html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,address,em,img,samp,small,strong,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,a{margin:0;padding:0;}
-body{ background: #2a1969 url(../images/shiji_bg.jpg) no-repeat center top; color: #fff; font-family:"HY-XiZYJ", "HY_XiZYJ", Arial;}
+body{ background: #2a1969 url(../images/shiji_bg.jpg) no-repeat center top; color: #fff; font-family:Arial;}
 ul{list-style:none}
 a{ color: #fff; text-decoration: none; }
 a:hover { color: #ffb510;}
@@ -18,13 +18,13 @@ textarea{resize: none; outline: none;}
 
 /*吸顶导航*/
 .topBox { width: 1266px; height: 836px; margin: 0 auto; position: relative; z-index: 99; }
-.nav_bg { background:url(../images/nav_bg.png) no-repeat; width: 140px; height: 352px; text-align:center; position: fixed; top: 0; left:0;}
+.nav_bg { background:url(../images/nav_bg.png) no-repeat; width: 140px; height: 352px; text-align:center; position: fixed; top: 0; left:10px;}
 .nav_bg .nav { padding-top: 94px; }
 .nav_bg .nav li { line-height: 28px; font-size:14px; }
 .nav_bg h4 { font-size: 14px; font-weight:600; line-height: 28px; }
 .nav_bg .top { font-size: 12px; font-weight: bold; line-height: 68px; }
 
-.code { background: url(../images/code.jpg) no-repeat; width: 143px; height: 167px; position: fixed; top: 190px; right: 0; z-index: 9; }
+.code { background: url(../images/code.jpg) no-repeat; width: 143px; height: 167px; position: fixed; top: 190px; right: 10px; z-index: 9; }
 
 .bjzhan { background: url(../images/bjzhan.jpg) no-repeat; width: 1200px; height: 616px; margin: 0 auto; }
 
@@ -44,7 +44,7 @@ textarea{resize: none; outline: none;}
 
 
 .all_powerful { background: url(../images/wanneng.jpg) no-repeat; width: 826px; height: 476px; margin: 50px auto 0;}
-.plus { background: url(../images/plus.jpg) no-repeat; width: 912px; height: 340px; margin: 50px auto 0;}
+.plus { background: url(../images/plus.jpg) no-repeat; width: 912px; height: 350px; margin: 50px auto 0;}
 
 .guest { background: url(../images/tyjb.jpg) no-repeat top center; width: 1050px; margin: 50px auto 0; padding-top: 108px; }
 .guest_con { position: relative; margin-top: 20px; }
@@ -54,7 +54,7 @@ textarea{resize: none; outline: none;}
 .guest_con .con li a{ width: 194px; height: 315px; display: block; position: relative; }
 .guest_con .con li a .pic { width: 194px; height: 315px; float: left; overflow: hidden; }
 .guest_con .con li a .tle { width: 194px; height: 40px; line-height:40px; color: #fff; text-align:center; float: left; background-color:#0dc980; position: absolute; bottom: 0; left: 0; }
-.guest_con .con li a:hover .details { width: 174px; height: 265px; background: #0dc980; color: #fff; padding: 50px 10px 0; filter:alpha(opacity=80); opacity:0.8; float: left; position: absolute; top: 0; left: 0; }
+.guest_con .con li a:hover .details { width: 194px; height: 315px; background: #0dc980; color: #fff;  filter:alpha(opacity=80); opacity:0.8; float: left; position: absolute; top: 0; left: 0; }
 .guest_con .con li a:hover .tle {display: none;}
 .guest_con .con li .details h4 { text-align: center; font-size: 24px; }
 .guest_con .con li .details p { font-size: 14px; padding-top: 15px; line-height: 22px; }
@@ -90,5 +90,10 @@ textarea{resize: none; outline: none;}
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
 select::-ms-expand { display: none; }
 .point{color:red;margin: 0 3px;}
+.vm{display:table-cell; width:174px; height:315px;vertical-align:middle;padding: 0 10px;text-align: center;}
+.vm span{display:inline-block; vertical-align:middle;}
+#m4{overflow: hidden;}
+#m4 div{margin-top: 325px;color: #0ee793;padding-left: 70px;}
+#m4 div span{display: inline-block;width: 128px;text-align: center;}
 
 
