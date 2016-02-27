@@ -1,5 +1,5 @@
 html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,address,em,img,samp,small,strong,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,a{margin:0;padding:0;}
-body{ background: #2a1969 url(../images/shiji_bg.jpg) no-repeat center top; color: #fff; font-family:Arial;}
+body{ background: #2a1969 url(../images/shiji_bg.jpg) no-repeat center top; color: #fff; font-family:'Hiragino Sans GB', 'Microsoft Yahei', SimSun, Arial, 'Helvetica Neue', Helvetica;}
 ul{list-style:none}
 a{ color: #fff; text-decoration: none; }
 a:hover { color: #ffb510;}
