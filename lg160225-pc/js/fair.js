@@ -203,7 +203,18 @@ $(function(){
 				marginLeft: -width*index
 			},600, function() {
 			})
+			autoMove()
 		}
+
+		var aid = 0
+		function autoMove(){
+			clearTimeout(aid)
+			aid = setTimeout(function(){
+				actIndex++
+				moveTo()
+			}, 5000)
+		}
+		autoMove()
 
 	})()
 })
